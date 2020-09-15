@@ -1,0 +1,32 @@
+$colors: (
+  very-light-yellow: #e5cf85,
+  light-yellow: #e2c977,
+  dark-yellow: #cf9a00,
+  very-dark-yellow: #be8d00,
+  very-whyte: #ffffff,
+  very-black: #000000,
+);
+
+$fonts: (
+  default-font: 1.6rem,
+  primary-heading: 4.8rem,
+  secondary-heading: 3.4rem,
+  tertiary-heading: 2.4rem,
+  primary-desc: 2.6rem,
+  secondary-desc: 2.1rem,
+  inline-link: 1.8rem,
+);
+
+$mvfonts: (
+  mvprimary-heading: 2.6rem,
+  mvsecondary-heading: 2.4rem,
+  mvtertiary-heading: 2rem,
+  mvprimary-desc: 2.2rem,
+);
+
+$gutters: (
+  grid-width: 114rem,
+  gutter-vertical: 6rem,
+  gutter-vertical-small: 4rem,
+  gutter-horizontal: 4rem,
+);

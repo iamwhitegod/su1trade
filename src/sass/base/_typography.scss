@@ -1,0 +1,31 @@
+.primary-heading {
+  font-size: font(primary-heading);
+}
+
+.secondary-heading {
+  display: inline-block;
+  font-size: font(secondary-heading);
+  @include gradient(45deg);
+  background-clip: text;
+  color: transparent;
+}
+
+.tertiary-heading {
+  font-size: font(tertiary-heading);
+
+  // @include respond(phone) {
+  //   font-size: font();
+  // }
+}
+
+.primary-desc {
+  font-size: font(primary-desc);
+}
+
+.secondary-desc {
+  font-size: font(secondary-desc);
+}
+
+.inline-link {
+  font-size: font(inline-link);
+}

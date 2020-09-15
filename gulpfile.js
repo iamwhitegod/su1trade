@@ -10,8 +10,9 @@ gulp.task("sass", () => {
   return gulp
     .src("./src/sass/main.scss")
     .pipe(sass().on("error", logError))
-    .pipe(postcss([autoprefixer({ browsers: ["last 5 versions"] }), cssnano()]))
-    .pipe(gulp.dest("css"));
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(gulp.dest("css"))
+    .pipe(browserSync.stream());
 });
 
 gulp.task("watch:sass", () => {
@@ -20,6 +21,6 @@ gulp.task("watch:sass", () => {
       baseDir: "./",
     },
   }),
-    gulp.watch("./src/sass/**/*.scss", gulp.series(["sass"]));
-  gulp.watch("./*.index.html").on("change", browserSync.reload);
+    gulp.watch("./src/sass/**/*.scss", gulp.series(["sass"])),
+    gulp.watch("./*.html").on("change", browserSync.reload);
 });

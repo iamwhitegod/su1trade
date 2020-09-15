@@ -1,0 +1,11 @@
+@function font($size) {
+  @return map-get($fonts, $size);
+}
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+@function gap($gutter) {
+  @return map-get($gutters, $gutter);
+}

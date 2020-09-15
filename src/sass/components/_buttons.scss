@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  font-size: font(inline-link);
+  font-family: "roboto", sans-serif;
+  font-weight: 500;
+  padding: 1.3rem 3.2rem;
+  @include gradient(45deg);
+  color: color(very-whyte);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  outline: none;
+  transition: all 5s;
+
+  &--full {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
