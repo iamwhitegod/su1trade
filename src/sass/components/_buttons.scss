@@ -18,4 +18,8 @@
     width: 100%;
     margin: 0 auto;
   }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 }

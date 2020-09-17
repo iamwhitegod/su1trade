@@ -9,3 +9,7 @@
 @function gap($gutter) {
   @return map-get($gutters, $gutter);
 }
+
+@function mvfonts($mvfont) {
+  @return map-get($mvfonts, $mvfont);
+}

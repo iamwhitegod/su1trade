@@ -1,0 +1,12 @@
+.mw50 {
+  max-width: 50rem;
+  @include respond(tab-port) {
+    margin: 0 auto;
+  }
+}
+
+.mb6 {
+  @include respond(tab-port) {
+    margin-bottom: 6rem;
+  }
+}
