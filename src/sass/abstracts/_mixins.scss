@@ -90,7 +90,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
 
   @if $breakpoint == port-height {
-    @media only screen and (min-height: 600px) and (max-width: 425px) {
+    @media only screen and (min-height: 654px) and (max-width: 425px) {
       @content;
     } //900px
   }

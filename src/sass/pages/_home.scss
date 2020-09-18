@@ -2,6 +2,8 @@
   &-container {
     max-width: gap(grid-width);
     margin: 0 auto;
+    position: relative;
+    z-index: 0;
 
     @include respond(port-height) {
       padding: 3rem;
@@ -185,6 +187,10 @@
     width: 7.5rem;
     height: 7.5rem;
     margin: 0 auto 2rem;
+
+    img {
+      height: 100%;
+    }
   }
 
   &__details {
