@@ -61,6 +61,10 @@
 .empirical-data {
   &-section {
     padding: 10rem 0;
+
+    @include respond(tab-land) {
+      padding: 10rem 3rem;
+    }
   }
 
   display: flex;
@@ -166,6 +170,9 @@
 
   &-section {
     background-color: color(very-black);
+    @include respond(tab-land) {
+      padding: 3rem;
+    }
   }
 
   &__caption {
@@ -234,6 +241,10 @@
 
   &-section {
     padding: 0 0 10rem;
+
+    @include respond(tab-land) {
+      padding: 0 3rem;
+    }
 
     @include respond(tab-port) {
       padding: 0 0 5rem;

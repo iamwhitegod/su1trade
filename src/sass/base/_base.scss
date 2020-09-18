@@ -29,4 +29,8 @@ img {
 }
 section {
   padding: 1rem;
+
+  @include respond(tab-land) {
+    padding: 0 3rem;
+  }
 }

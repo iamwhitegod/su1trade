@@ -2,6 +2,10 @@
   background-color: color(very-black);
   padding: 10rem 0;
 
+  @include respond(tab-land) {
+    padding: 10rem 3rem;
+  }
+
   @include respond(tab-port) {
     text-align: center;
   }
