@@ -21,8 +21,12 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "roboto", sans-serif;
+  color: color(grey);
 }
 
 img {
   max-width: 100%;
+}
+section {
+  padding: 1rem;
 }

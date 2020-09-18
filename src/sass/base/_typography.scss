@@ -32,6 +32,11 @@
 .tertiary-heading {
   font-size: font(tertiary-heading);
 
+  display: inline-block;
+  @include gradient(45deg);
+  background-clip: text;
+  color: transparent;
+
   // @include respond(phone) {
   //   font-size: font();
   // }
@@ -56,5 +61,9 @@
 }
 
 .inline-link {
+  display: inline-block;
   font-size: font(inline-link);
+  text-decoration: none;
+  color: color(dark-yellow);
+  margin-top: 0.5rem;
 }

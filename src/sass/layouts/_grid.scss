@@ -1,6 +1,7 @@
 .row {
   max-width: gap(grid-width);
   margin: 0 auto;
+  //background-color: red;
 
   &:not(:last-child) {
     margin-bottom: gap(gutter-vertical);
@@ -11,22 +12,31 @@
   }
 
   @include respond(tab-port) {
-    max-width: 50rem;
+    max-width: 90%;
     padding: 0 3rem;
   }
 
   @include respond(phone) {
+    max-width: 100%;
     padding: 0 2rem;
   }
 
+  //@include flex();
   @include clearfix;
+
+  // [class^="col-"] {
+  //   @include grid(3, 5%);
+  //   background-color: yellow;
+
+  //   @include respond(phone) {
+  //     width: 100%;
+  //   }
+  // }
 
   [class^="col-"] {
     float: left;
-
     &:not(:last-child) {
       margin-right: gap(gutter-horizontal);
-
       @include respond(tab-port) {
         margin-right: 0;
         margin-bottom: gap(gutter-vertical-small);
@@ -74,3 +84,12 @@
     );
   }
 }
+
+// $columns: 12;
+
+// @for $i from 1 through $columns {
+//   .col-#{$i} {
+//     flex: 0 0 100% / $columns * $i;
+//     background-color: yellow;
+//   }
+// }

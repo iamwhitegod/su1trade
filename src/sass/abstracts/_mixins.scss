@@ -22,11 +22,28 @@
   }
 }
 
-@mixin absCenter {
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin absCenter($top: 50%, $left: 50%) {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: $top;
+  left: $left;
   transform: translate(-50%, -50%);
+}
+
+@mixin grid($cols, $gap) {
+  float: left;
+  margin-right: $gap;
+  margin-bottom: $gap;
+  width: ((100% - (($cols - 1) * $gap)) / $cols);
+
+  &:nth-child(#{$cols}n) {
+    margin-right: 0;
+  }
 }
 
 // MEDIA QUERY MANAGER
