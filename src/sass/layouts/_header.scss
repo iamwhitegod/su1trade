@@ -11,6 +11,10 @@
     padding: 0 3rem 10rem;
   }
 
+  &-nr {
+    background-color: color(very-black);
+  }
+
   .img-overlay {
     background-image: url(../images/bg-desktop.png);
     background-size: cover;
