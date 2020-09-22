@@ -5,11 +5,43 @@
   }
 }
 
+// Margin utilty classes
 .mb6 {
   @include respond(tab-port) {
     margin-bottom: 6rem;
   }
 }
+
+.mb2 {
+  margin-bottom: 2rem;
+}
+
+.neg-mg {
+  margin-top: -20rem;
+}
+
+.mb4 {
+  margin-bottom: 4rem !important;
+}
+
+// Padding utility classes
+.pd1 {
+  padding: 1rem;
+}
+
+.pd {
+  padding: 8rem 0;
+}
+
+.pd-cntr {
+  padding: 10rem 12rem 10rem 0;
+}
+
+.pdr {
+  padding-right: 12rem;
+}
+
+// Flex-box Utility classes
 
 .d-flex {
   display: flex;
@@ -25,6 +57,33 @@
   display: block;
 }
 
+// Color utility classes
+
 .accent {
   color: color(dark-yellow) !important;
+}
+
+.col-grey {
+  color: color(grey);
+}
+
+// .orwhite {
+//   color: color(very-whyte);
+// }
+
+// background color utility classes
+
+.bg-white {
+  background-color: color(very-whyte);
+}
+
+// typography utility classes
+
+.align-left {
+  text-align: left;
+  max-width: 60%;
+}
+
+.line-height {
+  line-height: 1.5;
 }

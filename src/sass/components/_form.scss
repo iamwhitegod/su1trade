@@ -3,11 +3,11 @@
 }
 
 .form {
-  max-width: 60rem;
+  max-width: 45rem;
   margin: 5rem auto;
   padding: 3rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0px 2px 4px rgba(color(very-black), 0.3);
+  box-shadow: 0px 10px 16px rgba(color(very-black), 0.08);
 
   &__caption {
     text-align: center;
@@ -35,12 +35,12 @@
 
   &-group {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     &__label,
     &__input {
       display: block;
-      font-size: 1.8rem;
+      font-size: font(default-font);
       font-family: "roboto", sans-serif;
     }
 
@@ -49,23 +49,38 @@
       top: 25%;
       left: 0;
       padding: 0 2rem;
-      color: #999999;
-      opacity: 0;
+      color: color(light-grey);
       transition: all 0.5s;
     }
 
     &__input {
       width: 100%;
-      border: 1.8px solid lighten(color(grey), 50%);
+      border: 1.6px solid color(very-light-grey);
       border-radius: 0.5rem;
       padding: 1rem 2rem;
-      font-size: 2rem;
-      color: #777777;
-      outline-color: color(dark-yellow);
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: #888;
+      outline: none;
       // transition: outline-color 0.5s;
+
+      &:focus {
+        border: 1.6px solid color(dark-yellow);
+        outline: none;
+      }
     }
 
-    &__input:focus:valid ~ .form-group__label {
+    &__input:focus ~ .form-group__label {
+      top: -22%;
+      left: 2rem;
+      background-color: color(very-whyte);
+      padding: 0;
+      color: color(dark-yellow);
+      z-index: 1000;
+    }
+
+    &__input:not(:placeholder-shown).form-group__input:not(:focus)
+      + .form-group__label {
       top: -22%;
       left: 2rem;
       background-color: color(very-whyte);
