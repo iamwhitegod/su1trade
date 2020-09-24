@@ -25,7 +25,6 @@
 
   &__col {
     @include grid(2, 10%);
-    background-color: color(very-black);
   }
 
   &__img {
@@ -37,6 +36,23 @@
       height: 100%;
       object-fit: cover;
       // margin-right: -4rem;
+    }
+  }
+
+  &__col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 60rem;
+
+    h2 {
+      padding-right: 14rem;
+      margin-bottom: 4rem;
+    }
+
+    p {
+      padding-right: 12rem;
+      line-height: 1.6;
     }
   }
 }
