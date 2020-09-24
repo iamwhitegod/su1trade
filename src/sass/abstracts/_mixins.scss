@@ -35,15 +35,24 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin grid($cols, $gap) {
+@mixin grid($cols, $gapr, $gapb: 0) {
   float: left;
-  margin-right: $gap;
-  margin-bottom: $gap;
-  width: ((100% - (($cols - 1) * $gap)) / $cols);
+  margin-right: $gapr;
+  margin-bottom: $gapb;
+  width: ((100% - (($cols - 1) * $gapr)) / $cols);
 
   &:nth-child(#{$cols}n) {
     margin-right: 0;
   }
+
+  @include respond(tab-port) {
+    width: 100% !important;
+  }
+}
+
+@mixin centeredwidth($width) {
+  width: $width;
+  margin: 0 auto;
 }
 
 // MEDIA QUERY MANAGER

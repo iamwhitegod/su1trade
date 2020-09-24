@@ -87,3 +87,15 @@
 .line-height {
   line-height: 1.5;
 }
+
+.absolute {
+  position: absolute;
+
+  @include respond(tab-port) {
+    position: relative;
+  }
+}
+
+.relative {
+  position: relative;
+}
