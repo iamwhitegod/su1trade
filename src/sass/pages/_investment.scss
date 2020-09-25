@@ -52,7 +52,76 @@
 
     p {
       padding-right: 12rem;
-      line-height: 1.6;
+      line-height: 1.8;
+    }
+  }
+}
+
+.steps {
+  &__section {
+    padding: 10rem 0;
+  }
+
+  &__details,
+  &__video {
+    @include grid(2, 5%);
+  }
+
+  &__details {
+    h2 {
+      margin-bottom: 4rem;
+    }
+
+    p {
+      line-height: 2;
+      padding-right: 12rem;
+    }
+  }
+
+  &__video {
+    padding: 3rem 0;
+
+    video {
+      width: 100%;
+      margin-top: 8rem;
+    }
+  }
+}
+
+.steps-shown {
+  &__section {
+    padding: 10rem 0;
+  }
+
+  &__col {
+    @include grid(2, 10%);
+    // background-color: color(very-black);
+    padding-right: 6rem;
+    margin-bottom: 4rem;
+
+    .heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      span {
+        display: inline-block;
+        font-size: font(secondary-desc);
+        font-weight: 600;
+        width: 5rem;
+        height: 5rem;
+        @include gradient(45deg);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 5rem;
+        margin-right: 2rem;
+      }
+    }
+
+    .description {
+      p {
+        line-height: 1.6;
+      }
     }
   }
 }
