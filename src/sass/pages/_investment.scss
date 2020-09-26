@@ -125,3 +125,63 @@
     }
   }
 }
+
+.pricing {
+  &__section {
+    padding: 10rem 0;
+    background-color: color(very-black);
+    color: color(very-whyte);
+  }
+
+  &__caption {
+    text-align: center;
+  }
+
+  &__plan {
+    @include grid(3, 10%);
+    text-align: center;
+    padding: 1.8rem 1rem;
+    margin-top: 10rem;
+    border-radius: 1rem;
+    transition: all 0.1s;
+
+    &:hover {
+      border: 1px solid color(dark-yellow);
+    }
+
+    &-price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .price-tag {
+        display: block;
+        font-size: font(default-font);
+        margin-bottom: 1rem;
+      }
+
+      .price {
+        display: block;
+        @include gradient(45deg);
+        background-clip: text;
+        color: transparent;
+        font-size: font(secondary-heading);
+        font-weight: 600;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__details {
+    list-style: none;
+    li {
+      font-size: font(inline-link);
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin: 4rem;
+      }
+    }
+  }
+}
