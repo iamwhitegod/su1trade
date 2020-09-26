@@ -2,6 +2,10 @@
   animation: delay 1s;
 }
 
+@mixin Updown() {
+  animation: Updown 3.5s infinite;
+}
+
 @keyframes delay {
   0% {
     opacity: 0;
@@ -9,5 +13,19 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes Updown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

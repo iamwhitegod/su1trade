@@ -47,9 +47,10 @@ function checkSlide(e) {
 
     if (isHalfShown && isNotScrolledPast) {
       slideCol.classList.add("active");
-    } else {
-      slideCol.classList.remove("active");
     }
+    // else {
+    //   slideCol.classList.remove("active");
+    // }
   });
 }
 
@@ -63,7 +64,5 @@ questionPanel.forEach((question) => {
   question.addEventListener("click", (e) => {
     e.target.classList.toggle("FAQs__question--active");
     // e.target.nextElementSibling.classList.toggle("FAQs__answer--active");
-
-
   });
 });
