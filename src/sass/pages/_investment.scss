@@ -185,3 +185,87 @@
     }
   }
 }
+
+.FAQs {
+  &__section {
+    padding: 10rem 0;
+  }
+
+  &__caption {
+    text-align: center;
+  }
+
+  &__accordion {
+    max-width: 70rem;
+    margin: 0 auto 4rem;
+    border-radius: 0.5rem;
+    // transition: display 5s;
+
+    &:first-child {
+      margin-top: 10rem;
+    }
+  }
+
+  &__question {
+    display: block;
+    background-color: color(very-light-grey);
+    font-weight: 500;
+    padding: 0.8rem 2rem;
+    color: color(grey);
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: color(light-grey);
+    }
+
+    &--active {
+      background-color: color(light-grey);
+    }
+  }
+
+  &__answer {
+    display: none;
+    margin-top: 1rem;
+    line-height: 1.6;
+    padding: 2rem;
+
+    background-color: color(very-whyte);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    // &--active {
+    //   display: block;
+    // }
+  }
+
+  &__question--active + &__answer {
+    display: block;
+    max-height: fit-content;
+    transition: max-height 0.2s ease-out;
+  }
+}
+
+.telegram-community {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__section {
+    padding: 0 0 10rem;
+  }
+
+  &__cta {
+    margin-right: 10rem;
+  }
+
+  &__desc {
+    flex: 0 0 50%;
+    padding: 0 4rem;
+    p {
+      font-size: 4.2rem;
+      line-height: 1.3;
+    }
+  }
+}

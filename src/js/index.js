@@ -54,3 +54,16 @@ function checkSlide(e) {
 }
 
 window.addEventListener("scroll", debounce(checkSlide));
+
+// Accordion controller
+const questionPanel = document.querySelectorAll(".FAQs__question");
+// const answerPanel = document.querySelectorAll(".FAQs__answer");
+
+questionPanel.forEach((question) => {
+  question.addEventListener("click", (e) => {
+    e.target.classList.toggle("FAQs__question--active");
+    // e.target.nextElementSibling.classList.toggle("FAQs__answer--active");
+
+
+  });
+});
