@@ -7,7 +7,7 @@
     @include grid(2, 30%);
 
     @include respond(tab-port) {
-      margin-top: 5rem;
+      margin-top: 8rem;
     }
   }
 }
@@ -17,7 +17,7 @@
     padding: 10rem 0;
 
     @include respond(tab-port) {
-      padding: 5rem 0;
+      padding: 8rem 0;
     }
   }
   &__video {
@@ -31,7 +31,7 @@
     padding: 10rem 0;
 
     @include respond(tab-port) {
-      padding: 5rem 0;
+      padding: 8rem 0;
     }
   }
 
@@ -86,7 +86,7 @@
     padding: 10rem 0;
 
     @include respond(tab-port) {
-      padding: 1rem 0;
+      padding: 3rem 0;
     }
   }
 
@@ -125,7 +125,7 @@
     padding: 10rem 0;
 
     @include respond(tab-port) {
-      padding: 5rem 0;
+      padding: 8rem 0;
     }
   }
 
@@ -173,7 +173,7 @@
     color: color(very-whyte);
 
     @include respond(tab-port) {
-      padding: 5rem 0;
+      padding: 8rem 0;
     }
   }
 
@@ -235,7 +235,7 @@
     padding: 10rem 0;
 
     @include respond(tab-port) {
-      padding: 5rem 0;
+      padding: 8rem 0;
     }
   }
 
