@@ -99,3 +99,12 @@
 .relative {
   position: relative;
 }
+
+.uti-primary-heading {
+  @include respond(phone) {
+    font-size: 3.6rem;
+    text-align: center;
+    margin-top: 4rem;
+    padding: 0;
+  }
+}
