@@ -314,9 +314,9 @@
 
   &__cta {
     margin-right: 10rem;
-    order: 1;
 
     @include respond(tab-port) {
+      order: 1;
       text-align: center;
       margin: 0 auto;
     }

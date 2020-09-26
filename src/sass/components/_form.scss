@@ -10,7 +10,7 @@
   box-shadow: 0px 10px 16px rgba(color(very-black), 0.08);
 
   &--mrgzero {
-    @include respond(phone) {
+    @include respond(tab-port) {
       margin: 0 auto;
     }
   }

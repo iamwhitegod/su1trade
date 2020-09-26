@@ -19,6 +19,16 @@
     margin: 0 auto;
   }
 
+  &--ghost {
+    background: none;
+    border: 1.5px solid color(dark-yellow);
+    transition: all 0.2s;
+
+    &:hover {
+      @include gradient(45deg);
+    }
+  }
+
   @include respond(phone) {
     font-size: 2rem;
   }
