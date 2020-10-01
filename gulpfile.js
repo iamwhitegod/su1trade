@@ -15,6 +15,7 @@ gulp.task("scss", () => {
   return gulp
     .src("./src/sass/main.scss")
     .pipe(sass().on("error", logError))
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulp.dest("css"))
     .pipe(browserSync.stream());
 });
@@ -29,7 +30,16 @@ gulp.task("sass", () => {
 });
 
 gulp.task("js", () => {
-  return gulp.src("./src/js/**/*.js").pipe(gulp.dest("js"));
+  return gulp
+    .src("./src/js/**/*.js")
+    .pipe(
+      webpack({
+        output: {
+          filename: "bundle.js",
+        },
+      })
+    )
+    .pipe(gulp.dest("js"));
 });
 
 gulp.task("webpack", () => {
@@ -42,7 +52,7 @@ gulp.task("webpack", () => {
 gulp.task("img", () => {
   return gulp
     .src("./images/*")
-    .pipe(imagemin())
+    .pipe(imageMin())
     .pipe(gulp.dest("build/images"));
 });
 

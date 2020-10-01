@@ -37,6 +37,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
     "html-webpack-plugin": "^4.5.0",
+    "nodemon": "^2.0.4",
     "webpack-cli": "^3.3.12",
     "webpack-stream": "^6.1.0"
   }
