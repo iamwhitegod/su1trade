@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: ["babel-polyfill", "./src/js/index.js"],
@@ -30,6 +31,8 @@ module.exports = {
       filename: "about.html",
       template: "./about.html",
     }),
+
+    new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
@@ -38,6 +41,18 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+        },
+      },
+      {
+        test: /\.(png|jpe?g|gif|mp4)$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name], [ext]",
+            output: "images",
+            publicPath: "images/",
+          },
         },
       },
     ],
