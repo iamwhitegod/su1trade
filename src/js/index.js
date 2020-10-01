@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const mbMenu = document.querySelector(".mobile-nav-menu");
 mbMenu.addEventListener("click", (e) => {
   mbMenu.classList.toggle("mobile-nav-menu__active");
@@ -64,5 +66,24 @@ questionPanel.forEach((question) => {
   question.addEventListener("click", (e) => {
     e.target.classList.toggle("FAQs__question--active");
     // e.target.nextElementSibling.classList.toggle("FAQs__answer--active");
+  });
+});
+
+// const proxy = `https://cors-anywhere.herokuapp.com/`;
+// const scriptURL = `${proxy}https://script.google.com/macros/s/AKfycbw8VylXa3hYu3ZmOSOxEG4a6x1tid8oEQ5em55bJwZ87rBqvf-g/exec`;
+const form = document.forms["submit-to-google-sheet"];
+console.log(form);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  // fetch(scriptURL, { method: "POST", body: new FormData(form) })
+  //   .then((response) => console.log("Success!", response))
+  //   .catch((error) => console.error("Error!", error.message));
+  axios({
+    method: "POST",
+    url: "localhost:5000/createTable",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
   });
 });

@@ -5,6 +5,8 @@ const postcss = require("gulp-postcss");
 const concat = require("gulp-concat");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
+const webpack = require("webpack-stream");
+const { dest } = require("gulp");
 const browserSync = require("browser-sync").create();
 
 gulp.task("sass", () => {
@@ -20,6 +22,13 @@ gulp.task("js", () => {
   return gulp.src("./src/js/**/*.js").pipe(gulp.dest("js"));
 });
 
+gulp.task("webpack", () => {
+  return gulp
+    .src("./src/js/**/*.js")
+    .pipe(webpack(require("./webpack.config")))
+    .pipe(gulp.dest("dest"));
+});
+
 gulp.task("watch:sass", () => {
   browserSync.init({
     server: {
@@ -28,7 +37,7 @@ gulp.task("watch:sass", () => {
   }),
     gulp.watch(
       ["./src/sass/**/*.scss", "./src/js/**/*.js"],
-      gulp.series(["sass", "js"])
+      gulp.series(["sass", "js", "webpack"])
     ),
     gulp.watch("./*.html").on("change", browserSync.reload);
 });

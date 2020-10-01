@@ -46,7 +46,12 @@
     </header>
 
     <section class="create-account">
-      <form action="#" method="POST" class="form">
+      <form
+        action="/createTable"
+        method="POST"
+        class="form"
+        name="submit-to-google-sheet"
+      >
         <div class="form__caption">
           <h2 class="secondary-heading">Sign for Investment</h2>
           <p class="secondary-desc">Welcome to SU1Trade</p>
@@ -126,7 +131,11 @@
               <img src="images/Twiiter icon.svg" alt="twiiter icon" />
             </a>
 
-            <a href="#" class="social-media__link">
+            <a
+              href="http://T.me/SUcommunity"
+              target="_blank"
+              class="social-media__link"
+            >
               <img src="images/Telegram icon.svg" alt="telegram icon" />
             </a>
 
@@ -159,6 +168,7 @@
     </footer>
     <!-- Footer end here -->
 
-    <script src="src/js/index.js"></script>
+    <script src="./src/js/index.js" type="module"></script>
+    <script src="js/bundle.js"></script>
   </body>
 </html>

@@ -173,6 +173,8 @@
 }
 
 .menu__active {
-  display: block;
-  @include delayElement();
+  @include respond(tab-port) {
+    display: block;
+    @include delayElement();
+  }
 }
