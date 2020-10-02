@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const form = document.querySelector(".form");
 const userInputs = document.querySelectorAll("input");
 
@@ -32,11 +34,10 @@ export const collectUserForm = () => {
       });
     }
 
-    // console.log(userData);
+    axios.post("localhost/5000/createTable");
 
     // Pass user's data for validation
-    validateUserInput(userData);
-    sendUserForm(userData);
+    // validateUserInput(userData);
   });
 };
 
