@@ -3,6 +3,15 @@ import axios from "axios";
 const form = document.querySelector(".form");
 const userInputs = document.querySelectorAll("input");
 
+// Regular expressions for form input field validation
+const letters = /^[A-Za-z]+$/;
+var phoneNum = (num) => /^\d{11}$/.test(num);
+const isEmail = (email) => {
+  return /^(([^<>()\[\]\\.,;:\$@"]+(\.[^<>()\[\]\\.,;:\$@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
+};
+
 export const collectUserForm = () => {
   const userData = {};
   // Checks if there is a form on the current page and adds form event listener
@@ -34,29 +43,48 @@ export const collectUserForm = () => {
       });
     }
 
-    axios.post("localhost/5000/createTable");
-
     // Pass user's data for validation
-    // validateUserInput(userData);
+    validateUserInput(userData);
   });
 };
 
-// const whitespace = /\s/;
+const setErrorFor = (input, message) => {
+  const formControl = input.parentElement;
+  const small = formControl.querySelector("small");
 
-// const validateUserInput = ({ fullname, email, phone }) => {
-//   if (fullname == whitespace) {
-//     console.log("Fullname can't be blank");
-//     setErrorFor(document.getElementById("fullname"), "Fullname can't be blank");
-//   }
-// };
+  //Add error message
+  small.textContent = message;
 
-// const setErrorFor = (input, message) => {
-//   const formControl = input.parentElement;
-//   const small = formControl.querySelector("small");
+  //Add Class
+  formControl.classList = "form-control error";
+};
 
-//   //Add error message
-//   small.textContent = message;
+const validateUserInput = ({ fullname, email, phone }) => {
+  if (fullname == false) {
+    console.log("Fullname can't be blank");
+    setErrorFor(document.getElementById("fullname"), "Fullname can't be blank");
+  } else if (!letters.test(fullname)) {
+    setErrorFor(
+      document.getElementById("fullname"),
+      "Fullname should only be alphabets"
+    );
+  }
+  // else {
+  //   setSuccessFor(fullname);
+  // }
 
-//   //Add Class
-//   formControl.classList = "form-control error";
-// };
+  if (email == false) {
+    alert("Email can't be empty");
+    setErrorFor(document.getElementById("email"), "Email can't be empty");
+  } else if (!isEmail(email)) {
+    setErrorFor(document.getElementById("email"), "Please enter a invalid");
+  }
+  // else {
+  //   setErrorFor(emails)
+  // }
+
+  if (!phoneNum(phone)) {
+    alert("Please enter a valid Phone number");
+    setErrorFor(document.getElementById("phone"), "Please enter a valid Phone");
+  }
+};
