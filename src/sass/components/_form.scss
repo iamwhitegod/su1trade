@@ -76,6 +76,10 @@
       }
     }
 
+    &__input::-webkit-inner-spin-button {
+      display: none;
+    }
+
     &__input:focus ~ .form-group__label {
       font-size: 1.5rem;
       top: -22%;

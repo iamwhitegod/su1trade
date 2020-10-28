@@ -6,3 +6,6 @@ Email-password ^Y&yw3E4db0S
 
 
 /usr/bin/mysql -h 127.0.0.1 -p -u cpuser_dbuser cpuser_dbname -P 3306
+
+
+SG.Ht4Uy1ATRo2dCJSPQaxcPw.atlRztFdSrMuy7cTcGSu6SDGNPum2SPRcqtEyCVocEc
