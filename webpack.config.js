@@ -32,6 +32,11 @@ module.exports = {
       template: "./about.html",
     }),
 
+    new HtmlWebpackPlugin({
+      filename: "tutorial.html",
+      template: "./tutorial.html",
+    }),
+
     new CleanWebpackPlugin(),
   ],
   module: {
