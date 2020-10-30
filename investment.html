@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SU1Trade Invest</title>
+    <title>Su1trade | Invest</title>
     <link href="css/main.css" type="text/css" rel="stylesheet" />
 
     <!-- Fav Icons -->
@@ -54,7 +54,7 @@
                   <a href="#" class="nav-menu__link">BTC/NGN 4,952,998</a>
                 </li>
                 <li class="nav-menu__item">
-                  <a href="#" class="nav-menu__link">About Us</a>
+                  <a href="./about.html" class="nav-menu__link">About Us</a>
                 </li>
                 <li class="nav-menu__item">
                   <a href="#" class="nav-menu__link">Exchange</a>
@@ -72,13 +72,15 @@
       </div>
       <!-- top navigation ends here -->
 
-      <ul class="mobile-nav-menu__list">
-        <a href="#" class="mobile-nav-menu__link">BTC/NGN 4,952,998</a>
-        <a href="./about.html" class="mobile-nav-menu__link">About Us</a>
-        <a href="#" class="mobile-nav-menu__link">Exchange</a>
-        <a href="#" class="mobile-nav-menu__link">Sign in</a>
-        <a href="./signup.html" class="mobile-nav-menu__link">Sign up</a>
-      </ul>
+      <div class="mobile-menu">
+        <ul class="mobile-nav-menu__list">
+          <a href="#" class="mobile-nav-menu__link">BTC/NGN 4,952,998</a>
+          <a href="./about.html" class="mobile-nav-menu__link">About Us</a>
+          <a href="#" class="mobile-nav-menu__link">Exchange</a>
+          <a href="#" class="mobile-nav-menu__link">Sign in</a>
+          <a href="./signup.html" class="mobile-nav-menu__link">Sign up</a>
+        </ul>
+      </div>
 
       <!-- header-in-text-box start  here-->
       <div class="header-in__text-box">
@@ -91,6 +93,7 @@
           <div class="col-1-of-2">
             <form
               class="form form--mrgzero bg-white absolute"
+              id="registration"
               autocomplete="off"
             >
               <div class="form__caption align-left">
@@ -495,6 +498,38 @@
       </div>
     </section>
     <!-- telegram community ends here -->
+
+    <!-- modal starts here -->
+
+    <div class="container backdrop">
+      <div class="modal__container">
+        <div class="modal__content">
+          <span><img src="images/close-dark.svg" alt="close dark icon" /></span>
+          <h2 class="secondary-heading">This is a modal heading 2</h2>
+          <p class="secondary-desc">This is a modal</p>
+          <button class="btn">Modal button</button>
+        </div>
+      </div>
+
+      <div class="modal__popup popup-dark">
+        <div class="modal__content">
+          <span><img src="images/close.svg" alt="close dark icon" /></span>
+          <h2 class="secondary-heading">Congrats!</h2>
+          <p class="secondary-desc">
+            Your Registration was successful. We will contact you on how to
+            begin investment with our partner broker Deriv.
+          </p>
+          <div class="modal__img">
+            <img src="images/logo.png" alt="Deriv" />
+          </div>
+          <p class="secondary-desc">Click button to learn more</p>
+          <button class="btn">
+            <a href="./tutorial.html" target="_blank"> Learn More</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- modal ends here -->
 
     <!-- Footer starts here -->
     <footer class="footer">

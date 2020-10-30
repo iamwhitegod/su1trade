@@ -1,0 +1,14 @@
+.about-us {
+  max-width: 70rem;
+  margin: 0 auto;
+
+  &__section {
+    margin-top: 2.4rem;
+  }
+
+  &__list {
+    p {
+      margin-bottom: 2.4rem;
+    }
+  }
+}

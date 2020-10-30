@@ -1,6 +1,8 @@
 const slideCols = document.querySelectorAll(".slide-up");
 const mbMenu = document.querySelector(".mobile-nav-menu");
 const questionPanel = document.querySelectorAll(".FAQs__question");
+const modal = document.querySelector(".modal__container");
+const modalPopup = document.querySelector(".modal__popup");
 
 /*This function forces a checklslide
  * function to wait for 20ms before running again
@@ -55,10 +57,9 @@ export const clickEvent = () => {
       .querySelector(".mobile-nav-menu__list")
       .classList.toggle("menu__active");
 
-    // if(mbMenu.classList )
-    // // const mvlist = ;
-    // // console.log(mvlist);
-    // // mvlist.style.display = "block";
+    if (document.querySelector(".mobile-menu")) {
+      document.querySelector(".mobile-menu").classList.toggle("active");
+    }
   });
 
   questionPanel.forEach((question) => {
@@ -68,3 +69,45 @@ export const clickEvent = () => {
     });
   });
 };
+
+/**********************************
+ * modal
+ **************** */
+
+if (modal) {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal.querySelector("img")) {
+      modal.classList.remove("open-modal");
+    }
+
+    if (e.target == modal.querySelector("button")) {
+      modal.classList.remove("open-modal");
+    }
+  });
+}
+
+if (modalPopup) {
+  modalPopup.addEventListener("click", (e) => {
+    if (e.target === modalPopup.querySelector("img")) {
+      modalPopup.classList.remove("active");
+    }
+
+    if (e.target == modalPopup.querySelector("button")) {
+      modalPopup.classList.remove("active");
+    }
+  });
+}
+
+export function openModal(trigger) {
+  trigger.addEventListener("click", () => {
+    if (modal) {
+      modal.classList.add("open-modal");
+    }
+  });
+}
+
+export function openModalPopup() {
+  if (modalPopup) {
+    modalPopup.classList.add("active");
+  }
+}

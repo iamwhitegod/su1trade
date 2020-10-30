@@ -67,6 +67,10 @@
   color: color(grey);
 }
 
+.color-grey {
+  color: color(grey);
+}
+
 // .orwhite {
 //   color: color(very-whyte);
 // }
@@ -75,6 +79,16 @@
 
 .bg-white {
   background-color: color(very-whyte);
+}
+
+.no-bg {
+  .img-overlay {
+    display: none;
+  }
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
 }
 
 // typography utility classes
@@ -107,4 +121,59 @@
     margin-top: 4rem;
     padding: 0;
   }
+}
+
+$margin: 8px;
+$padding: 8px;
+
+@for $i from 1 through 12 {
+  .uti-mb-#{$i} {
+    margin-bottom: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-mt-#{$i} {
+    margin-top: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-mr-#{$i} {
+    margin-right: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-ml-#{$i} {
+    margin-left: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-margin-#{$i} {
+    margin: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-pdin-#{$i} {
+    padding: $padding * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-pdtb-#{$i} {
+    padding: #{$padding * $i} 0;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-pdlr-#{$i} {
+    padding: 0 #{$padding * $i};
+  }
+}
+
+.mobile-menu.active {
+  height: 100vh;
 }

@@ -26,6 +26,8 @@ body {
   font-weight: 300;
   color: color(grey);
   line-height: 1.3;
+  background-color: color(color-dark-white);
+  overflow-x: hidden;
 }
 
 img {
@@ -43,5 +45,3 @@ section {
     padding: 0 3rem;
   }
 }
-
-
