@@ -86,6 +86,10 @@
     display: none;
   }
 
+  @include respond(port-height) {
+    height: auto;
+  }
+
   @include respond(tab-land) {
     padding: 0;
   }
