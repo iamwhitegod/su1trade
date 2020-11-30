@@ -91,6 +91,19 @@
 
         <div class="form-group">
           <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder=" "
+            autocomplete="off"
+            class="form-group__input"
+            required
+          />
+          <label for="email" class="form-group__label">Email</label>
+        </div>
+
+        <div class="form-group">
+          <input
             type="number"
             name="phone"
             id="phone"
@@ -104,26 +117,50 @@
 
         <div class="form-group">
           <input
-            type="email"
-            name="email"
-            id="email"
+            type="password"
+            name="password"
+            id="password"
             placeholder=" "
             autocomplete="off"
             class="form-group__input"
             required
           />
-          <label for="email" class="form-group__label">Email</label>
+          <label for="password" class="form-group__label">Password</label>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            placeholder=" "
+            autocomplete="off"
+            class="form-group__input"
+            required
+          />
+          <label for="confirm-password" class="form-group__label"
+            >Confirm Password</label
+          >
         </div>
 
         <div class="form-group d-flex">
           <input type="checkbox" class="form-group__checkbox" />
           <p class="secondary-desc">
-            I have read and agree to the Terms of Service.
-            <span class="accent">SU1Trade’s Terms</span>
+            I have read and agree to the terms of service by
+            <span class="accent">Su1trade Inc.</span>
           </p>
         </div>
 
-        <button type="submit" class="btn btn--full">Sign Up</button>
+        <button type="submit" class="btn btn--full mb2">Sign Up</button>
+
+        <div class="form-group d-flex">
+          <p class="secondary-desc">
+            I already have an account?
+            <span class="accent"
+              ><a href="./signin.html" class="accent"> Signin</a></span
+            >
+          </p>
+        </div>
       </form>
     </section>
 

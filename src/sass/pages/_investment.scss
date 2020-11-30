@@ -186,7 +186,7 @@
     text-align: center;
     padding: 1.8rem 1rem;
     margin-top: 10rem;
-    border-radius: 1rem;
+    // border-radius: 1rem;
     transition: all 0.1s;
 
     &:hover {
@@ -260,7 +260,7 @@
   &__question {
     display: block;
     background-color: color(very-light-grey);
-    border-radius: 0.3rem;
+    // border-radius: 0.3rem;
     font-weight: 500;
     padding: 0.8rem 2rem;
     color: color(grey);
@@ -283,6 +283,7 @@
     padding: 2rem;
 
     background-color: color(very-whyte);
+    // border-radius: 0.3rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;

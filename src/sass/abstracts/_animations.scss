@@ -17,6 +17,7 @@
   }
 }
 
+// updown animation animation
 @keyframes Updown {
   0% {
     transform: translateY(0);
@@ -27,6 +28,19 @@
   }
 
   100% {
+    transform: translateY(0);
+  }
+}
+
+// Fade in animation @keyframes delay
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }

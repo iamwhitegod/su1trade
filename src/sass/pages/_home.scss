@@ -33,12 +33,14 @@
     &__text {
       grid-column: 1 / 8;
       grid-row: 1 / 2;
-      margin-top: 4rem;
+      margin-top: 1rem;
+      margin-bottom: 10rem;
 
       @include respond(tab-port) {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
         margin-top: -3rem;
+        margin-bottom: 0;
         text-align: center;
       }
 
@@ -50,7 +52,7 @@
     &__img {
       grid-column: 6 / -1;
       grid-row: 1 / 2;
-      margin-top: 4rem;
+      margin-top: 2rem;
       @include Updown();
 
       @include respond(tab-port) {
@@ -90,7 +92,7 @@
   }
 
   &__data {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     h3 {
       margin-bottom: 0.5rem;
     }
@@ -99,7 +101,7 @@
 
 .fin-freedom {
   &-section {
-    padding: 0 0 4rem;
+    padding: 8rem 0 4rem;
   }
 
   &__caption {
@@ -108,69 +110,42 @@
     text-align: center;
   }
 
-  &__img {
-    padding: 0 10rem 5rem;
+  &__details {
+    margin: 25% 0 0 20rem;
 
     @include respond(tab-port) {
-      padding: 0 14rem 0;
-    }
-
-    @include respond(phone) {
-      padding: 0 10rem 0;
-      margin-left: -3rem;
-    }
-
-    @include respond(sm-phone) {
-      padding: 0 6rem 0;
-    }
-
-    @include respond(xs-phone) {
-      padding: 0 4rem 0;
-    }
-  }
-
-  &__details {
-    display: flex;
-
-    @include respond(phone) {
-      flex-direction: column;
+      margin: 0;
       text-align: center;
     }
 
-    &:first-child {
-      margin-top: 11rem;
-
-      @include respond(tab-port) {
-        margin-top: 8rem;
-      }
-
-      @include respond(phone) {
-        margin-top: 6rem;
-      }
-    }
-  }
-
-  &__details-desc {
-    margin-bottom: 5rem;
     h3 {
       margin-bottom: 1rem;
     }
-  }
 
-  &__icon {
-    flex: 0 0 8rem;
-    margin-right: 2rem;
-
-    @include respond(phone) {
-      flex: 0 0 4rem;
-      margin-right: 0;
+    p {
       margin-bottom: 2rem;
     }
+  }
+
+  &__details.flip {
+    margin: 25% 23rem 0 0;
+
+    @include respond(tab-port) {
+      margin: 0 auto 3rem;
+    }
+  }
+
+  &__img {
+    max-width: 46rem;
+    max-height: 50rem;
+    margin: 0 auto;
   }
 }
 
 .crypto {
-  text-align: center;
+  @include respond(tab-port) {
+    text-align: center;
+  }
 
   &-section {
     background-color: color(very-black);
@@ -180,15 +155,23 @@
   }
 
   &__caption {
-    max-width: 60rem;
-    margin: 10rem auto;
-    text-align: center;
+    max-width: 65rem;
+    margin: 18rem 0 10rem;
+
+    @include respond(tab-port) {
+      text-align: center;
+      margin: 18rem auto 10rem;
+    }
   }
 
   &__img {
     width: 7.5rem;
     height: 7.5rem;
-    margin: 0 auto 2rem;
+    margin: 0 0 3rem;
+
+    @include respond(tab-port) {
+      margin: 0 auto 3rem;
+    }
 
     img {
       height: 100%;
@@ -196,46 +179,53 @@
   }
 
   &__details {
-    margin-bottom: 10rem;
+    margin-bottom: 18rem;
 
     @include respond(tab-port) {
       margin-bottom: 4rem;
     }
 
     h3 {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     p {
       color: color(very-whyte);
+      line-height: 150.8%;
     }
   }
 }
 
 .why-choose-su1trade {
-  text-align: center;
+  @include respond(tab-port) {
+    text-align: center;
+  }
 
   &__caption {
     max-width: 60rem;
-    margin: 10rem auto;
+    margin: 18rem auto 10rem;
     text-align: center;
   }
 
   &__img {
     width: 7.5rem;
     height: 7.5rem;
-    margin: 0 auto 2rem;
+    margin: 0 0 3rem;
+
+    @include respond(tab-port) {
+      margin: 0 auto 3rem;
+    }
   }
 
   &__details {
-    margin-bottom: 10rem;
+    margin-bottom: 18rem;
 
     @include respond(tab-port) {
       margin-bottom: 4rem;
     }
 
     h3 {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
   }
 }

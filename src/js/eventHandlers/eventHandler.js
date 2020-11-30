@@ -3,6 +3,7 @@ const mbMenu = document.querySelector(".mobile-nav-menu");
 const questionPanel = document.querySelectorAll(".FAQs__question");
 const modal = document.querySelector(".modal__container");
 const modalPopup = document.querySelector(".modal__popup");
+const modalOverlay = document.querySelector(".modal__overlay");
 
 /*This function forces a checklslide
  * function to wait for 20ms before running again
@@ -90,10 +91,12 @@ if (modalPopup) {
   modalPopup.addEventListener("click", (e) => {
     if (e.target === modalPopup.querySelector("img")) {
       modalPopup.classList.remove("active");
+      modalOverlay.classList.remove("active");
     }
 
     if (e.target == modalPopup.querySelector("button")) {
       modalPopup.classList.remove("active");
+      modalOverlay.classList.remove("active");
     }
   });
 }
@@ -109,5 +112,9 @@ export function openModal(trigger) {
 export function openModalPopup() {
   if (modalPopup) {
     modalPopup.classList.add("active");
+    modalOverlay.classList.add("active");
+    console.log(modalOverlay);
   }
 }
+
+openModalPopup();

@@ -24,6 +24,10 @@
   margin-bottom: 4rem !important;
 }
 
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
 // Padding utility classes
 .pd1 {
   padding: 1rem;
@@ -53,6 +57,13 @@
   }
 }
 
+.column-reverse {
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 .no-flex {
   display: block;
 }
@@ -60,7 +71,7 @@
 // Color utility classes
 
 .accent {
-  color: color(dark-yellow) !important;
+  color: color(very-light-yellow) !important;
 }
 
 .col-grey {

@@ -3,12 +3,9 @@
   color: color(very-whyte);
   margin-bottom: 2rem;
 
-  @include respond(tab-port) {
-    margin-bottom: 3rem;
-  }
-
   @include respond(phone) {
     font-size: mvfonts(mvprimary-heading);
+    margin-bottom: 3rem;
   }
 
   @include respond(sm-phone) {
@@ -19,11 +16,18 @@
   @include respond(xs-phone) {
     font-size: 2.6rem;
   }
+
+  &.mb-6 {
+    @include respond(tab-port) {
+      margin-bottom: -6rem;
+    }
+  }
 }
 
 .secondary-heading {
   display: inline-block;
   font-size: font(secondary-heading);
+  font-weight: 400;
   @include gradient(45deg);
   background-clip: text;
   color: transparent;
@@ -31,6 +35,7 @@
 
 .tertiary-heading {
   font-size: font(tertiary-heading);
+  font-weight: 400;
 
   display: inline-block;
   @include gradient(45deg);

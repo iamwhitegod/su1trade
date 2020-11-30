@@ -23,6 +23,21 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
+      filename: "signin.html",
+      template: "./signin.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "forgotten.html",
+      template: "./forgotten.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "resetpassword.html",
+      template: "./resetpassword.html",
+    }),
+
+    new HtmlWebpackPlugin({
       filename: "investment.html",
       template: "./investment.html",
     }),
@@ -35,6 +50,34 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "tutorial.html",
       template: "./tutorial.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "ecommerce.html",
+      template: "./ecommerce.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "exchange.html",
+      template: "./exchange.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "partners.html",
+      template: "./partners.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "privacy.html",
+      template: "./privacy.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "license.html",
+      template: "./license.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "terms.html",
+      template: "./terms.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "news.html",
+      template: "./news.html",
     }),
 
     new CleanWebpackPlugin(),

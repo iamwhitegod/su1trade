@@ -29,7 +29,8 @@
   <body>
     <!-- header starts here -->
     <header class="header">
-      <div class="img-overlay">&nbsp;</div>
+      <!-- <div class="img-overlay">&nbsp;</div> -->
+      <canvas id="canvas"></canvas>
       <!-- top navigation starts here -->
       <div class="top-navigation">
         <div class="row no-flex">
@@ -52,7 +53,7 @@
             <nav class="nav-menu">
               <ul class="nav-menu__list">
                 <li class="nav-menu__item">
-                  <a href="#" class="nav-menu__link">BTC/NGN 4,952,998</a>
+                  <a href="#" class="nav-menu__link">BTC/NGN 19,952,998</a>
                 </li>
                 <li class="nav-menu__item">
                   <a href="./about.html" class="nav-menu__link">About Us</a>
@@ -74,7 +75,7 @@
       <!-- top navigation ends here -->
 
       <ul class="mobile-nav-menu__list">
-        <a href="#" class="mobile-nav-menu__link">BTC/NGN 4,952,998</a>
+        <a href="#" class="mobile-nav-menu__link">BTC/NGN 19,952,998</a>
         <a href="./about.html" class="mobile-nav-menu__link">About Us</a>
         <a href="#" class="mobile-nav-menu__link">Exchange</a>
         <a href="#" class="mobile-nav-menu__link">Sign in</a>
@@ -91,7 +92,7 @@
             <p class="primary-desc mw50 mb6">
               Invest and get minimum of 28% or more monthly with SU1Trade.
             </p>
-            <a href="./investment.html" class="btn">Invest Now</a>
+            <a href="#fin-freedom" class="btn">Invest Now</a>
           </div>
           <div class="hero-box__img">
             <img src="images/illustration.svg" alt="illustration" />
@@ -107,7 +108,7 @@
         <div class="col-1-of-3 slide-up">
           <div class="empirical-data">
             <div class="empirical-data__icon">
-              <img src="images/Costumer icon.svg" alt="customer icon" />
+              <img src="images/person-group-icon.svg" alt="customer icon" />
             </div>
 
             <div class="empirical-data__data">
@@ -119,7 +120,7 @@
         <div class="col-1-of-3 slide-up">
           <div class="empirical-data">
             <div class="empirical-data__icon">
-              <img src="images/Wallet Icon.svg" alt="wallet icon" />
+              <img src="images/wallet-icon.svg" alt="wallet icon" />
             </div>
 
             <div class="empirical-data__data">
@@ -131,7 +132,7 @@
         <div class="col-1-of-3 slide-up">
           <div class="empirical-data">
             <div class="empirical-data__icon">
-              <img src="images/Investment icon.svg" alt="Investment icon" />
+              <img src="images/stats-icon.svg" alt="Investment icon" />
             </div>
 
             <div class="empirical-data__data">
@@ -148,91 +149,107 @@
     <section class="fin-freedom-section">
       <div class="fin-freedom__caption">
         <h2 class="secondary-heading">
-          At SU1Trade your Financial Freedom is our goal
+          At su1trade your financial freedom is our goal
         </h2>
       </div>
-      <div class="row">
-        <div class="fin-freedom">
-          <div class="col-2-of-4">
-            <div class="fin-freedom__img slide-up">
-              <img src="images/SU1Trade-mockup 1.png" alt="SU1Trade mockup" />
+
+      <div class="fin-freedom" id="fin-freedom">
+        <!-- fin freedom row starts here -->
+        <div class="row slide-up">
+          <div class="col-1-of-2">
+            <div class="fin-freedom__details">
+              <h3 class="tertiary-heading">Sign up for Investment</h3>
+              <p class="secondary-desc">
+                Sign up for investment and get 28% or more on your capital
+                monthly with your investment 100% secured with you.
+              </p>
+
+              <a href="./investment.html" class="btn">Learn more</a>
             </div>
           </div>
-          <div class="col-2-of-4 slide-up">
-            <div class="fin-freedom__details">
-              <div class="fin-freedom__icon">
-                <img src="images/User icon.svg" alt="user icon" />
-              </div>
-
-              <div class="fin-freedom__details-desc">
-                <h3 class="tertiary-heading">Sign up for Investment</h3>
-                <p class="secondary-desc">
-                  Invest and get 28% or more on your investment monthly with
-                  your investment 100% secured with you.
-                </p>
-
-                <a href="#" class="inline-link">Learn more</a>
-              </div>
-            </div>
-
-            <div class="fin-freedom__details">
-              <div class="fin-freedom__icon">
-                <img src="images/Euro icon.svg" alt="euro icon" />
-              </div>
-
-              <div class="fin-freedom__details-desc">
-                <h3 class="tertiary-heading">E-currency Exchange</h3>
-                <p class="secondary-desc">
-                  People all over the world use Bitcoin, perfect money, etc. to
-                  send money to friends and family or buy things online.
-                </p>
-
-                <a href="#" class="inline-link">Learn more</a>
-              </div>
-            </div>
-
-            <div class="fin-freedom__details">
-              <div class="fin-freedom__icon">
-                <img
-                  src="images/Shopping bag icon.svg"
-                  alt="Shopping bag icon"
-                />
-              </div>
-
-              <div class="fin-freedom__details-desc">
-                <h3 class="tertiary-heading">Invest in E-Commerce</h3>
-                <p class="secondary-desc">
-                  Own your own online store and earn salary for life.
-                </p>
-                <a href="#" class="inline-link">Learn more</a>
-              </div>
+          <div class="col-1-of-2">
+            <div class="fin-freedom__img">
+              <img
+                src="images/fin-investment-img.png"
+                alt="Coins in a glass jar photo"
+              />
             </div>
           </div>
         </div>
+        <!-- fin freedom row starts here -->
+
+        <!-- fin freedom row starts here -->
+        <div class="row column-reverse slide-up">
+          <div class="col-1-of-2">
+            <div class="fin-freedom__img flip">
+              <img
+                src="images/fin-learn-forex-img.png"
+                alt="Person Trading Forex photo"
+              />
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="fin-freedom__details flip">
+              <h3 class="tertiary-heading">Learn Forex Trading</h3>
+              <p class="secondary-desc">
+                Become a professional trader in the global financial market
+                today at Su1trade.
+              </p>
+
+              <a href="./investment.html" class="btn">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <!-- fin freedom row starts here -->
+
+        <!-- fin freedom row starts here -->
+        <div class="row slide-up">
+          <div class="col-1-of-2">
+            <div class="fin-freedom__details">
+              <h3 class="tertiary-heading">Learn E-Commerce</h3>
+              <p class="secondary-desc">
+                Know how to buy and sell anything online.
+              </p>
+              <a href="./investment.html" class="btn">Learn more</a>
+            </div>
+          </div>
+
+          <div class="col-1-of-2">
+            <div class="fin-freedom__img">
+              <img
+                src="images/fin-learn-e-commerce-img.png"
+                alt="Learn e-commerce photo"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- fin freedom row starts here -->
       </div>
     </section>
     <!-- Fin Freedom end here -->
 
     <!-- Crypto start here -->
     <section class="crypto-section">
-      <div class="crypto__caption">
-        <h2 class="secondary-heading">
-          Reasons why you should Invest in online business like Forex Investment
-          and E-commerce Investment.
-        </h2>
+      <div class="row mb0">
+        <div class="crypto__caption">
+          <h2 class="secondary-heading">
+            Reasons why people should do online business like Forex Investment,
+            Trading and E-commerce.
+          </h2>
+        </div>
       </div>
 
       <div class="row">
         <div class="col-1-of-3 slide-up">
           <div class="crypto">
             <div class="crypto__img">
-              <img src="images/lock icon.svg" alt="100% Security" />
+              <img src="images/security-icon.svg" alt="100% Security" />
             </div>
 
             <div class="crypto__details">
               <h3 class="tertiary-heading">100% Security</h3>
               <p class="secondary-desc">
-                Investing in forex or E-Commerce is the best business online.
+                Investing in forex or e-commerce is the best business online.
                 You can monitor the progress of your investment and your
                 investment is not in one economy and your capital is 100% secure
                 with you.
@@ -244,7 +261,7 @@
           <div class="crypto">
             <div class="crypto__img">
               <img
-                src="images/Cloud-drizille icon.svg"
+                src="images/finanical-freedom-icon.svg"
                 alt="Financial Freedom"
               />
             </div>
@@ -263,7 +280,7 @@
           <div class="crypto">
             <div class="crypto__img">
               <img
-                src="images/shape-polygon icon.svg"
+                src="images/make-money-anywhere-icon.svg"
                 alt="Shape polygon icon"
               />
             </div>
@@ -285,7 +302,7 @@
     <section class="why-choose-su1trade">
       <div class="why-choose-su1trade__caption">
         <h2 class="secondary-heading">
-          Why are people from all over the World choose SU1Trade?
+          Why are people from all over the world choose su1trade?
         </h2>
       </div>
 
@@ -293,13 +310,13 @@
         <div class="col-1-of-4 slide-up">
           <div class="why-choose-su1trade">
             <div class="why-choose-su1trade__img">
-              <img src="images/Reliable icon.svg" alt="Reliable icon" />
+              <img src="images/reliable-icon.svg" alt="Reliable icon" />
             </div>
 
             <div class="why-choose-su1trade__details">
               <h3 class="tertiary-heading">Reliable</h3>
               <p class="secondary-desc">
-                SU1trade is reliable as it is the only investment where you have
+                Su1trade is reliable as it is the only investment where you have
                 your money in your possession and its making profit for you.
               </p>
             </div>
@@ -309,7 +326,7 @@
           <div class="why-choose-su1trade">
             <div class="why-choose-su1trade__img">
               <img
-                src="images/Highly Profitable icon.svg"
+                src="images/profitable-icon.svg"
                 alt="Highly profitable icon"
               />
             </div>
@@ -317,8 +334,8 @@
             <div class="why-choose-su1trade__details">
               <h3 class="tertiary-heading">Highly profitable</h3>
               <p class="secondary-desc">
-                SU1trade is highly profitable with minimum of 28% or more on
-                forex investment and high profit salary for life on E-commerce.
+                Su1trade is highly profitable with minimum of 28% or more on
+                forex investment and high profit salary for life on e-commerce.
               </p>
             </div>
           </div>
@@ -327,7 +344,7 @@
           <div class="why-choose-su1trade">
             <div class="why-choose-su1trade__img">
               <img
-                src="images/Global Expetise icon.svg"
+                src="images/global-expertise-icon.svg"
                 alt="global expertise icon"
               />
             </div>
@@ -335,8 +352,8 @@
             <div class="why-choose-su1trade__details">
               <h3 class="tertiary-heading">Global expertise</h3>
               <p class="secondary-desc">
-                SU1trade global expertise cuts across financial investment
-                management, E-commerce, E-currency trading and management.
+                Su1trade global expertise cuts across financial investment,
+                e-commerce, e-currency trading and management.
               </p>
             </div>
           </div>
@@ -344,13 +361,13 @@
         <div class="col-1-of-4 slide-up">
           <div class="why-choose-su1trade">
             <div class="why-choose-su1trade__img">
-              <img src="images/Secure icon.svg" alt="Secure icon" />
+              <img src="images/finger-print-icon.svg" alt="Secure icon" />
             </div>
 
             <div class="why-choose-su1trade__details">
-              <h3 class="tertiary-heading">SU1Trade is Secure</h3>
+              <h3 class="tertiary-heading">Su1trade is secure</h3>
               <p class="secondary-desc">
-                SU1trade platforms is where you can monitor the progress of your
+                Su1trade platforms is where you can monitor the progress of your
                 investment, and your capital is 100% secure with you.
               </p>
             </div>
@@ -456,16 +473,16 @@
           <div class="footer__nav">
             <ul class="footer__list">
               <a href="#" class="footer__link">Terms of use </a>
-              <a href="#" class="footer__link">Legal notices </a>
+              <a href="#" class="footer__link">Legal License </a>
               <a href="#" class="footer__link">Privacy policy </a>
               <a href="#" class="footer__link">Security </a>
             </ul>
 
             <ul class="footer__list">
-              <a href="#" class="footer__link"> Company </a>
-              <a href="#" class="footer__link">Careers</a>
-              <a href="#" class="footer__link">Press </a>
-              <a href="#" class="footer__link">Press Kit </a>
+              <a href="#" class="footer__link"> Partners </a>
+              <a href="#" class="footer__link">About Us</a>
+              <a href="#" class="footer__link">News </a>
+              <!-- <a href="#" class="footer__link">Press Kit </a> -->
             </ul>
           </div>
         </div>
