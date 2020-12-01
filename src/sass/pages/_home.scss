@@ -1,72 +1,7 @@
-.hero {
-  &-container {
-    max-width: gap(grid-width);
-    margin: 5rem auto 0;
-    position: relative;
-    z-index: 0;
-
-    @include respond(port-height) {
-      padding: 3rem;
-      margin: 0 auto;
-      position: absolute;
-      top: 46%;
-      left: 0%;
-      transform: translateY(-50%);
-    }
-  }
-
-  &-box {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(min-content, 1fr));
-    grid-gap: 2rem;
-    position: relative;
-    z-index: 100;
-
-    @include respond(tab-port) {
-      grid-template-rows: repeat(2, min-content);
-    }
-
-    @include respond(xs-phone) {
-      font-size: 2.6rem;
-    }
-
-    &__text {
-      grid-column: 1 / 8;
-      grid-row: 1 / 2;
-      margin-top: 1rem;
-      margin-bottom: 10rem;
-
-      @include respond(tab-port) {
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-        margin-top: -3rem;
-        margin-bottom: 0;
-        text-align: center;
-      }
-
-      @include respond(xs-phone) {
-        margin-top: -2rem;
-      }
-    }
-
-    &__img {
-      grid-column: 6 / -1;
-      grid-row: 1 / 2;
-      margin-top: 2rem;
-      @include Updown();
-
-      @include respond(tab-port) {
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
-        margin-top: 1rem;
-      }
-    }
-  }
-}
-
 .empirical-data {
   &-section {
-    padding: 10rem 0;
+    padding: 5rem 0;
+    background-color: color(very-black);
 
     @include respond(tab-land) {
       padding: 10rem 3rem;
@@ -96,12 +31,15 @@
     h3 {
       margin-bottom: 0.5rem;
     }
+    p {
+      color: color(very-whyte);
+    }
   }
 }
 
 .fin-freedom {
   &-section {
-    padding: 8rem 0 4rem;
+    padding: 10rem 0 4rem;
   }
 
   &__caption {

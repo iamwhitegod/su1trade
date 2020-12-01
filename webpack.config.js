@@ -28,8 +28,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      filename: "forgotten.html",
-      template: "./forgotten.html",
+      filename: "verify.html",
+      template: "./verify.html",
     }),
 
     new HtmlWebpackPlugin({
@@ -51,33 +51,55 @@ module.exports = {
       filename: "tutorial.html",
       template: "./tutorial.html",
     }),
+
     new HtmlWebpackPlugin({
       filename: "ecommerce.html",
       template: "./ecommerce.html",
     }),
+
     new HtmlWebpackPlugin({
       filename: "exchange.html",
       template: "./exchange.html",
     }),
+
     new HtmlWebpackPlugin({
       filename: "partners.html",
       template: "./partners.html",
     }),
+
     new HtmlWebpackPlugin({
       filename: "privacy.html",
       template: "./privacy.html",
     }),
+
     new HtmlWebpackPlugin({
       filename: "license.html",
       template: "./license.html",
     }),
+
     new HtmlWebpackPlugin({
       filename: "terms.html",
       template: "./terms.html",
     }),
+
     new HtmlWebpackPlugin({
       filename: "news.html",
       template: "./news.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "email-verify-email.html",
+      template: "./email-verify-email.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "email-e-commerce.html",
+      template: "./email-e-commerce.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "email-Oauth.html",
+      template: "./email-Oauth.html",
     }),
 
     new CleanWebpackPlugin(),
