@@ -180,3 +180,35 @@
     @include delayElement();
   }
 }
+
+.secondary-nav {
+  background-color: color(very-light-yellow);
+  @include respond(tab-port) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    padding: 2rem 0;
+  }
+
+  &__item {
+    list-style: none;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: color(very-black);
+    }
+
+    &:hover .secondary-nav__link {
+      color: color(very-whyte);
+    }
+  }
+
+  &__link {
+    font-size: font(inline-link);
+    text-decoration: none;
+    color: color(very-black);
+  }
+}

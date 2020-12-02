@@ -19,7 +19,11 @@
 
   &.mb-6 {
     @include respond(tab-port) {
-      margin-bottom: -6rem;
+      margin-bottom: -2rem;
+    }
+
+    @include respond(sm-phone) {
+      margin-bottom: 0;
     }
   }
 }

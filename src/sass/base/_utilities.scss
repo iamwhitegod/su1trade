@@ -192,3 +192,18 @@ $padding: 8px;
 .mobile-menu.active {
   height: 100vh;
 }
+
+.disabled-bg {
+  border-right: 2px solid color(very-black);
+  margin-right: 3rem;
+  &:hover {
+    background: none !important;
+  }
+
+  &:hover .secondary-nav__link {
+    color: color(very-black) !important;
+  }
+
+  background-color: none !important;
+  color: none !important;
+}
