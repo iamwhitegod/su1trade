@@ -6,6 +6,10 @@
 }
 
 // Margin utilty classes
+.mb14 {
+  margin-bottom: 14rem !important;
+}
+
 .mb6 {
   @include respond(tab-port) {
     margin-bottom: 6rem;
@@ -55,6 +59,13 @@
   @include respond(phone) {
     align-items: flex-start;
   }
+}
+
+.d-flex--2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .column-reverse {

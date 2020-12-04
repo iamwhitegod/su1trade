@@ -125,6 +125,7 @@
 
 .our-location {
   @extend %cp-layout-container;
+  padding: 0 0 10rem;
 
   // @include respond(tab-port) {
   //   flex-wrap: wrap;
@@ -188,6 +189,14 @@
 
   &__shedule-visit {
     display: flex;
-    // margin-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+
+    a {
+      font-weight: 500;
+      font-style: oblique;
+      color: color(very-black);
+
+      text-decoration: none;
+    }
   }
 }
