@@ -8,6 +8,10 @@
 // Margin utilty classes
 .mb14 {
   margin-bottom: 14rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 4rem !important;
+  }
 }
 
 .mb6 {
@@ -72,6 +76,16 @@
   @include respond(tab-port) {
     display: flex;
     flex-direction: column-reverse;
+  }
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(tab-port) {
+    flex-direction: column;
   }
 }
 
