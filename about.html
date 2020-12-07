@@ -25,6 +25,9 @@
       href="images/favicon-16x16.png"
     />
     <link rel="manifest" href="images/site.webmanifest" />
+
+    <!-- Mapbox CDN -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
   </head>
   <body>
     <!-- header starts here -->
@@ -329,7 +332,7 @@
 
       <section class="location">
         <div class="our-location">
-          <div class="our-location__map">Map Goes here</div>
+          <div class="our-location__map" id="map"></div>
           <div class="our-location__address">
             <h2 class="secondary-heading">&nbsp;</h2>
             <p class="secondary-desc">
@@ -422,6 +425,22 @@
     <!-- Footer end here -->
 
     <!-- <script src="./js/index.js"></script> -->
+    <script>
+      mapboxgl.accessToken =
+  "pk.eyJ1Ijoid2hpdGVnb2QiLCJhIjoiY2s5Y3Q5bm52MDdsOTNobzhvenp6MnNsdCJ9.vc6KagoZn4bn0JtaLazS7g";
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: [7.150660505501719,4.869074610358993],
+      zoom: 10,
+      interactive: false
+    });
+
+    map.scrollZoom.disable();
+
+    // const marker = new mapboxgl.Marker().setLngLat([7.150660505501719,4.869074610358993]).addTo(map);
+
+      </script>
     <script src="js/bundle.js"></script>
   </body>
 </html>

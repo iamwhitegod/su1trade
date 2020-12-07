@@ -168,7 +168,8 @@
 
   &__map {
     flex: 0 0 52%;
-    background-color: yellowgreen;
+    // background-color: yellowgreen;
+    max-height: 53rem;
     margin-right: 2rem;
 
     @include respond(tab-port) {
