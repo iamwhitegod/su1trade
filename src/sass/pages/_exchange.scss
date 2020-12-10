@@ -1,0 +1,115 @@
+.exchange-price {
+  max-width: 96rem;
+  margin: 0 auto;
+  box-shadow: 0px 10px 16px rgba(color(very-black), 0.08);
+  padding: 2rem;
+
+  &__section {
+    padding: 10rem 0;
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  // &__table-head {
+  //   background-color: color(dark-whyte);
+  // }
+
+  // &__table-body {
+  // }
+
+  // &__table-row {
+  //   padding: 1.2rem;
+  // }
+
+  &__name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    figure {
+      width: 32px;
+      height: 32px;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &__change {
+    color: rgb(127, 212, 0);
+  }
+
+  &__change.error {
+    color: rgb(230, 0, 0);
+  }
+
+  td {
+    padding: 1.2rem;
+    &:last-child {
+      text-align: center;
+    }
+  }
+}
+
+.payment-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 114rem;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  &__section {
+    padding: 5rem 0 10rem;
+  }
+
+  &__details {
+    flex: 0 0 50%;
+    padding: 0 2.8rem;
+
+    @include respond(tab-port) {
+      max-width: 80rem;
+      margin-bottom: 3.2rem;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__img {
+    flex: 0 0 50%;
+    margin-left: 2.4rem;
+  }
+}
+
+.exc-features {
+  &__section {
+    padding: 5rem 0 10rem;
+  }
+
+  &__caption {
+    max-width: 58rem;
+    margin-bottom: 8rem;
+
+    h2 {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__details {
+    padding-right: 2.4rem;
+    figure {
+      margin-bottom: 1.6rem;
+    }
+
+    h3 {
+      margin-bottom: 1.6rem;
+      // color: color(very-black);
+    }
+  }
+}

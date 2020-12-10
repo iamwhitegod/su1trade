@@ -93,8 +93,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      filename: "email-e-commerce.html",
-      template: "./email-e-commerce.html",
+      filename: "email-ecommerce.html",
+      template: "./email-ecommerce.html",
     }),
 
     new HtmlWebpackPlugin({
