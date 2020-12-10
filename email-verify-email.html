@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification</title>
+  </head>
+
+  <style>
+    *,
+    *::after,
+    *::before {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 10px;
+    }
+
+    body {
+      font-size: 2.2rem;
+      font-family: "Rotobo", sans-serif;
+    }
+
+    .wrapper {
+      background-color: #f5f5f5;
+      border: 1px solid transparent;
+    }
+
+    figure {
+      width: 9.6rem;
+      width: 9.4rem;
+      margin: 6rem auto;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 80%;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 10.4rem;
+      position: relative;
+    }
+
+    .border-line {
+      display: block;
+      width: 100%;
+      height: 0.5rem;
+      background-image: linear-gradient(to right, #f7dc39, #cf9a00);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .center-element {
+      text-align: center;
+    }
+
+    h2 {
+      display: inline-block;
+      background-image: linear-gradient(to right, #f7dc39, #cf9a00);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      color: transparent;
+
+      font-size: 3.8rem;
+      margin-bottom: 6rem;
+      /* font-weight: 700; */
+    }
+
+    h3 {
+      font-size: 2.8rem;
+      line-height: 130%;
+    }
+
+    button {
+      background-image: linear-gradient(to right, #f7dc39, #cf9a00);
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 1.3rem 2.5rem;
+      margin-bottom: 8rem;
+      outline: none;
+
+      font-family: "Rotobo", sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin-top: 8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    ul li {
+      margin: 0 1.6rem;
+    }
+
+    ul li a {
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .welcome-text {
+      max-width: 60rem;
+      margin: 0 auto 6rem;
+      line-height: 130%;
+    }
+
+    .verification-link {
+      max-width: 60rem;
+      margin: 8rem auto;
+      line-height: 130%;
+    }
+
+    .verification-link a {
+      background-image: linear-gradient(to right, #f7dc39, #cf9a00);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      color: transparent;
+    }
+
+    .from {
+      display: inline-block;
+      margin-top: 0.8rem;
+      margin-bottom: 8rem;
+    }
+
+    .support span,
+    .support a {
+      color: #f7dc39;
+    }
+
+    .address {
+      max-width: 60rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      html {
+        font-size: 9px;
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+      html {
+        font-size: 8px;
+      }
+
+      .container {
+        padding: 4.8rem;
+        max-width: 90%;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      html {
+        font-size: 7px;
+      }
+
+      .container {
+        padding: 2.4rem;
+      }
+
+      ul {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <figure class="logo">
+        <img src="images/logo-dark-bg.svg" alt="logo dark" />
+      </figure>
+
+      <div class="container">
+        <span class="border-line"></span>
+
+        <div class="center-element">
+          <h2>Verify your Account</h2>
+          <p class="welcome-text">
+            Welcome to Su1trade , Kingsley! Before we get started, we need to
+            confirm your email address.
+          </p>
+          <button>Verify Account</button>
+
+          <hr />
+
+          <p class="verification-link">
+            Or, paste this link into your browser:
+            <a href="#"
+              >https://su1trade.com/verifyEmail?t=9eb2652a9c5f329e5664d9aea8b17ca2&e=kmbagwu12%40gmail.com</a
+            >
+          </p>
+        </div>
+
+        <h3>Thank you,</h3>
+        <span class="from">The Su1trade Team</span>
+
+        <p class="support">
+          Need help? <span>Contact our support team</span> or hit us up on
+          Twitter <a href="#">@su1trade.</a> Want to give us feedback? Let us
+          know what you think on our feedback site.
+        </p>
+      </div>
+
+      <ul>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Pirvacy Policy</a></li>
+        <li><a href="#">Sign in</a></li>
+      </ul>
+
+      <p class="address">
+        Arizona complex, No.6 Location Road Oyigbo, River state, Nigeria. Close
+        to Access dimond bank.
+      </p>
+
+      <figure class="logo">
+        <img src="images/logo-dark-bg.svg" alt="logo dark" />
+      </figure>
+    </div>
+  </body>
+</html>
