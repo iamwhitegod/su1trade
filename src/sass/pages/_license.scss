@@ -1,0 +1,31 @@
+.certification {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 10rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  figure {
+    flex: 0 0 50%;
+    text-align: center;
+
+    @include respond(tab-port) {
+      margin-bottom: 4.8rem;
+    }
+  }
+
+  &__details {
+    padding-right: 12rem;
+
+    @include respond(tab-port) {
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
