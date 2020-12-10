@@ -147,6 +147,17 @@
   }
 }
 
+#exchange-form > * {
+  @include respond(tab-port) {
+    width: 80% !important;
+    margin: 0 auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
+}
+
 ::-webkit-input-placeholder {
   color: #999999;
   font-size: font(inline-link);
