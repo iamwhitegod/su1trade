@@ -70,7 +70,7 @@
 .hero {
   &-container {
     max-width: gap(grid-width);
-    margin: 5rem auto 0;
+    margin: 12rem auto 0;
     position: relative;
     z-index: 0;
 
@@ -78,7 +78,7 @@
       padding: 3rem;
       margin: 0 auto;
       position: absolute;
-      top: 46%;
+      top: 54%;
       left: 0%;
       transform: translateY(-50%);
     }
@@ -123,9 +123,11 @@
     }
 
     &__img {
-      grid-column: 6 / -1;
+      grid-column: 8 / -1;
       grid-row: 1 / 2;
-      margin-top: 2rem;
+      margin-top: -6.5rem;
+      margin-right: -5rem;
+      margin-left: -5rem;
       @include Updown();
 
       &--2 {
@@ -147,7 +149,10 @@
       @include respond(tab-port) {
         grid-column: 1 / -1;
         grid-row: 1 / 2;
-        margin-top: 1rem;
+        margin-top: -6.5rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        nargin-bottom: 2.4rem;
       }
     }
   }

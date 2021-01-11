@@ -39,45 +39,77 @@
 
 .fin-freedom {
   &-section {
-    padding: 10rem 0 4rem;
+    padding: 14rem 0;
   }
 
   &__caption {
-    max-width: 50rem;
+    max-width: 70rem;
     margin: 0 auto 5rem;
     text-align: center;
   }
 
-  &__details {
-    margin: 25% 0 0 20rem;
-
-    @include respond(tab-port) {
-      margin: 0;
-      text-align: center;
-    }
-
-    h3 {
-      margin-bottom: 1rem;
-    }
-
-    p {
-      margin-bottom: 2rem;
-    }
+  img {
+    width: 8rem;
+    display: block;
+    margin-bottom: 2.4rem;
   }
 
-  &__details.flip {
-    margin: 25% 23rem 0 0;
-
-    @include respond(tab-port) {
-      margin: 0 auto 3rem;
-    }
+  h3 {
+    margin-bottom: 1.6rem;
   }
 
-  &__img {
-    max-width: 46rem;
-    max-height: 50rem;
-    margin: 0 auto;
+  p {
+    margin-bottom: 1.6rem;
   }
+
+  a {
+    color: color(dark-yellow);
+    font-size: font(secondary-desc);
+  }
+
+  // &__row {
+  //   display: table;
+  // }
+
+  display: table;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.07, 0.54, 0.04, 0.61);
+
+  &:hover {
+    box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.2);
+  }
+
+  // &__details {
+  //   margin: 25% 0 0 20rem;
+
+  //   @include respond(tab-port) {
+  //     margin: 0;
+  //     text-align: center;
+  //   }
+
+  //   h3 {
+  //     margin-bottom: 1rem;
+  //   }
+
+  //   p {
+  //     margin-bottom: 2rem;
+  //   }
+  // }
+
+  // &__details.flip {
+  //   margin: 25% 23rem 0 0;
+
+  //   @include respond(tab-port) {
+  //     margin: 0 auto 3rem;
+  //   }
+  // }
+
+  // &__img {
+  //   max-width: 46rem;
+  //   max-height: 50rem;
+  //   margin: 0 auto;
+  // }
 }
 
 .crypto {
@@ -237,6 +269,36 @@
       span {
         font-weight: 600;
         color: #024873;
+      }
+    }
+  }
+}
+
+.our-partners {
+  &__section {
+    padding: 8rem 0;
+    background-color: color(very-black);
+  }
+
+  &__caption {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tab-port) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    figure {
+      @include respond(tab-port) {
+        margin-right: 1rem;
+        margin-bottom: 2rem;
       }
     }
   }

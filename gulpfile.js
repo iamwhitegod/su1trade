@@ -8,7 +8,6 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const webpack = require("webpack-stream");
 const { dest } = require("gulp");
-const imagemin = require("gulp-imagemin");
 const browserSync = require("browser-sync").create();
 
 gulp.task("scss", () => {
@@ -66,7 +65,7 @@ gulp.task("watch:sass", () => {
       ["./src/sass/**/*.scss", "./src/js/**/*.js"],
       gulp.series(["scss", "js"])
     ),
-    gulp.watch("./*.html").on("change", browserSync.reload);
+    gulp.watch(["./*.html", "./**/*.js"]).on("change", browserSync.reload);
 });
 
 gulp.task("prod", gulp.parallel(["webpack", "sass", "img"]));
