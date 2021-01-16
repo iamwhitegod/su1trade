@@ -111,6 +111,7 @@
     img {
       display: block;
       width: 100%;
+      // height: 100%;
     }
   }
 
@@ -119,6 +120,17 @@
 
     @include respond(phone) {
       padding: 4rem 2rem 1rem;
+    }
+  }
+
+  .figphoto {
+    height: 20rem;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

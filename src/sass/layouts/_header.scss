@@ -141,9 +141,9 @@
       }
 
       &--3 {
-        grid-column: 6 / -1;
+        grid-column: 7 / -1;
         animation: none;
-        transform: translateY(-30px);
+        // transform: translateY(-30px);
       }
 
       @include respond(tab-port) {
