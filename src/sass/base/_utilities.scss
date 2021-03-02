@@ -54,6 +54,9 @@
 }
 
 // Flex-box Utility classes
+.flex {
+  display: flex !important;
+}
 
 .d-flex {
   display: flex;

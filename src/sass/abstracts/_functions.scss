@@ -1,15 +1,24 @@
+/*Return specified font from $fonts  map*/
 @function font($size) {
   @return map-get($fonts, $size);
 }
 
-@function color($color) {
-  @return map-get($colors, $color);
+/*Return specified primary colors  from $primary-colors-setup  map*/
+@function primary-colors-setup($color) {
+  @return map-get($primary-colors-setup, $color);
 }
 
+/* Return specified theme colors  from $theme-colors-setup  map*/
+@function theme-colors-setup($color) {
+  @return map-get($theme-colors-setup, $color);
+}
+
+/*Return specified neutral colors  from $neutral-colors-setup  map*/
+@function neutral-colors-setup($color) {
+  @return map-get($neutral-colors-setup, $color);
+}
+
+/*Return specified gutter from $gutter map*/
 @function gap($gutter) {
   @return map-get($gutters, $gutter);
-}
-
-@function mvfonts($mvfont) {
-  @return map-get($mvfonts, $mvfont);
 }

@@ -26,7 +26,7 @@ const multipleHtmlTemplates = htmlTemplateNames.map(
   (name) =>
     new HtmlWebpackPlugin({
       filename: `${name}.html`,
-      template: `./${name}.html`,
+      template: `./src/templates/${name}.html`,
       chunks: [`${name}`],
     })
 );
@@ -43,7 +43,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: "./index.html",
+      template: "./src/templates/index.html",
     }),
 
     new CleanWebpackPlugin(),
