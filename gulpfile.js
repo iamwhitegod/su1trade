@@ -15,7 +15,7 @@ gulp.task("scss", () => {
     .src("./src/sass/main.scss")
     .pipe(sass().on("error", logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest("css"))
+    .pipe(gulp.dest("src/templates/css"))
     .pipe(browserSync.stream());
 });
 
@@ -38,7 +38,7 @@ gulp.task("js", () => {
         },
       })
     )
-    .pipe(gulp.dest("js"));
+    .pipe(gulp.dest("src/templates/js"));
 });
 
 gulp.task("webpack", () => {
@@ -50,22 +50,22 @@ gulp.task("webpack", () => {
 
 gulp.task("img", () => {
   return gulp
-    .src("./images/*")
+    .src("./src/assets/*")
     .pipe(imageMin())
-    .pipe(gulp.dest("build/images"));
+    .pipe(gulp.dest("build/assets"));
 });
 
 gulp.task("watch:sass", () => {
   browserSync.init({
     server: {
-      baseDir: "./",
+      baseDir: "./src/templates",
     },
   }),
-    gulp.watch(
-      ["./src/sass/**/*.scss", "./src/js/**/*.js"],
-      gulp.series(["scss", "js"])
-    ),
-    gulp.watch(["./*.html", "./**/*.js"]).on("change", browserSync.reload);
+    gulp.watch(["./src/sass/**/*.scss"], gulp.series(["scss"])),
+    gulp.watch("./src/js/**/*.js", gulp.series(["js"])),
+    gulp
+      .watch(["./src/templates/*.html", "./**/*.js"])
+      .on("change", browserSync.reload);
 });
 
-gulp.task("prod", gulp.parallel(["webpack", "sass", "img"]));
+gulp.task("prod", gulp.series(["webpack", "sass", "img"]));

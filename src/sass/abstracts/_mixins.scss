@@ -1,16 +1,8 @@
 @mixin gradient($direction) {
   background: linear-gradient(
     $direction,
-    color(very-light-yellow),
-    color(dark-yellow)
-  );
-}
-
-@mixin hover() {
-  background-image: linear-gradient(
-    45deg,
-    darken(color(very-light-yellow), 2.5%),
-    darken(color(dark-yellow), 2.5%)
+    primary-colors-setup(primary-color-base-light),
+    primary-colors-setup(primary-color-base-dark)
   );
 }
 

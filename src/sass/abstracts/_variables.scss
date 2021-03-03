@@ -1,36 +1,65 @@
-$colors: (
-  very-light-yellow: #f7dc39,
-  light-yellow: #e2c977,
-  dark-yellow: #cf9a00,
-  very-dark-yellow: #be8d00,
-  very-whyte: #ffffff,
-  color-dark-white: #f1f1f1,
-  very-black: #000000,
-  grey: #444444,
-  light-grey: #cccccc,
-  very-light-grey: #e6e6e6,
-);
+/*
+  Font sizes variables for typography cross project. Maped fonts 
+  setup is feed to font function to return specified font.
+
+  Note: Functions is founded in the abstracts folder
+*/
 
 $fonts: (
-  default-font: 1.6rem,
-  primary-heading: 4.8rem,
-  secondary-heading: 3.4rem,
-  tertiary-heading: 2.4rem,
-  primary-desc: 2.4rem,
-  secondary-desc: 1.8rem,
-  inline-link: 1.8rem,
+  base-font-size: 1.6rem,
+  blockquote-font-size: 2.8rem,
 );
 
-$mvfonts: (
-  mvprimary-heading: 4.2rem,
-  mvsecondary-heading: 2.4rem,
-  mvtertiary-heading: 2rem,
-  mvprimary-desc: 2.2rem,
+/*
+  Map colors setup is feed to color function to return 
+  desired color from the map.
+
+  Note: Functions is founded in the abstracts folder
+*/
+
+$primary-colors-setup: (
+  primary-color-base-light: #f7dc39,
+  primary-color-base-dark: #d99913,
+  primary-color-disabled: #f0d6a1,
+  primary-color-accent: #f7ebd0,
 );
+
+$theme-colors-setup: (
+  color-light-gray: #f7f7fa,
+  color-light-gray-lines: #ececec,
+  color-light-gray-heading: #dadada,
+  color-dark-gray: #444444,
+  color-dark-gray-text: #999999,
+);
+
+$neutral-colors-setup: (
+  color-white: #ffffff,
+  color-black: #000000,
+);
+
+/* Gutters are gaps between custom grid system such as columns & 
+  rows etc.
+*/
 
 $gutters: (
   grid-width: 114rem,
   gutter-vertical: 6rem,
   gutter-vertical-small: 4rem,
   gutter-horizontal: 2rem,
+);
+
+/*  
+  White space system setup for margins, paddingss
+*/
+
+$spacing: (
+  spacing-xs: 0.4rem,
+  spacing-sm: 0.8rem,
+  spacing-md: 1.2rem,
+  spacing-lg: 1.6rem,
+  spacing-xl: 2.4rem,
+  spacing-xxl: 4.8rem,
+  spacing-extra-sm: 6rem,
+  spacing-extra-md: 8rem,
+  spacing-extra-lg: 104rem,
 );

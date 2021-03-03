@@ -1,120 +1,97 @@
-const slideCols = document.querySelectorAll(".slide-up");
-const mbMenu = document.querySelector(".mobile-nav-menu");
-const questionPanel = document.querySelectorAll(".FAQs__question");
-const modal = document.querySelector(".modal__container");
-const modalPopup = document.querySelector(".modal__popup");
-const modalOverlay = document.querySelector(".modal__overlay");
+const menu = document.querySelector('[data--js="mobile--menu"]');
+const menuPanel = document.querySelector('[data--js="menu--panel"]');
+const menuItems = Array.from(
+  document.querySelectorAll('[data--js="menu--item"]')
+);
+const menuLinks = document.querySelectorAll('[data--js="menu--link"]');
 
-/*This function forces a checklslide
- * function to wait for 20ms before running again
- */
-
-export function debounce(func, wait = 10, immediate = true) {
-  var timeout;
-  return function () {
-    var context = this,
-      args = arguments;
-    var later = function () {
-      timeout = null;
-
-      if (!immediate) func.apply(context, args);
-    };
-
-    var callNew = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNew) func.apply(context, args);
-  };
-}
-
-// mobile-nav-menu__active;
-
-export function checkSlide(e) {
-  slideCols.forEach((slideCol) => {
-    const elemLoc = window.scrollY + window.innerHeight;
-    const elemHeight = slideCol.clientHeight / 2.5;
-    const slideInAt = elemLoc - elemHeight;
-    //const colTop = slideCol.offsetTop + slideCol.height;
-
-    const colBottom = slideCol.offsetTop + slideCol.clientHeight;
-    const isHalfShown = slideInAt > slideCol.offsetTop;
-    const isNotScrolledPast = window.scrollY < colBottom;
-
-    // console.log(isHalfShown, isNotScrolledPast, slideInAt);
-
-    if (isHalfShown && isNotScrolledPast) {
-      slideCol.classList.add("active");
-    }
-    // else {
-    //   slideCol.classList.remove("active");
-    // }
-  });
-}
-
-export const clickEvent = () => {
-  mbMenu.addEventListener("click", (e) => {
-    mbMenu.classList.toggle("mobile-nav-menu__active");
-    document
-      .querySelector(".mobile-nav-menu__list")
-      .classList.toggle("menu__active");
-
-    if (document.querySelector(".mobile-menu")) {
-      document.querySelector(".mobile-menu").classList.toggle("active");
-    }
+// Setup eventlisteners
+export const setupEventListners = () => {
+  // Toggle mobile menu
+  menu.addEventListener("click", (event) => {
+    menuPanel.classList.toggle("flex");
   });
 
-  questionPanel.forEach((question) => {
-    question.addEventListener("click", (e) => {
-      e.target.classList.toggle("FAQs__question--active");
-      // e.target.nextElementSibling.classList.toggle("FAQs__answer--active");
+  if (menuItems) {
+    menuItems.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        menuItems.forEach((menu) => menu.classList.remove("active"));
+
+        item.classList.add("active");
+      });
     });
-  });
+  }
+
+  if (menuLinks) {
+    menuLinks.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        menuLinks.forEach((menu) => menu.classList.remove("active"));
+
+        item.classList.add("active");
+      });
+    });
+  }
 };
 
-/**********************************
- * modal
- **************** */
+// setupEventListners();
 
-if (modal) {
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal.querySelector("img")) {
-      modal.classList.remove("open-modal");
-    }
+// const questionPanel = document.querySelectorAll(".FAQs__question");
+// const modal = document.querySelector(".modal__container");
+// const modalPopup = document.querySelector(".modal__popup");
+// const modalOverlay = document.querySelector(".modal__overlay");
 
-    if (e.target == modal.querySelector("button")) {
-      modal.classList.remove("open-modal");
-    }
-  });
-}
+//   questionPanel.forEach((question) => {
+//     question.addEventListener("click", (e) => {
+//       e.target.classList.toggle("FAQs__question--active");
+//       // e.target.nextElementSibling.classList.toggle("FAQs__answer--active");
+//     });
+//   });
+// };
 
-if (modalPopup) {
-  modalPopup.addEventListener("click", (e) => {
-    if (e.target === modalPopup.querySelector("img")) {
-      modalPopup.classList.remove("active");
-      modalOverlay.classList.remove("active");
-    }
+// /**********************************
+//  * modal
+//  **************** */
 
-    if (e.target == modalPopup.querySelector("button")) {
-      modalPopup.classList.remove("active");
-      modalOverlay.classList.remove("active");
-    }
-  });
-}
+// if (modal) {
+//   modal.addEventListener("click", (e) => {
+//     if (e.target === modal.querySelector("img")) {
+//       modal.classList.remove("open-modal");
+//     }
 
-export function openModal(trigger) {
-  trigger.addEventListener("click", () => {
-    if (modal) {
-      modal.classList.add("open-modal");
-    }
-  });
-}
+//     if (e.target == modal.querySelector("button")) {
+//       modal.classList.remove("open-modal");
+//     }
+//   });
+// }
 
-export function openModalPopup() {
-  if (modalPopup) {
-    modalPopup.classList.add("active");
-    modalOverlay.classList.add("active");
-    console.log(modalOverlay);
-  }
-}
+// if (modalPopup) {
+//   modalPopup.addEventListener("click", (e) => {
+//     if (e.target === modalPopup.querySelector("img")) {
+//       modalPopup.classList.remove("active");
+//       modalOverlay.classList.remove("active");
+//     }
 
-openModalPopup();
+//     if (e.target == modalPopup.querySelector("button")) {
+//       modalPopup.classList.remove("active");
+//       modalOverlay.classList.remove("active");
+//     }
+//   });
+// }
+
+// export function openModal(trigger) {
+//   trigger.addEventListener("click", () => {
+//     if (modal) {
+//       modal.classList.add("open-modal");
+//     }
+//   });
+// }
+
+// export function openModalPopup() {
+//   if (modalPopup) {
+//     modalPopup.classList.add("active");
+//     modalOverlay.classList.add("active");
+//     console.log(modalOverlay);
+//   }
+// }
+
+// openModalPopup();

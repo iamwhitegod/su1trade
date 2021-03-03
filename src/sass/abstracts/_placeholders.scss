@@ -1,0 +1,29 @@
+%cp-layout-container {
+  display: flex;
+  max-width: 114rem;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    max-width: 90%;
+    // padding: 0 3rem;
+  }
+
+  @include respond(phone) {
+    max-width: 100%;
+    // padding: 0 2rem;
+  }
+}
+
+%cp-layout-col-1 {
+  flex: 0 0 35%;
+  margin-right: 2rem;
+}
+
+%cp-layout-col-2 {
+  flex: 0 0 65%;
+}
+
+%d-flex {
+  display: flex;
+}
