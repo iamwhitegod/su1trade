@@ -36,7 +36,11 @@
   margin-bottom: 0 !important;
 }
 
-// Padding utility classes
+// Padding utility
+.pdl0 {
+  padding-left: 0;
+}
+
 .pd1 {
   padding: 1rem;
 }
@@ -99,15 +103,15 @@
 // Color utility classes
 
 .accent {
-  color: color(very-light-yellow) !important;
+  color: primary-colors-setup(primary-color-base-light) !important;
 }
 
 .col-grey {
-  color: color(grey);
+  color: theme-colors-setup(color-dark-gray);
 }
 
 .color-grey {
-  color: color(grey);
+  color: theme-colors-setup(color-dark-gray);
 }
 
 // .orwhite {
@@ -222,16 +226,13 @@ $padding: 8px;
 }
 
 .disabled-bg {
-  border-right: 2px solid color(very-black);
-  margin-right: 3rem;
-  &:hover {
-    background: none !important;
+  border-right: 2px solid neutral-colors-setup(color-black);
+  margin-right: 6rem !important;
+
+  .nav--secondary__link {
+    color: neutral-colors-setup(color-black) !important;
+    background: primary-colors-setup(primary-color-base-light) !important;
   }
 
-  &:hover .secondary-nav__link {
-    color: color(very-black) !important;
-  }
-
-  background-color: none !important;
-  color: none !important;
+  // color: none !important;
 }

@@ -10,81 +10,78 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="images/apple-touch-icon.png"
+      href="assets/favicon_io/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="images/favicon-32x32.png"
+      href="assets/favicon_io/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="images/favicon-16x16.png"
+      href="assets/favicon_io/favicon-16x16.png"
     />
-    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
   </head>
   <body>
-    <!-- header starts here -->
-    <header class="header no-bg">
-      <div class="img-overlay">&nbsp;</div>
-      <canvas id="canvas"></canvas>
-      <!-- top navigation starts here -->
-      <div class="top-navigation">
-        <div class="row no-flex">
-          <div class="nav-bar">
-            <div class="logo">
-              <a href="index.html">
-                <img src="images/su_LOGO_REAL.png" alt="logo" />
-              </a>
-            </div>
+    <!-- preloader -->
+    <div class="loader-container">
+      <div class="loader three-d-spinner">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+      </div>
+    </div>
 
-            <div class="mobile-nav-menu">
-              <span class="line line--1"></span>
-              <span class="line line--2"></span>
-              <span class="line line--3"></span>
+    <!-- Main site navigation bar starts here-->
+    <nav>
+      <div class="row">
+        <div class="nav nav--bar nav--main">
+          <figure class="logo">
+            <img src="assets/su1trade_logo.png" alt="brand logo" />
+          </figure>
 
-              <div class="mobile-nav-menu__overlay">&nbsp;</div>
-            </div>
+          <ul data--js="menu--panel">
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./about.html">About us</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="#">Learn</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="#">Invest</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./exchange.html">Exchange</a>
+            </li>
+            <li data--js="menu--item" class="active">
+              <a data--js="menu--link" class="active" href="./signin.html"
+                >Sign in</a
+              >
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./signup.html">Sign up</a>
+            </li>
+          </ul>
 
-            <!-- nav-menu holds individual links on the nav-bar-->
-            <nav class="nav-menu">
-              <ul class="nav-menu__list">
-                <li class="nav-menu__item">
-                  <a href="#" class="nav-menu__link">BTC/NGN 4,952,998</a>
-                </li>
-                <li class="nav-menu__item">
-                  <a href="./about.html" class="nav-menu__link">About Us</a>
-                </li>
-                <li class="nav-menu__item">
-                  <a href="./exchange.html" class="nav-menu__link">Exchange</a>
-                </li>
-                <li class="nav-menu__item">
-                  <a href="./signin.html" class="nav-menu__link">Sign in</a>
-                </li>
-                <li class="nav-menu__item">
-                  <a href="./signup.html" class="nav-menu__link">Sign up</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <menu data--js="mobile--menu" class="icon icon--small">
+            <svg>
+              <use xlink:href="assets/sprite.svg#menu-alt"></use>
+            </svg>
+          </menu>
         </div>
       </div>
-      <!-- top navigation ends here -->
+    </nav>
+    <!-- Main site navigation ends here -->
 
-      <div class="mobile-menu">
-        <ul class="mobile-nav-menu__list">
-          <a href="#" class="mobile-nav-menu__link">BTC/NGN 4,952,998</a>
-          <a href="./about.html" class="mobile-nav-menu__link">About Us</a>
-          <a href="./exchange.html" class="mobile-nav-menu__link">Exchange</a>
-          <a href="./signin.html" class="mobile-nav-menu__link">Sign in</a>
-          <a href="./signup.html" class="mobile-nav-menu__link">Sign up</a>
-        </ul>
-      </div>
+    <!-- header starts here -->
+    <header class="header--about">
+      <canvas id="canvas"></canvas>
 
-      <div class="header-in__text-box header-in__text-box--2">
+      <div class="header--about__text-box header--about__text-box--2">
         <div class="row">
           <h1 class="primary-heading">Pirvacy Policy</h1>
           <p class="primary-desc">
@@ -99,24 +96,24 @@
     <!-- header ends here -->
 
     <!-- secondary nav starts here -->
-    <nav class="secondary-nav">
+    <nav class="nav--secondary">
       <div class="row">
-        <ul class="secondary-nav__list">
-          <li class="secondary-nav__item disabled-bg">
-            <a href="#" class="secondary-nav__link"><b>Connect</b></a>
+        <ul class="nav--secondary__list">
+          <li class="nav--secondary__item disabled-bg">
+            <a href="#" class="nav--secondary__link"><b>Connect</b></a>
           </li>
-          <li class="secondary-nav__item">
-            <a href="./terms.html" class="secondary-nav__link"
+          <li class="nav--secondary__item">
+            <a href="./terms.html" class="nav--secondary__link"
               >Terms & Conditions</a
             >
           </li>
-          <li class="secondary-nav__item">
-            <a href="./privacy.html" class="secondary-nav__link"
+          <li class="nav--secondary__item">
+            <a href="./privacy.html" class="nav--secondary__link"
               >Privacy Policy</a
             >
           </li>
-          <li class="secondary-nav__item">
-            <a href="./partners.html" class="secondary-nav__link"
+          <li class="nav--secondary__item">
+            <a href="./partners.html" class="nav--secondary__link"
               >Our Partners</a
             >
           </li>
@@ -287,13 +284,11 @@
       <div class="row">
         <div class="col-1-of-3">
           <img
-            src="images/su_LOGO_REAL.png"
-            alt="SU1Trade logo"
+            src="assets/su1trade_logo.png"
+            alt="brand logo"
             class="footer__logo"
           />
-          <p class="secondary-desc">
-            &copy;2020 SU1Trade.com. All rights reserved
-          </p>
+          <p>&copy;2020 SU1Trade.com. All rights reserved</p>
 
           <div class="social-media">
             <a
@@ -301,11 +296,11 @@
               target="_blank"
               class="social-media__link"
             >
-              <img src="images/Facebook icon.svg" alt="facebook icon" />
+              <img src="assets/Facebook icon.svg" alt="facebook icon" />
             </a>
 
             <a href="#" target="_blank" class="social-media__link">
-              <img src="images/Twiiter icon.svg" alt="twiiter icon" />
+              <img src="assets/Twiiter icon.svg" alt="twiiter icon" />
             </a>
 
             <a
@@ -313,11 +308,11 @@
               target="_blank"
               class="social-media__link"
             >
-              <img src="images/Telegram icon.svg" alt="telegram icon" />
+              <img src="assets/Telegram icon.svg" alt="telegram icon" />
             </a>
 
             <a href="#" class="social-media__link">
-              <img src="images/Instagram icon.svg" alt="instagram icon" />
+              <img src="assets/Instagram icon.svg" alt="instagram icon" />
             </a>
           </div>
         </div>

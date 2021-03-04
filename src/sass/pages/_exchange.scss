@@ -1,7 +1,7 @@
 .exchange-price {
   max-width: 96rem;
   margin: 0 auto;
-  box-shadow: 0px 10px 16px rgba(color(very-black), 0.08);
+  box-shadow: 0px 10px 16px rgba(neutral-colors-setup(color-black), 0.08);
   padding: 2rem;
 
   &__section {
@@ -221,7 +221,7 @@
 
   input {
     width: 60%;
-    border: 1.6px solid color(very-light-grey);
+    border: 1.6px solid #e6e6e6;
     // border-radius: 0.5rem;
     background: none;
     padding: 1.2rem 2rem;
@@ -231,13 +231,13 @@
     outline: none;
 
     &:focus {
-      border: 1.6px solid color(dark-yellow);
+      border: 1.6px solid primary-colors-setup(primary-color-base-dark);
       outline: none;
     }
 
     &::-webkit-input-placeholder {
       color: #cfcfcf;
-      font-size: font(inline-link);
+      font-size: 1.2rem;
     }
   }
 }

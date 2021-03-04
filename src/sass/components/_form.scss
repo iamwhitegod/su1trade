@@ -8,7 +8,7 @@
   padding: 3rem 2rem;
   // border-radius: 1rem;
   // box-shadow: 0px 10px 16px rgba(color(very-black), 0.08);
-  background-color: color(very-whyte);
+  background-color: neutral-colors-setup(color-white);
 
   // &--drop-shadow {
   //   box-shadow: 0px 10px 16px rgba(color(very-black), 0.08);
@@ -51,7 +51,7 @@
     &__label,
     &__input {
       display: block;
-      font-size: font(default-font);
+      font-size: 1.6rem;
       font-family: "roboto", sans-serif;
     }
 
@@ -60,13 +60,13 @@
       top: 25%;
       left: 0;
       padding: 0 2rem;
-      color: color(light-grey);
+      color: #ccc;
       transition: all 0.2s;
     }
 
     &__input {
       width: 100%;
-      border: 1.6px solid color(very-light-grey);
+      border: 1.6px solid #e6e6e6;
       // border-radius: 0.5rem;
       padding: 1rem 2rem;
       font-size: 1.8rem;
@@ -76,7 +76,7 @@
       // transition: outline-color 0.5s;
 
       &:focus {
-        border: 1.6px solid color(dark-yellow);
+        border: 1.6px solid primary-colors-setup(primary-color-base-dark);
         outline: none;
       }
     }
@@ -89,9 +89,9 @@
       font-size: 1.3rem;
       top: -18%;
       left: 2rem;
-      background-color: color(very-whyte);
+      background-color: neutral-colors-setup(color-white);
       padding: 0;
-      color: color(dark-yellow);
+      color: primary-colors-setup(primary-color-base-dark);
       z-index: 100;
       transition: all 0.5s;
     }
@@ -101,22 +101,28 @@
       font-size: 1.3rem;
       top: -18%;
       left: 2rem;
-      background-color: color(very-whyte);
+      background-color: neutral-colors-setup(color-white);
       padding: 0;
       opacity: 1;
       z-index: 100;
     }
 
-    // &__checkbox {
-    //   &:checked {
-    //     background-color: color(dark-yellow);
-    //   }
-    // }
+    &__checkbox {
+      &:checked {
+        background-color: primary-colors-setup(primary-color-base-dark);
+      }
+    }
 
     p {
       display: inline-block;
-      font-size: font(default-font);
+      font-size: 1.6rem;
+      // color: primary-colors-setup(primary-color-base-light);
       margin-left: 1.5rem;
+
+      @include respond(phone) {
+        margin-left: 0;
+        text-align: center;
+      }
     }
 
     small {
@@ -136,7 +142,7 @@
 #exchange-form {
   input {
     width: 60%;
-    border: 1.6px solid color(very-light-grey);
+    border: 1.6px solid #e6e6e6;
     // border-radius: 0.5rem;
     background: none;
     padding: 1.2rem 2rem;
@@ -160,5 +166,5 @@
 
 ::-webkit-input-placeholder {
   color: #999999;
-  font-size: font(inline-link);
+  font-size: 1.2rem;
 }

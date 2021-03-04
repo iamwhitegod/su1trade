@@ -38,6 +38,3 @@ import * as canvas from "./eventHandlers/canvas";
     .pauseFor(25000)
     .start();
 })();
-
-// canvas.init();
-// canvas.animate();

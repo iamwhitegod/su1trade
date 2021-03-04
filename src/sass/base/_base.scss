@@ -74,13 +74,8 @@ a {
   text-decoration: none;
   position: relative;
   color: theme-colors-setup(color-dark-gray);
-  transition: color 0.5s;
+  // transition: color 0.5s;
   -webkit-tap-highlight-color: transparent;
-}
-
-a:active,
-a:hover {
-  color: theme-colors-setup(color-dark-gray-text);
 }
 
 // a:hover::after {
@@ -105,12 +100,6 @@ nav {
 
 header {
   background-color: neutral-colors-setup(color-black);
-  height: 100vh;
-
-  @include respond(tab-port) {
-    padding: 25vh 0;
-    height: 100%;
-  }
 }
 
 img {
