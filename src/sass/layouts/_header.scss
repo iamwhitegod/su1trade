@@ -78,10 +78,12 @@
 
     h1 {
       margin-bottom: 1.6rem;
+      color: neutral-colors-setup(color-white);
     }
 
     p {
       margin-bottom: 6rem;
+      color: neutral-colors-setup(color-white);
       @extend %lg--copy;
     }
   }
