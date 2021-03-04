@@ -1,248 +1,282 @@
 .empirical-data {
-  &-section {
-    padding: 5rem 0;
-    background-color: color(very-black);
-
-    @include respond(tab-land) {
-      padding: 10rem 3rem;
-    }
-  }
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %d-flex--centered;
 
   @include respond(tab-port) {
     flex-direction: column;
     text-align: center;
   }
 
+  &-section {
+    padding: 5rem 0;
+    background-color: neutral-colors-setup(color-black);
+
+    @include respond(tab-land) {
+      padding: 10rem 3rem;
+    }
+  }
+
   &__icon {
-    width: 6.5rem;
+    // width: 6.5rem;
     margin-right: 1rem;
 
     @include respond(tab-port) {
-      margin-bottom: 2rem;
+      margin-bottom: -1rem;
     }
   }
 
   &__data {
     margin-bottom: 0.5rem;
+
     h3 {
+      color: primary-colors-setup(primary-color-base-dark);
       margin-bottom: 0.5rem;
     }
     p {
-      color: color(very-whyte);
+      color: neutral-colors-setup(color-white);
     }
   }
 }
 
-.fin-freedom {
-  &-section {
-    padding: 14rem 0;
-  }
-
-  &__caption {
-    max-width: 70rem;
-    margin: 0 auto 5rem;
+.services--section {
+  @include respond(phone) {
     text-align: center;
   }
 
-  img {
-    width: 8rem;
-    display: block;
-    margin-bottom: 2.4rem;
-  }
-
-  h3 {
+  h2 {
+    max-width: 35rem;
     margin-bottom: 1.6rem;
+    // color: primary-colors-setup(primary-color-base-dark);
+    @include gradient(45deg);
+    background-clip: text;
+    color: transparent;
   }
 
   p {
-    margin-bottom: 1.6rem;
+    max-width: 45rem;
   }
 
-  a {
-    color: color(dark-yellow);
-    font-size: font(secondary-desc);
-  }
-
-  // &__row {
-  //   display: table;
-  // }
-
-  display: table;
-  padding: 2rem;
-  cursor: pointer;
-  transition: all 1s cubic-bezier(0.07, 0.54, 0.04, 0.61);
-
-  &:hover {
-    box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.2);
-  }
-
-  // &__details {
-  //   margin: 25% 0 0 20rem;
-
-  //   @include respond(tab-port) {
-  //     margin: 0;
-  //     text-align: center;
-  //   }
-
-  //   h3 {
-  //     margin-bottom: 1rem;
-  //   }
-
-  //   p {
-  //     margin-bottom: 2rem;
-  //   }
-  // }
-
-  // &__details.flip {
-  //   margin: 25% 23rem 0 0;
-
-  //   @include respond(tab-port) {
-  //     margin: 0 auto 3rem;
-  //   }
-  // }
-
-  // &__img {
-  //   max-width: 46rem;
-  //   max-height: 50rem;
-  //   margin: 0 auto;
-  // }
-}
-
-.crypto {
-  @include respond(tab-port) {
-    text-align: center;
-  }
-
-  &-section {
-    background-color: color(very-black);
-    @include respond(tab-land) {
-      padding: 3rem;
-    }
-  }
-
-  &__caption {
-    max-width: 65rem;
-    margin: 18rem 0 10rem;
+  .service {
+    height: 34rem;
+    padding: 2.4rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.09);
 
     @include respond(tab-port) {
       text-align: center;
-      margin: 18rem auto 10rem;
-    }
-  }
-
-  &__img {
-    width: 7.5rem;
-    height: 7.5rem;
-    margin: 0 0 3rem;
-
-    @include respond(tab-port) {
-      margin: 0 auto 3rem;
     }
 
-    img {
-      height: 100%;
-    }
-  }
+    figure {
+      margin-left: -1.2rem;
 
-  &__details {
-    margin-bottom: 18rem;
-
-    @include respond(tab-port) {
-      margin-bottom: 4rem;
+      @include respond(tab-port) {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
-    h3 {
-      margin-bottom: 3rem;
+    :is(h3, p) {
+      margin-bottom: 1.6rem;
     }
 
-    p {
-      color: color(very-whyte);
-      line-height: 150.8%;
+    button {
+      font-weight: 400;
+      display: block;
+      @include gradient(45deg);
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 2.4rem;
+
+      @include respond(tab-port) {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
 
-.why-choose-su1trade {
-  @include respond(tab-port) {
+.steps--section {
+  h2 {
+    max-width: 63rem;
+    margin: 0 auto 4.8rem;
+    @include gradient(45deg);
+    background-clip: text;
+    color: transparent;
     text-align: center;
   }
 
-  &__caption {
-    max-width: 60rem;
-    margin: 18rem auto 10rem;
-    text-align: center;
+  button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4.8rem;
   }
 
-  &__img {
-    width: 7.5rem;
-    height: 7.5rem;
-    margin: 0 0 3rem;
+  // button::after {
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 0.3rem;
+  //   position: absolute;
+  //   background-color: primary-colors-setup(primary-color-base-dark);
+  // }
 
-    @include respond(tab-port) {
-      margin: 0 auto 3rem;
+  .steps-shown {
+    &__col {
+      @include grid(2, 10%);
+      // background-color: color(very-black);
+      padding-right: 6rem;
+      margin-bottom: 4rem;
+
+      @include respond(tab-port) {
+        padding: 1rem;
+      }
+
+      .heading {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+
+        span {
+          display: inline-block;
+          font-size: 2rem;
+          font-weight: 600;
+          flex: 0 0 5rem;
+          height: 5rem;
+          @include gradient(45deg);
+          border-radius: 50%;
+          text-align: center;
+          line-height: 5rem;
+          margin-right: 2rem;
+        }
+      }
+
+      .description {
+        p {
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+.why-su1trade {
+  &--section {
+    background-color: neutral-colors-setup(color-black);
+
+    @include respond(phone) {
+      text-align: center;
+    }
+
+    h2 {
+      max-width: 48rem;
+      @include gradient(45deg);
+      background-clip: text;
+      color: transparent;
     }
   }
 
-  &__details {
-    margin-bottom: 18rem;
+  &--wrapper {
+    background-image: url(../assets/blockchain_security_cube.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    // height: 100vh;
 
     @include respond(tab-port) {
-      margin-bottom: 4rem;
+      background-image: url(../assets/blockchain_security_cube_mobile.png);
+      background-position: center 8rem;
+    }
+  }
+
+  &--details {
+    margin-bottom: 6rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 3.2rem;
     }
 
     h3 {
-      margin-bottom: 3rem;
+      @include gradient(45deg);
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      color: neutral-colors-setup(color-white);
+      line-height: 140%;
+    }
+  }
+
+  &2 {
+    &--section {
+      background-color: neutral-colors-setup(color-black);
+
+      @include respond(phone) {
+        text-align: center;
+      }
+
+      h2 {
+        max-width: 40rem;
+        margin: 0 auto 4.8rem;
+        @include gradient(45deg);
+        background-clip: text;
+        color: transparent;
+        text-align: center;
+      }
+    }
+
+    &--details {
+      figure {
+        @include respond(tab-port) {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      h3 {
+        @include gradient(45deg);
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 2.4rem;
+      }
+
+      p {
+        color: neutral-colors-setup(color-white);
+        line-height: 140%;
+      }
     }
   }
 }
 
 .testimonial {
-  padding: 0 0 10rem;
-
-  @include respond(tab-port) {
-    padding: 0 0 3rem;
+  &--section {
+    background-color: neutral-colors-setup(color-black);
   }
 
-  &-section {
-    padding: 0 0 10rem;
-
-    @include respond(tab-land) {
-      padding: 0 3rem;
-    }
+  &--wrapper {
+    transform: translateY(-50%);
+    margin-top: 60%;
+    padding-left: auto;
+    padding-right: auto;
+    @extend %d-flex--centered;
 
     @include respond(tab-port) {
-      padding: 0 0 5rem;
+      transform: translateY(0);
+      margin-top: 4.8rem;
     }
   }
 
-  &__caption {
-    max-width: 60rem;
-    margin: 10rem auto;
-    text-align: center;
-
-    @include respond(phone) {
-      padding: 0 1rem;
-    }
-  }
-
-  blockquote {
+  &--customer-story {
     font-style: italic;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    padding: 2rem 3rem;
+    padding: 0 4.8rem;
+    color: neutral-colors-setup(color-white);
     position: relative;
-    border-radius: 0.5rem;
 
     @include respond(tab-port) {
-      width: 60%;
-      margin: 0 auto 6rem;
-    }
-
-    @include respond(phone) {
-      width: 100%;
+      font-size: 2.2rem;
     }
 
     &::before {
@@ -250,56 +284,49 @@
       display: block;
       font-size: 13rem;
       position: absolute;
-      top: -5rem;
+      top: -1rem;
       left: -1rem;
-      color: #666666;
+      color: primary-colors-setup(primary-color-base-dark);
+
+      @include respond(tab-port) {
+        font-size: 9.6rem;
+      }
     }
 
     cite {
       display: flex;
-      align-items: center;
-      margin-top: 4rem;
+      flex-direction: column;
+      margin-top: 4.8rem;
 
-      img {
-        width: 5rem;
-        margin-right: 2rem;
-        border-radius: 50%;
+      h4 {
+        color: primary-colors-setup(primary-color-base-dark);
       }
 
       span {
-        font-weight: 600;
-        color: #024873;
+        font-size: 1.6rem;
+        font-weight: 400;
       }
     }
   }
 }
 
-.our-partners {
-  &__section {
-    padding: 8rem 0;
-    background-color: color(very-black);
-  }
-
-  &__caption {
-    text-align: center;
-    margin-bottom: 8rem;
-  }
-
-  &__img {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.cta {
+  &--section {
+    padding: 14rem 0;
 
     @include respond(tab-port) {
-      justify-content: center;
-      flex-wrap: wrap;
+      padding: 8rem 0;
     }
+  }
 
-    figure {
-      @include respond(tab-port) {
-        margin-right: 1rem;
-        margin-bottom: 2rem;
-      }
+  &--copy {
+    h2 {
+      margin-bottom: 1.2rem;
     }
+  }
+
+  &--btn {
+    text-align: center;
+    padding-top: 2.4rem;
   }
 }
