@@ -320,6 +320,10 @@
   }
 
   &--copy {
+    @include respond(tab-port) {
+      text-align: center;
+    }
+
     h2 {
       margin-bottom: 1.2rem;
     }
