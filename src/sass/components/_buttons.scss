@@ -1,49 +1,95 @@
 .btn {
-  display: inline-block;
-  font-size: font(inline-link);
-  font-family: "roboto", sans-serif;
-  font-weight: 500;
-  padding: 1.3rem 3.2rem;
-  @include gradient(45deg);
-  color: color(very-whyte);
-  cursor: pointer;
-  border: none;
-  // border-radius: 0.5rem;
-  text-decoration: none;
-  outline: none;
-  // box-shadow: 0 0.4rem 3rem rgba(247, 220, 57, 0.3);
-  transition: all 0.3s;
-
-  // &:hover {
-  //   transform: translateY(-0.3rem);
-  // }
-
-  // &:active {
-  //   transform: translateY(-0.1rem);
-  // }
-
-  a {
-    text-decoration: none;
-    color: color(very-whyte);
+  &--primary,
+  &--disabled {
+    background-color: primary-colors-setup(primary-color-base-dark);
+    color: neutral-colors-setup(color-white);
   }
 
-  &--full {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
+  &--primary {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
   }
 
-  &--ghost {
+  &--outlined {
     background: none;
-    border: 1.5px solid color(dark-yellow);
-    transition: all 0.2s;
+    border: 1.3px solid primary-colors-setup(primary-color-base-dark);
+    color: primary-colors-setup(primary-color-base-dark);
+    transition: color 0.8s;
 
     &:hover {
-      @include gradient(45deg);
+      color: neutral-colors-setup(color-white);
     }
   }
 
-  @include respond(phone) {
-    font-size: 2rem;
+  &--ripple {
+    background-position: center;
+    transition: background 0.8s;
+
+    &:hover {
+      background: primary-colors-setup(primary-color-disabled)
+        radial-gradient(
+          circle,
+          transparent 1%,
+          primary-colors-setup(primary-color-disabled) 1%
+        )
+        center/15000%;
+    }
+
+    &:active {
+      background-color: primary-colors-setup(primary-color-base-dark);
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+
+  &--disabled {
+    background-color: primary-colors-setup(primary-color-disabled);
+  }
+
+  &--small {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  &--medium {
+    font-size: 1.6rem;
+    padding: 1rem 3.2rem;
+  }
+
+  &--large {
+    font-size: 1.8rem;
+    padding: 1.6rem 4.8rem;
+
+    @include respond(tab-port) {
+      padding: 1.2rem 2.4rem;
+    }
+  }
+
+  &--icon {
+    line-height: 0;
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  &--text {
+    font-size: 1.6rem;
+    background: none;
+    color: theme-colors-setup(color-dark-gray);
+    padding: 0;
+  }
+
+  &--icon-with-text {
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    color: neutral-colors-setup(color-white);
+    padding: 0 1.6rem 0 0;
+  }
+
+  &--full-width {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }

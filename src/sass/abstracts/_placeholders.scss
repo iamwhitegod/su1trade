@@ -24,6 +24,27 @@
   flex: 0 0 65%;
 }
 
-%d-flex {
+%d-flex--centered {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Typography placeholders
+
+%lg--copy {
+  font-size: clamp(1.8rem, 2vw, 3.2rem);
+}
+
+%sm--copy {
+  font-size: 1.4rem;
+}
+
+%tiny--copy {
+  font-size: 1rem;
+}
+
+%lead--copy {
+  font-size: 1.6rem;
+  font-weight: 500;
 }

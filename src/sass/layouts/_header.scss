@@ -3,9 +3,8 @@
   position: relative;
   overflow: hidden;
 
-  @include respond(port-height) {
-    height: 100vh;
-  }
+  // @include respond(port-height) {
+  // }
 
   @include respond(tab-land) {
     padding: 0 3rem 10rem;
@@ -44,116 +43,46 @@
     }
   }
 
-  .img-overlay {
-    background-image: url(../images/bg-desktop.png);
-    background-size: cover;
+  &--home {
+    background-image: url(../assets/hero_image.png);
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
+    position: relative;
+    @extend %d-flex--centered;
 
     @include respond(phone) {
-      background-image: url(../images/bg-mobile.png);
+      background-image: url(../assets/hero_image_mobile.png);
+      background-size: cover;
     }
-  }
 
-  .top-navigation {
-    position: relative;
-    z-index: 100;
-  }
-}
-
-.hero {
-  &-container {
-    max-width: gap(grid-width);
-    margin: 12rem auto 0;
-    position: relative;
-    z-index: 0;
-
-    @include respond(port-height) {
-      padding: 3rem;
-      margin: 0 auto;
-      position: absolute;
-      top: 54%;
-      left: 0%;
-      transform: translateY(-50%);
-    }
-  }
-
-  &-box {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(min-content, 1fr));
-    grid-gap: 2rem;
-    position: relative;
-    z-index: 100;
-
-    @include respond(tab-port) {
-      grid-template-rows: repeat(2, min-content);
+    @include respond(sm-phone) {
+      background-image: url(../assets/hero_image_xs.png);
+      background-size: contain;
     }
 
     @include respond(xs-phone) {
-      font-size: 2.6rem;
+      background-image: url(../assets/hero_image_xs.png);
+      background-size: contain;
     }
 
-    &__text {
-      grid-column: 1 / 8;
-      grid-row: 1 / 2;
-      margin-top: 1rem;
-      margin-bottom: 10rem;
-
-      &--2 {
-        grid-column: 1 / 7;
-      }
-
-      @include respond(tab-port) {
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-        margin-top: -3rem;
-        margin-bottom: 0;
-        text-align: center;
-      }
-
-      @include respond(xs-phone) {
-        margin-top: -2rem;
-      }
+    .hero--box {
+      max-width: 96rem;
+      margin: 0 auto;
+      text-align: center;
     }
 
-    &__img {
-      grid-column: 8 / -1;
-      grid-row: 1 / 2;
-      margin-top: -6.5rem;
-      margin-right: -5rem;
-      margin-left: -5rem;
-      // @include Updown();
+    :is(h1, p) {
+      color: neutral-colors-setup(color-white);
+    }
 
-      &--2 {
-        grid-column: 7 / -1;
-        animation: none;
-        transform: translateY(-30px);
+    h1 {
+      margin-bottom: 1.6rem;
+    }
 
-        img {
-          max-width: 85%;
-        }
-      }
-
-      &--3 {
-        grid-column: 7 / -1;
-        animation: none;
-        // transform: translateY(-30px);
-      }
-
-      @include respond(tab-port) {
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
-        margin-top: -6.5rem;
-        margin-right: 0rem;
-        margin-left: 0rem;
-        margin-bottom: 3.2rem;
-      }
+    p {
+      margin-bottom: 6rem;
+      @extend %lg--copy;
     }
   }
 }
