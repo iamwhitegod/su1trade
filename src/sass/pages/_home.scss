@@ -230,7 +230,7 @@
 
     &--details {
       figure {
-        @include respond(tab-port) {
+        @include respond(phone) {
           text-align: center;
           margin-left: auto;
           margin-right: auto;
