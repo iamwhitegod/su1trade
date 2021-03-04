@@ -5,6 +5,11 @@ import * as e from "./eventHandlers/eventHandler";
 import * as canvas from "./eventHandlers/canvas";
 
 (function UIevents() {
+  window.onload = function () {
+    //hide the preloader
+    document.querySelector(".loader-container").style.display = "none";
+  };
+
   // window.addEventListener("scroll", e.debounce(e.checkSlide));
   e.setupEventListners();
   summit.collectRegistrationContact();
