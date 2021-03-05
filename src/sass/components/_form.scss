@@ -126,11 +126,13 @@
     }
 
     small {
-      visibility: hidden;
+      // visibility: hidden;
       font-size: 10px;
       position: absolute;
-      bottom: 0;
+      bottom: -16px;
       left: 0;
+      color: #e61e1e;
+      // color: #c6e2ad;
     }
 
     a {
