@@ -19,7 +19,7 @@ const userData = {};
 const validateFullname = (event) => {
   // Check if user input is empty
   if (!event.target.value) {
-    setErrorMessage("Fullname cannot be empty", fullname);
+    setErrorMessage("Please enter your fullname", fullname);
     return;
   } else {
     removeErrorMessage(fullname);
@@ -28,7 +28,10 @@ const validateFullname = (event) => {
 
   // Check if user input is less than 4
   if (event.target.value.length < 4) {
-    setErrorMessage("Fullname must be more than 4 characters", fullname);
+    setErrorMessage(
+      "A fullname of aleast 4 or more characters is required",
+      fullname
+    );
     return;
   } else {
     removeErrorMessage(fullname);
@@ -38,7 +41,7 @@ const validateFullname = (event) => {
   // Check if user input contains number or special characters
   if (!event.target.value.match(regexFullname)) {
     setErrorMessage(
-      "Fullname cannot contain numbers or special characters",
+      "Fullname can't contain numbers or special characters",
       fullname
     );
     return;
@@ -54,7 +57,7 @@ const validateFullname = (event) => {
 const validateEmail = (event) => {
   // Check if email input is empty
   if (!event.target.value) {
-    setErrorMessage("Email cannot be empty", email);
+    setErrorMessage("Please enter your email address", email);
     return;
   } else {
     removeErrorMessage(email);
@@ -65,7 +68,7 @@ const validateEmail = (event) => {
     event.target.value.includes("@") &&
     !event.target.value.match(regexEmail)
   ) {
-    setErrorMessage("Please provide a correct email", email);
+    setErrorMessage("Please provide a valid email address", email);
     return;
   } else {
     removeErrorMessage(email);
@@ -79,7 +82,7 @@ const validateEmail = (event) => {
 const validatePhone = (event) => {
   // Check if phone input is empty
   if (!event.target.value) {
-    setErrorMessage("Phone cannot be empty", phone);
+    setErrorMessage("Please enter your phone number", phone);
     return;
   } else {
     removeErrorMessage(phone);
@@ -101,7 +104,10 @@ const validatePhone = (event) => {
 const validatePassword = (event) => {
   // Check if password field is emtpy
   if (!event.target.value) {
-    setErrorMessage("Password cannot be empty", password);
+    setErrorMessage(
+      `A minimum 8 characters password contains a combination of uppercase and lowercase letter, symbols and number are required`,
+      password
+    );
     return;
   } else {
     removeErrorMessage(password);
@@ -110,7 +116,7 @@ const validatePassword = (event) => {
   // Check if password field matches regexPassword
   if (!event.target.value.match(regexPassword)) {
     setErrorMessage(
-      "Password must be 8 characters long, and should contain aleast one Uppercase letter, special character & number",
+      `A minimum 8 characters password contains a combination of uppercase and lowercase letter, symbols and number are required`,
       password
     );
   } else {
@@ -162,10 +168,12 @@ if (signup) {
 // setErrorMessage
 const setErrorMessage = (message, element) => {
   element.parentElement.querySelector("small").textContent = message;
+  element.classList.add("error");
 };
 
 const removeErrorMessage = (element) => {
   element.parentElement.querySelector("small").textContent = "";
+  element.classList.remove("error");
 };
 
 // //Collect registration contact
