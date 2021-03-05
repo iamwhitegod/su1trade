@@ -1,6 +1,6 @@
 // import axios from "axios";
 import Typewriter from "typewriter-effect/dist/core";
-import * as summit from "./eventHandlers/summitForm";
+import * as summit from "./eventHandlers/signup";
 import * as e from "./eventHandlers/eventHandler";
 import * as canvas from "./eventHandlers/canvas";
 
@@ -10,11 +10,10 @@ import * as canvas from "./eventHandlers/canvas";
     document.querySelector(".loader-container").style.display = "none";
   };
 
-  // window.addEventListener("scroll", e.debounce(e.checkSlide));
+  // setup event listener
   e.setupEventListners();
-  summit.collectRegistrationContact();
-  summit.collectSignUpForm();
 
+  // Typing animation
   const heading = document.querySelector('[data--js="typewriter"]');
 
   // Animations
