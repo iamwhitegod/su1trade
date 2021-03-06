@@ -106,4 +106,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
       @content;
     } //1800
   }
+
+  @if $breakpoint == hover {
+    @media not all and (pointer: coarse) {
+      @content;
+    }
+  }
 }

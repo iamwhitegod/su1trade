@@ -26,13 +26,23 @@
     transition: background 0.8s;
 
     &:hover {
-      background: primary-colors-setup(primary-color-disabled)
-        radial-gradient(
-          circle,
-          transparent 1%,
-          primary-colors-setup(primary-color-disabled) 1%
-        )
-        center/15000%;
+      // background: primary-colors-setup(primary-color-disabled)
+      //   radial-gradient(
+      //     circle,
+      //     transparent 1%,
+      //     primary-colors-setup(primary-color-disabled) 1%
+      //   )
+      //   center/15000%;
+
+      @include respond(hover) {
+        background: primary-colors-setup(primary-color-disabled)
+          radial-gradient(
+            circle,
+            transparent 1%,
+            primary-colors-setup(primary-color-disabled) 1%
+          )
+          center/15000%;
+      }
     }
 
     &:active {

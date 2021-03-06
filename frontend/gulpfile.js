@@ -38,6 +38,7 @@ gulp.task("js", () => {
         },
       })
     )
+    .on("error", logError)
     .pipe(gulp.dest("src/templates/js"));
 });
 
@@ -62,7 +63,9 @@ gulp.task("watch:sass", () => {
     },
   }),
     gulp.watch(["./src/sass/**/*.scss"], gulp.series(["scss"])),
-    gulp.watch("./src/js/**/*.js", gulp.series(["js"])),
+    gulp
+      .watch("./src/js/**/*.js", gulp.series(["js"]))
+      .on("change", browserSync.reload),
     gulp
       .watch(["./src/templates/*.html", "./**/*.js"])
       .on("change", browserSync.reload);
