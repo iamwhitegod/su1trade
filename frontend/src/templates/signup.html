@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Su1trade | Sign up</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+
+    <!-- Fav Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <!-- preloader -->
+    <div class="loader-container">
+      <div class="loader three-d-spinner">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+      </div>
+    </div>
+
+    <!-- Main site navigation bar starts here-->
+    <nav>
+      <div class="row">
+        <div class="nav nav--bar nav--main">
+          <figure class="logo">
+            <img src="assets/su1trade_logo.png" alt="brand logo" />
+          </figure>
+
+          <ul data--js="menu--panel">
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./about.html">About us</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="#">Learn</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="#">Invest</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./exchange.html">Exchange</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./signin.html">Sign in</a>
+            </li>
+            <li data--js="menu--item" class="active">
+              <a data--js="menu--link" class="active" href="./signup.html"
+                >Sign up</a
+              >
+            </li>
+          </ul>
+
+          <menu data--js="mobile--menu" class="icon icon--small">
+            <svg>
+              <use xlink:href="assets/sprite.svg#menu-alt"></use>
+            </svg>
+          </menu>
+        </div>
+      </div>
+    </nav>
+    <!-- Main site navigation ends here -->
+
+    <section class="create-account">
+      <form class="form" id="signup-form">
+        <div class="form__caption">
+          <h2 class="secondary-heading">Sign for Investment</h2>
+          <p class="secondary-desc">Welcome to SU1Trade</p>
+        </div>
+
+        <div class="form__line">
+          <span class="primary-desc">Sign Up</span>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder=" "
+            autocomplete="off"
+            class="form-group__input"
+            required
+          />
+          <label for="fullname" class="form-group__label">Full Name</label>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder=" "
+            autocomplete="off"
+            class="form-group__input"
+            required
+          />
+          <label for="email" class="form-group__label">Email</label>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder=" "
+            autocomplete="off"
+            class="form-group__input"
+            required
+          />
+          <label for="phone" class="form-group__label">Phone</label>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder=" "
+            autocomplete="off"
+            class="form-group__input"
+            required
+          />
+          <label for="password" class="form-group__label">Password</label>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            placeholder=" "
+            autocomplete="off"
+            class="form-group__input"
+            required
+          />
+          <label for="confirm-password" class="form-group__label"
+            >Confirm Password</label
+          >
+        </div>
+
+        <div class="form-group d-flex">
+          <input type="checkbox" class="form-group__checkbox" />
+          <p class="secondary-desc">
+            I have read and agree to the terms of service by
+            <span class="accent">Su1trade Inc.</span>
+          </p>
+        </div>
+
+        <div class="form-group d-flex">
+          <button
+            type="submit"
+            class="btn--primary btn--ripple btn--full-width btn--medium mb2"
+          >
+            Create an account
+          </button>
+        </div>
+
+        <div class="form-group d-flex">
+          <p class="secondary-desc">
+            I already have an account?
+            <span class="accent"
+              ><a href="./signin.html" class="accent"> Signin</a></span
+            >
+          </p>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer starts here -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col-1-of-3">
+          <img
+            src="assets/su1trade_logo.png"
+            alt="brand logo"
+            class="footer__logo"
+          />
+          <p>&copy;2020 SU1Trade.com. All rights reserved</p>
+
+          <div class="social-media">
+            <a
+              href="http://FACEBOOK.com/SU1TRADE"
+              target="_blank"
+              class="social-media__link"
+            >
+              <img src="assets/Facebook icon.svg" alt="facebook icon" />
+            </a>
+
+            <a href="#" target="_blank" class="social-media__link">
+              <img src="assets/Twiiter icon.svg" alt="twiiter icon" />
+            </a>
+
+            <a
+              href="http://T.me/SUcommunity"
+              target="_blank"
+              class="social-media__link"
+            >
+              <img src="assets/Telegram icon.svg" alt="telegram icon" />
+            </a>
+
+            <a href="#" class="social-media__link">
+              <img src="assets/Instagram icon.svg" alt="instagram icon" />
+            </a>
+          </div>
+        </div>
+        <div class="col-1-of-3">
+          <div class="footer__nav">
+            <ul class="footer__list">
+              <a href="./terms.html" class="footer__link">Terms of use </a>
+              <a href="./license.html" class="footer__link">Legal License </a>
+              <a href="./privacy.html" class="footer__link">Privacy policy </a>
+              <a href="./security.html" class="footer__link">Security </a>
+            </ul>
+
+            <ul class="footer__list">
+              <a href="#" class="footer__link"> Partners </a>
+              <a href="./about.html" class="footer__link">About Us</a>
+              <a href="#" class="footer__link">News </a>
+              <!-- <a href="#" class="footer__link">Press Kit </a> -->
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-3">
+          <!-- <p class="secondary-desc"></p> -->
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end here -->
+
+    <!-- <script src="./js/index.js"></script> -->
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

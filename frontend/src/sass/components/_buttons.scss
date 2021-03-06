@@ -1,0 +1,95 @@
+.btn {
+  &--primary,
+  &--disabled {
+    background-color: primary-colors-setup(primary-color-base-dark);
+    color: neutral-colors-setup(color-white);
+  }
+
+  &--primary {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+  }
+
+  &--outlined {
+    background: none;
+    border: 1.3px solid primary-colors-setup(primary-color-base-dark);
+    color: primary-colors-setup(primary-color-base-dark);
+    transition: color 0.8s;
+
+    &:hover {
+      color: neutral-colors-setup(color-white);
+    }
+  }
+
+  &--ripple {
+    background-position: center;
+    transition: background 0.8s;
+
+    &:hover {
+      background: primary-colors-setup(primary-color-disabled)
+        radial-gradient(
+          circle,
+          transparent 1%,
+          primary-colors-setup(primary-color-disabled) 1%
+        )
+        center/15000%;
+    }
+
+    &:active {
+      background-color: primary-colors-setup(primary-color-base-dark);
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+
+  &--disabled {
+    background-color: primary-colors-setup(primary-color-disabled);
+  }
+
+  &--small {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  &--medium {
+    font-size: 1.6rem;
+    padding: 1rem 3.2rem;
+  }
+
+  &--large {
+    font-size: 1.8rem;
+    padding: 1.6rem 4.8rem;
+
+    @include respond(tab-port) {
+      padding: 1.2rem 2.4rem;
+    }
+  }
+
+  &--icon {
+    line-height: 0;
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  &--text {
+    font-size: 1.6rem;
+    background: none;
+    color: theme-colors-setup(color-dark-gray);
+    padding: 0;
+  }
+
+  &--icon-with-text {
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    color: neutral-colors-setup(color-white);
+    padding: 0 1.6rem 0 0;
+  }
+
+  &--full-width {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
