@@ -107,7 +107,7 @@
     }
 
     @include respond(phone) {
-      padding: 5vh 0 20vh;
+      padding: 5vh 0 15vh;
     }
 
     &__text-box {
@@ -166,6 +166,10 @@
       position: relative;
 
       @include respond(sm-phone) {
+        margin: 0 auto;
+      }
+
+      @include respond(xs-phone) {
         margin: 0 auto;
       }
     }
