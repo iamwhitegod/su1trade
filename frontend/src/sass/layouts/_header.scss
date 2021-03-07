@@ -87,6 +87,100 @@
       }
     }
   }
+
+  &--investment {
+    background-image: url(../assets/hero_image_2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    height: 90vh;
+
+    @include respond(tab-land) {
+      height: 75vh;
+    }
+
+    @include respond(tab-port) {
+      height: 100%;
+      padding: 15vh 0 20vh;
+    }
+
+    @include respond(phone) {
+      padding: 5vh 0 20vh;
+    }
+
+    &__text-box {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      color: neutral-colors-setup(color-white);
+      padding-top: 35vh;
+
+      @include respond(tab-land) {
+        padding-top: 25vh;
+      }
+
+      @include respond(tab-port) {
+        padding-top: 20vh;
+      }
+
+      @include respond(sm-phone) {
+        text-align: center;
+      }
+
+      @include respond(xs-phone) {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: clamp(2.8rem, 5.5vw, 6.4rem);
+        padding-right: 18vh;
+        margin-bottom: 0.8rem;
+
+        @include respond(tab-land) {
+          padding-right: 16vh;
+        }
+
+        @include respond(phone) {
+          // max-width: 60rem;
+          padding: 0;
+        }
+      }
+    }
+
+    p {
+      @extend %lg--copy;
+      margin-bottom: 4.8rem;
+
+      @include respond(xs-phone) {
+        padding: 0 1.6rem;
+      }
+    }
+
+    button.btn--text {
+      color: neutral-colors-setup(color-white);
+      display: block;
+      width: fit-content;
+
+      position: relative;
+
+      @include respond(sm-phone) {
+        margin: 0 auto;
+      }
+    }
+
+    button.btn--text::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0.3rem;
+      position: absolute;
+      bottom: -0.8rem;
+      border-radius: 0.8rem;
+      background-color: primary-colors-setup(primary-color-base-dark);
+    }
+  }
 }
 
 #canvas {

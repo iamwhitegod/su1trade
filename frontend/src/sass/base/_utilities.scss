@@ -106,6 +106,10 @@
   color: primary-colors-setup(primary-color-base-light) !important;
 }
 
+.accent--dark {
+  color: primary-colors-setup(primary-color-base-dark) !important;
+}
+
 .col-grey {
   color: theme-colors-setup(color-dark-gray);
 }

@@ -1,231 +1,277 @@
 .our-focus {
   &__section {
-    margin-top: 10rem;
+    background-color: neutral-colors-setup(color-black);
   }
-
   &__grid {
-    @include grid(2, 30%);
+    // @include grid(2, 10%);
+    margin-top: 6rem;
+    padding: 2.4rem;
 
     @include respond(tab-port) {
-      margin-top: 8rem;
+      margin-top: 1.2rem;
+      padding: 0;
+      text-align: center;
+    }
+
+    & > * {
+      color: neutral-colors-setup(color-white) !important;
     }
   }
 }
 
-.tutorial {
-  &__section {
-    padding: 10rem 0;
-
-    @include respond(tab-port) {
-      padding: 8rem 0;
-    }
+.how-it-works {
+  &--section {
+    background-color: neutral-colors-setup(color-black);
   }
-  &__video {
-    @include centeredwidth(60rem);
+
+  &--caption {
+    max-width: 58.5rem;
+    margin: 0 auto 6rem;
     text-align: center;
-  }
-}
 
-.success-path {
-  &__section {
-    padding: 10rem 0;
-
-    @include respond(tab-port) {
-      padding: 8rem 0;
+    h2,
+    h3 {
+      color: primary-colors-setup(primary-color-base-dark);
     }
-  }
 
-  &__col {
-    @include grid(2, 10%);
-  }
-
-  &__img {
-    width: 100%;
-    height: 60rem;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      // margin-right: -4rem;
-    }
-  }
-
-  &__col {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 60rem;
-
-    @include respond(tab-port) {
-      height: 55rem;
+    h3 {
+      margin-bottom: 4.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
     }
 
     h2 {
-      padding-right: 14rem;
-      margin-bottom: 4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      color: neutral-colors-setup(color-white);
+    }
+  }
+
+  &--investment-type {
+    text-align: center;
+    padding: 0 10rem;
+
+    @include respond(tab-land) {
+      padding: 0 4rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 0 6rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 2rem;
+    }
+
+    @include respond(xs-phone) {
+      padding: 0;
+    }
+
+    h2 {
+      color: neutral-colors-setup(color-white);
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      color: neutral-colors-setup(color-white);
+      margin-bottom: 1.6rem;
+      line-height: 140%;
+
+      &:last-of-type {
+        margin-bottom: 4.8rem;
+      }
+    }
+
+    button.btn--text {
+      color: neutral-colors-setup(color-white);
+      display: block;
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    button.btn--text::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0.3rem;
+      position: absolute;
+      bottom: -0.8rem;
+      border-radius: 0.8rem;
+      background-color: primary-colors-setup(primary-color-base-dark);
+    }
+  }
+}
+
+.social-proof {
+  &--section {
+    background-color: neutral-colors-setup(color-black);
+    padding: 12rem 0;
+
+    @include respond(tab-port) {
+      text-align: center;
+    }
+
+    p .large,
+    p .medium,
+    p .small {
+      display: block;
+      width: max-content;
+      line-height: 130%;
 
       @include respond(tab-port) {
-        padding-right: 6rem;
+        margin: 0 auto;
       }
     }
 
     p {
-      padding-right: 12rem;
-      line-height: 1.8;
+      color: neutral-colors-setup(color-white);
+
+      .large {
+        font-size: 12.4rem;
+        font-weight: 500;
+        color: primary-colors-setup(primary-color-base-dark);
+
+        @include respond(tab-land) {
+          font-size: 9.6rem;
+        }
+
+        @include respond(phone) {
+          font-size: 7.2rem;
+        }
+
+        @include respond(sm-phone) {
+          font-size: 5.6rem;
+        }
+
+        @include respond(xs-phone) {
+          font-size: 4.8rem;
+        }
+      }
+
+      .medium {
+        font-size: 6.4rem;
+        margin-top: -1.6rem;
+        color: primary-colors-setup(primary-color-base-dark);
+        font-weight: 500;
+
+        @include respond(tab-land) {
+          font-size: 5.4rem;
+        }
+
+        @include respond(phone) {
+          font-size: 4.8rem;
+        }
+
+        @include respond(sm-phone) {
+          font-size: 3.6rem;
+        }
+
+        @include respond(xs-phone) {
+          font-size: 3rem;
+        }
+      }
+
+      .small {
+        font-size: 3.8rem;
+        font-weight: 500;
+
+        @include respond(phone) {
+          font-size: 2.8rem;
+        }
+
+        @include respond(sm-phone) {
+          font-size: 2.4rem;
+        }
+
+        @include respond(xs-phone) {
+          font-size: 2.2rem;
+        }
+      }
+    }
+
+    figure {
+      margin-top: 1.2rem;
+      margin-left: -4.8rem;
 
       @include respond(tab-port) {
-        padding-right: 4rem;
+        margin-top: 4.8rem;
+        margin-left: 0;
+      }
+
+      @include respond(xs-phone) {
+        margin-top: 2.4rem;
+        margin-left: 0;
       }
     }
   }
 }
 
-.steps {
-  &__section {
-    padding: 10rem 0;
+.benefits {
+  &--section {
+    background-color: neutral-colors-setup(color-black);
 
-    @include respond(tab-port) {
-      padding: 3rem 0;
+    h2 {
+      max-width: 70rem;
+      margin: 0 auto 6rem;
+      text-align: center;
+      color: primary-colors-setup(primary-color-base-dark);
     }
   }
 
-  &__details,
-  &__video {
-    @include grid(2, 5%);
-  }
+  &--benefit {
+    padding-right: 8rem;
 
-  &__details {
-    h2 {
-      margin-bottom: 4rem;
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+
+    h3 {
+      color: primary-colors-setup(primary-color-base-dark);
+      margin-bottom: 2.4rem;
     }
 
     p {
-      line-height: 2;
-      padding-right: 12rem;
-
-      @include respond(tab-port) {
-        padding: 1rem;
-      }
-    }
-  }
-
-  &__video {
-    padding: 3rem 0;
-
-    video {
-      width: 100%;
-      margin-top: 8rem;
+      color: neutral-colors-setup(color-white);
     }
   }
 }
 
-.steps-shown {
-  &__section {
-    padding: 10rem 0;
-
-    @include respond(tab-port) {
-      padding: 8rem 0;
-    }
+.cta {
+  &--section-2 {
+    background-color: neutral-colors-setup(color-black);
   }
 
-  &__col {
-    @include grid(2, 10%);
-    // background-color: color(very-black);
-    padding-right: 6rem;
-    margin-bottom: 4rem;
+  &--copy-2 {
+    h2 {
+      font-size: 4.8rem;
+      color: neutral-colors-setup(color-white);
 
-    @include respond(tab-port) {
-      padding: 1rem;
-    }
+      @include respond(sm-phone) {
+        font-size: 3.6rem;
+      }
 
-    .heading {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-
-      span {
-        display: inline-block;
-        font-size: font(secondary-desc);
-        font-weight: 600;
-        flex: 0 0 5rem;
-        height: 5rem;
-        @include gradient(45deg);
-        border-radius: 50%;
-        text-align: center;
-        line-height: 5rem;
-        margin-right: 2rem;
+      @include respond(xs-phone) {
+        font-size: 3.2rem;
       }
     }
 
-    .description {
-      p {
-        line-height: 1.6;
-      }
-    }
-  }
-}
-
-.pricing {
-  &__section {
-    padding: 10rem 0;
-    background-color: color(very-black);
-    color: color(very-whyte);
-
-    @include respond(tab-port) {
-      padding: 8rem 0;
+    p {
+      color: primary-colors-setup(primary-color-base-dark);
     }
   }
 
-  &__caption {
-    text-align: center;
-  }
+  &--btn-2 {
+    padding-top: 3.8rem;
 
-  &__plan {
-    @include grid(3, 10%);
-    text-align: center;
-    padding: 1.8rem 1rem;
-    margin-top: 10rem;
-    // border-radius: 1rem;
-    transition: all 0.1s;
-
-    &:hover {
-      border: 1px solid color(dark-yellow);
-    }
-
-    &-price {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
-      .price-tag {
-        display: block;
-        font-size: font(default-font);
-        margin-bottom: 1rem;
-      }
-
-      .price {
-        display: block;
-        @include gradient(45deg);
-        background-clip: text;
-        color: transparent;
-        font-size: font(secondary-heading);
-        font-weight: 600;
-        margin-bottom: 4rem;
-      }
-    }
-  }
-
-  &__details {
-    list-style: none;
-    li {
-      font-size: font(inline-link);
-      margin-bottom: 2rem;
-
-      &:last-child {
-        margin: 4rem;
-      }
+    @include respond(phone) {
+      padding-top: 0;
     }
   }
 }
@@ -233,6 +279,7 @@
 .FAQs {
   &__section {
     padding: 10rem 0;
+    background-color: neutral-colors-setup(color-black);
 
     @include respond(tab-port) {
       padding: 8rem 0;
@@ -241,6 +288,7 @@
 
   &__caption {
     text-align: center;
+    color: primary-colors-setup(primary-color-base-dark);
   }
 
   &__accordion {
@@ -259,11 +307,12 @@
 
   &__question {
     display: block;
-    background-color: color(very-light-grey);
+    // background-color: color(very-light-grey);
     // border-radius: 0.3rem;
     font-weight: 500;
-    padding: 0.8rem 2rem;
-    color: color(grey);
+    padding: 1.2rem 2rem;
+    border: 1px solid #c4c4c4;
+    color: neutral-colors-setup(color-white);
     cursor: pointer;
     transition: 0.2s;
 
@@ -282,7 +331,7 @@
     line-height: 1.6;
     padding: 2rem;
 
-    background-color: color(very-whyte);
+    color: neutral-colors-setup(color-white);
     // border-radius: 0.3rem;
     max-height: 0;
     overflow: hidden;
@@ -310,7 +359,8 @@
   }
 
   &__section {
-    padding: 0 0 10rem;
+    padding: 10rem 0;
+    background-color: neutral-colors-setup(color-black);
   }
 
   &__cta {
@@ -336,6 +386,7 @@
     p {
       font-size: 4.2rem;
       line-height: 1.3;
+      color: neutral-colors-setup(color-white);
 
       @include respond(phone) {
         font-size: 3.2rem;

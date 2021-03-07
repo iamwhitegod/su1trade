@@ -4,6 +4,7 @@ const menuItems = Array.from(
   document.querySelectorAll('[data--js="menu--item"]')
 );
 const menuLinks = document.querySelectorAll('[data--js="menu--link"]');
+const questionPanel = document.querySelectorAll(".FAQs__question");
 
 // Setup eventlisteners
 export const setupEventListners = () => {
@@ -31,22 +32,22 @@ export const setupEventListners = () => {
       });
     });
   }
+
+  if (questionPanel) {
+    questionPanel.forEach((question) => {
+      question.addEventListener("click", (e) => {
+        e.target.classList.toggle("FAQs__question--active");
+        e.target.nextElementSibling.classList.toggle("FAQs__answer--active");
+      });
+    });
+  }
 };
 
 // setupEventListners();
 
-// const questionPanel = document.querySelectorAll(".FAQs__question");
 // const modal = document.querySelector(".modal__container");
 // const modalPopup = document.querySelector(".modal__popup");
 // const modalOverlay = document.querySelector(".modal__overlay");
-
-//   questionPanel.forEach((question) => {
-//     question.addEventListener("click", (e) => {
-//       e.target.classList.toggle("FAQs__question--active");
-//       // e.target.nextElementSibling.classList.toggle("FAQs__answer--active");
-//     });
-//   });
-// };
 
 // /**********************************
 //  * modal
