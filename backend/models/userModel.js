@@ -45,7 +45,7 @@ const userSchema = (db, DataTypes) => {
 
 const User = userSchema(db, Sequelize);
 
-db.sync({ force: true }).then(() => {
+db.sync().then(() => {
   console.log(`Database & tables created!`);
 });
 

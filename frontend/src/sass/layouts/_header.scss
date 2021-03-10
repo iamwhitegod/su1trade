@@ -185,6 +185,50 @@
       background-color: primary-colors-setup(primary-color-base-dark);
     }
   }
+
+  .hero {
+    &-box {
+      display: flex;
+      align-items: center;
+      padding: 6rem 0;
+      position: relative;
+      z-index: 100;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &__text {
+        width: 55%;
+        color: neutral-colors-setup(color-white);
+
+        @include respond(tab-port) {
+          width: 100%;
+          text-align: center;
+        }
+
+        button {
+          padding: 1.2rem 2rem;
+          border: 1.6px solid primary-colors-setup(primary-color-base-dark);
+          font-size: 1.65rem;
+          // margin-left: -4px;
+          // margin-top: 2px;
+        }
+      }
+
+      &__img {
+        width: 45%;
+
+        @include respond(tab-port) {
+          width: 100%;
+          padding: 4.8rem;
+          order: -1;
+          margin-bottom: 4.8rem;
+        }
+      }
+    }
+  }
 }
 
 #canvas {
