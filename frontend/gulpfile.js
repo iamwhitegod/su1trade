@@ -51,7 +51,7 @@ gulp.task("webpack", () => {
 
 gulp.task("img", () => {
   return gulp
-    .src("./src/assets/*")
+    .src("./src/templates/assets/*")
     .pipe(imageMin())
     .pipe(gulp.dest("build/assets"));
 });
@@ -71,4 +71,4 @@ gulp.task("watch:sass", () => {
       .on("change", browserSync.reload);
 });
 
-gulp.task("prod", gulp.series(["webpack", "sass", "img"]));
+gulp.task("prod", gulp.series(["webpack", "sass"]));

@@ -1,0 +1,22 @@
+nav
+  .row
+    .nav.nav--bar.nav--main
+      figure.logo
+        a(href="/")
+          img(src="assets/su1trade_logo.png", alt="brand logo")
+      ul(data--js="menu--panel")
+        li(data--js="menu--item")
+          a(data--js="menu--link", href="/about") About us
+        li(data--js="menu--item")
+          a(data--js="menu--link", href="#") Learn
+        li(data--js="menu--item")
+          a(data--js="menu--link", href="/invest") Invest
+        li(data--js="menu--item")
+          a(data--js="menu--link", href="/exchange") Exchange
+        li.active(data--js="menu--item")
+          a.active(data--js="menu--link", href="/login") Sign in
+        li(data--js="menu--item")
+          a(data--js="menu--link", href="/signup") Sign up
+      menu.icon.icon--small(data--js="mobile--menu")
+        svg
+          use(href="assets/sprite.svg#menu-alt")

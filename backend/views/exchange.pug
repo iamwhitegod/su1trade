@@ -1,0 +1,186 @@
+extends base
+
+block navigation
+  nav
+    .row
+      .nav.nav--bar.nav--main
+        figure.logo
+          a(href="/")
+            img(src="assets/su1trade_logo.png", alt="brand logo")
+        ul(data--js="menu--panel")
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/about") About us
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="#") Learn
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/invest") Invest
+          li.active(data--js="menu--item")
+            a.active(data--js="menu--link", href="/exchange") Exchange
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/login") Sign in
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/signup") Sign up
+        menu.icon.icon--small(data--js="mobile--menu")
+          svg
+            use(href="assets/sprite.svg#menu-alt")
+
+block content
+  header.header
+    canvas#canvas
+    .row
+      .hero-box
+        .hero-box__text.hero-box__text--2
+          h1.primary-heading.
+            
+            Buy & Sell Crypto Currencies at the best exchange rates.
+            
+          p.primary-desc.mw50.mb6.
+            
+            Safe, licensed & non-custodial crypto exchange services at your convenience. You get what you expect.
+            
+          form#exchange-form(action="#")
+            input#email.form-group__input--2(type="email", name="email", placeholder="Email", autocomplete="off", required)
+            button.btn--primary.btn--ripple.btn--medium(type="submit").
+              
+              Start Now
+              
+        .hero-box__img.hero-box__img--2
+          img(src="assets/illustration03.png", alt="illustration")
+  section.exchange-price__section
+    .exchange-price
+      table.exchange-price__table
+        thead.exchange-price__table-head
+          tr.exchange-price__table-row
+            td No.
+            td Name
+            td Prices
+            td Change
+            td Trade
+        tbody.exchange-price__table-body
+          tr.exchange-price__table-row
+            td 1
+            td
+              .exchange-price__name
+                figure
+                  img(src="assets/btc-logo.png", alt)
+                span Bitcoin
+            td N6, 866, 862.06
+            td
+              span.exchange-price__change.error -2.01%
+            td
+              button.btn Buy
+          tr.exchange-price__table-row
+            td 2
+            td
+              .exchange-price__name
+                figure
+                  img(src="assets/eth-logo.png", alt)
+                span Ethereum
+            td N181, 154.07
+            td
+              span.exchange-price__change.error -0.77%
+            td
+              button.btn Buy
+          tr.exchange-price__table-row
+            td 3
+            td
+              .exchange-price__name
+                figure
+                  img(src="assets/lite-logo.png", alt)
+                span Litecoin
+            td N31, 683.96
+            td
+              span.exchange-price__change +0.75%
+            td
+              button.btn Buy
+          tr.exchange-price__table-row
+            td 4
+            td
+              .exchange-price__name
+                figure
+                  img(src="assets/btccash-logo.png", alt)
+                span Bitcoin Cash
+            td N31, 683.96
+            td
+              span.exchange-price__change.error -0.07%
+            td
+              button.btn Buy
+  section.payment-method__section
+    .payment-method
+      .payment-method__details
+        h2.secondary-heading Any Payment Method
+        p.secondary-desc.
+          
+          Su1trade is a one-stop point connecting two worlds - flat and crypto. Now purchasing or selling crypto currencies is similar to online shopping - super fast, reliable and accesible worldwide. Pay for crypto in your preferred local currency and join thousands of happy customers.
+          
+      figure.payment-method__img
+        img(src="assets/exc-pm-img.png", alt="Payment method photo")
+  section.exc-features__section
+    .row
+      .exc-features__caption
+        h2.secondary-heading Best features in one place
+        p.secondary-desc.
+          
+          You can be absolutely certain that you are entering the realm of solid online crypto exchange services with a primary focus on ease of access, transparency regularly compliance and speedy delivery.
+          
+      .row
+        .col-1-of-3
+          .exc-features__details
+            figure
+              img(src="assets/no-hidden-fees-icon.svg", alt="No hidden Fees Icon")
+            h3.tertiary-heading No Hidden Fees
+            p.secondary.desc.
+              
+              All includes services - the prices you see is the price you pay. no added fees or extra payment. You get exactly what you expect.
+              
+        .col-1-of-3
+          .exc-features__details
+            figure
+              img(src="assets/fast-purchases-icon.svg", alt="Fast Purchases Icon")
+            h3.tertiary-heading Fast Purchases
+            p.secondary.desc.
+              
+              Sell or buy bitcoin and crypto curriencies with a bank credit or debit card or convert.
+              
+        .col-1-of-3
+          .exc-features__details
+            figure
+              img(src="assets/easy-verification-icon.svg", alt="No hidden Fees Icon")
+            h3.tertiary-heading Easy Verification
+            p.secondary.desc.
+              
+              Register an account within few minutes and complete auto ID verification in 15 minutes and start exchanging crypto immediately.
+              
+  section.fav-coin__section
+    .fav-coin
+      figure.fav-coin__img
+        img(src="assets/exc_fav_img.png", alt="Favourite coins img")
+      .fav-coin__details
+        h2.secondary-heading
+          | All your favorite coins
+          br
+          | in one place.
+
+        p.secondary-desc.
+          
+          Here you find all major and popular cryptocurriences avaiable for fast purchasing with a credit or debit card. Converting from one crypto to another and paying with your local bank.
+          
+        button.btn--primary.btn--ripple Buy Crypto
+  section.exchange-is-easy__section
+    .exchange-is-easy
+      .exchange-is-easy__details
+        h2.secondary-heading
+          | Exchange is Easy!
+          br
+          | Try it out Now!
+
+        p.secondary-desc.
+          
+          Safe, licensed & non-custodial crypto exchange service at your convency. You get exactly what you expect.
+          
+      form.exchange-is-easy__form
+        input#email.form-group__input--2(type="email", name="email", placeholder="Email", autocomplete="off", required)
+        button.btn--primary.btn--ripple(type="submit").
+          
+          Get Started
+          

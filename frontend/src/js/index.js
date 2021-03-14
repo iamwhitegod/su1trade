@@ -36,4 +36,6 @@ import * as canvas from "./eventHandlers/canvas";
     .typeString(`get minimum of 28% or more monthly.`)
     .pauseFor(25000)
     .start();
+
+  // summit.signup();
 })();

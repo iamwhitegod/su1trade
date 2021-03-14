@@ -1,0 +1,51 @@
+extends base
+
+block navigation
+  nav
+    .row
+      .nav.nav--bar.nav--main
+        figure.logo
+          a(href="/")
+            img(src="assets/su1trade_logo.png", alt="brand logo")
+        ul(data--js="menu--panel")
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/about") About us
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="#") Learn
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/invest") Invest
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/exchange") Exchange
+          li.active(data--js="menu--item")
+            a.active(data--js="menu--link", href="/login") Sign in
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/signup") Sign up
+        menu.icon.icon--small(data--js="mobile--menu")
+          svg
+            use(href="assets/sprite.svg#menu-alt")
+
+block content
+  section.create-account
+    form.form#signin-form
+      .form__caption
+        h2.secondary-heading Sign in to your Account
+        p.secondary-desc Welcome Back
+      .form__line
+        span.primary-desc Sign In
+      .form-group
+        input#email.form-group__input(type="email", name="email", placeholder=" ", autocomplete="off", required)
+        label.form-group__label(for="email") Email
+      .form-group
+        input#password.form-group__input(type="password", name="password", placeholder=" ", autocomplete="off", required)
+        label.form-group__label(for="password") Password
+      .form-group.d-flex
+        button.btn--primary.btn--ripple.btn--full-width.btn--medium.mb2(type="submit") Sign In
+
+      .form-group.d-flex
+        p.secondary-desc Don't have an account?
+          span.accent
+            a.accent(href="/signup") Sign up
+      .form-group.d-flex
+        p.secondary-desc Forgotten Password?
+          span.accent
+            a.accent(href="/forgottenPassword") Reset Password

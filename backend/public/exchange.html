@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Su1trade | ecommerce</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <div class="loader-container">
+      <div class="loader three-d-spinner">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+      </div>
+    </div>
+    <nav>
+      <div class="row">
+        <div class="nav nav--bar nav--main">
+          <figure class="logo">
+            <img src="assets/su1trade_logo.png" alt="brand logo" />
+          </figure>
+          <ul data--js="menu--panel">
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./about.html">About us</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="#">Learn</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./investment.html">Invest</a>
+            </li>
+            <li data--js="menu--item" class="active">
+              <a data--js="menu--link" class="active" href="./exchange.html"
+                >Exchange</a
+              >
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./signin.html">Sign in</a>
+            </li>
+            <li data--js="menu--item">
+              <a data--js="menu--link" href="./signup.html">Sign up</a>
+            </li>
+          </ul>
+          <menu data--js="mobile--menu" class="icon icon--small"
+            ><svg><use xlink:href="assets/sprite.svg#menu-alt"></use></svg
+          ></menu>
+        </div>
+      </div>
+    </nav>
+    <header class="header">
+      <canvas id="canvas"></canvas>
+      <div class="row">
+        <div class="hero-box">
+          <div class="hero-box__text hero-box__text--2">
+            <h1 class="primary-heading">
+              Buy & Sell Crypto Currencies at the best exchange rates.
+            </h1>
+            <p class="primary-desc mw50 mb6">
+              Safe, licensed & non-custodial crypto exchange services at your
+              convenience. You get what you expect.
+            </p>
+            <form action="#" id="exchange-form">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                autocomplete="off"
+                class="form-group__input--2"
+                required
+              />
+              <button
+                type="submit"
+                class="btn--primary btn--ripple btn--medium"
+              >
+                Start Now
+              </button>
+            </form>
+          </div>
+          <div class="hero-box__img hero-box__img--2">
+            <img src="assets/illustration03.png" alt="illustration" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="exchange-price__section">
+      <div class="exchange-price">
+        <table class="exchange-price__table">
+          <thead class="exchange-price__table-head">
+            <tr class="exchange-price__table-row">
+              <td>No.</td>
+              <td>Name</td>
+              <td>Prices</td>
+              <td>Change</td>
+              <td>Trade</td>
+            </tr>
+          </thead>
+          <tbody class="exchange-price__table-body">
+            <tr class="exchange-price__table-row">
+              <td>1</td>
+              <td>
+                <div class="exchange-price__name">
+                  <figure><img src="assets/btc-logo.png" alt="" /></figure>
+                  <span>Bitcoin</span>
+                </div>
+              </td>
+              <td>N6, 866, 862.06</td>
+              <td><span class="exchange-price__change error">-2.01%</span></td>
+              <td><button class="btn">Buy</button></td>
+            </tr>
+            <tr class="exchange-price__table-row">
+              <td>2</td>
+              <td>
+                <div class="exchange-price__name">
+                  <figure><img src="assets/eth-logo.png" alt="" /></figure>
+                  <span>Ethereum</span>
+                </div>
+              </td>
+              <td>N181, 154.07</td>
+              <td><span class="exchange-price__change error">-0.77%</span></td>
+              <td><button class="btn">Buy</button></td>
+            </tr>
+            <tr class="exchange-price__table-row">
+              <td>3</td>
+              <td>
+                <div class="exchange-price__name">
+                  <figure><img src="assets/lite-logo.png" alt="" /></figure>
+                  <span>Litecoin</span>
+                </div>
+              </td>
+              <td>N31, 683.96</td>
+              <td><span class="exchange-price__change">+0.75%</span></td>
+              <td><button class="btn">Buy</button></td>
+            </tr>
+            <tr class="exchange-price__table-row">
+              <td>4</td>
+              <td>
+                <div class="exchange-price__name">
+                  <figure><img src="assets/btccash-logo.png" alt="" /></figure>
+                  <span>Bitcoin Cash</span>
+                </div>
+              </td>
+              <td>N31, 683.96</td>
+              <td><span class="exchange-price__change error">-0.07%</span></td>
+              <td><button class="btn">Buy</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="payment-method__section">
+      <div class="payment-method">
+        <div class="payment-method__details">
+          <h2 class="secondary-heading">Any Payment Method</h2>
+          <p class="secondary-desc">
+            Su1trade is a one-stop point connecting two worlds - flat and
+            crypto. Now purchasing or selling crypto currencies is similar to
+            online shopping - super fast, reliable and accesible worldwide. Pay
+            for crypto in your preferred local currency and join thousands of
+            happy customers.
+          </p>
+        </div>
+        <figure class="payment-method__img">
+          <img src="assets/exc-pm-img.png" alt="Payment method photo" />
+        </figure>
+      </div>
+    </section>
+    <section class="exc-features__section">
+      <div class="row">
+        <div class="exc-features__caption">
+          <h2 class="secondary-heading">Best features in one place</h2>
+          <p class="secondary-desc">
+            You can be absolutely certain that you are entering the realm of
+            solid online crypto exchange services with a primary focus on ease
+            of access, transparency regularly compliance and speedy delivery.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-1-of-3">
+            <div class="exc-features__details">
+              <figure>
+                <img
+                  src="assets/no-hidden-fees-icon.svg"
+                  alt="No hidden Fees Icon"
+                />
+              </figure>
+              <h3 class="tertiary-heading">No Hidden Fees</h3>
+              <p class="secondary desc">
+                All includes services - the prices you see is the price you pay.
+                no added fees or extra payment. You get exactly what you expect.
+              </p>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="exc-features__details">
+              <figure>
+                <img
+                  src="assets/fast-purchases-icon.svg"
+                  alt="Fast Purchases Icon"
+                />
+              </figure>
+              <h3 class="tertiary-heading">Fast Purchases</h3>
+              <p class="secondary desc">
+                Sell or buy bitcoin and crypto curriencies with a bank credit or
+                debit card or convert.
+              </p>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="exc-features__details">
+              <figure>
+                <img
+                  src="assets/easy-verification-icon.svg"
+                  alt="No hidden Fees Icon"
+                />
+              </figure>
+              <h3 class="tertiary-heading">Easy Verification</h3>
+              <p class="secondary desc">
+                Register an account within few minutes and complete auto ID
+                verification in 15 minutes and start exchanging crypto
+                immediately.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fav-coin__section">
+      <div class="fav-coin">
+        <figure class="fav-coin__img">
+          <img src="assets/exc_fav_img.png" alt="Favourite coins img" />
+        </figure>
+        <div class="fav-coin__details">
+          <h2 class="secondary-heading">
+            All your favorite coins<br />in one place.
+          </h2>
+          <p class="secondary-desc">
+            Here you find all major and popular cryptocurriences avaiable for
+            fast purchasing with a credit or debit card. Converting from one
+            crypto to another and paying with your local bank.
+          </p>
+          <button class="btn--primary btn--ripple">Buy Crypto</button>
+        </div>
+      </div>
+    </section>
+    <section class="exchange-is-easy__section">
+      <div class="exchange-is-easy">
+        <div class="exchange-is-easy__details">
+          <h2 class="secondary-heading">
+            Exchange is Easy!<br />Try it out Now!
+          </h2>
+          <p class="secondary-desc">
+            Safe, licensed & non-custodial crypto exchange service at your
+            convency. You get exactly what you expect.
+          </p>
+        </div>
+        <form class="exchange-is-easy__form">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="off"
+            class="form-group__input--2"
+            required
+          />
+          <button type="submit" class="btn--primary btn--ripple">
+            Get Started
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="row">
+        <div class="col-1-of-3">
+          <img
+            src="assets/su1trade_logo.png"
+            alt="brand logo"
+            class="footer__logo"
+          />
+          <p>&copy;2020 SU1Trade.com. All rights reserved</p>
+          <div class="social-media">
+            <a
+              href="http://FACEBOOK.com/SU1TRADE"
+              target="_blank"
+              class="social-media__link"
+              ><img src="assets/Facebook icon.svg" alt="facebook icon" /> </a
+            ><a href="#" target="_blank" class="social-media__link"
+              ><img src="assets/Twiiter icon.svg" alt="twiiter icon" /> </a
+            ><a
+              href="http://T.me/SUcommunity"
+              target="_blank"
+              class="social-media__link"
+              ><img src="assets/Telegram icon.svg" alt="telegram icon" /> </a
+            ><a href="#" class="social-media__link"
+              ><img src="assets/Instagram icon.svg" alt="instagram icon"
+            /></a>
+          </div>
+        </div>
+        <div class="col-1-of-3">
+          <div class="footer__nav">
+            <ul class="footer__list">
+              <a href="./terms.html" class="footer__link">Terms of use </a
+              ><a href="./license.html" class="footer__link">Legal License </a
+              ><a href="./privacy.html" class="footer__link">Privacy policy </a
+              ><a href="./security.html" class="footer__link">Security</a>
+            </ul>
+            <ul class="footer__list">
+              <a href="./partners.html" class="footer__link">Partners </a
+              ><a href="./about.html" class="footer__link">About Us</a>
+              <a href="#" class="footer__link">News</a>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-3"></div>
+      </div>
+    </footer>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

@@ -11,7 +11,7 @@ const signToken = (id) => {
   });
 };
 
-const createSendToken = (user, stateCode, req, res) => {
+const createSendToken = (user, statusCode, req, res) => {
   const token = signToken(user.id);
 
   res.cookie("jwt", token, {
@@ -56,10 +56,29 @@ exports.login = catchAsync(async (req, res, next) => {
     return next(new AppError("Please provide email and password!", 400));
   }
 
-  const user = await User.findOne({ email });
+  const user = await User.findOne({
+    attributes: ["id", "email", "password"],
+    where: { email },
+  });
 
-  console.log(user);
+  // console.log(await user.correctPassword(user.password, password));
+
+  if (!user || !(await user.correctPassword(password, user.password))) {
+    return next(new AppError("Incorrect email or password", 401));
+  }
+
+  // 3) If everything ok, send token to client
+  createSendToken(user, 200, req, res);
 });
+
+exports.logout = (req, res) => {
+  res.cookie("jwt", "loggedout", {
+    expires: new Date(Date.now() + 1 * 1000),
+    httpOnly: true,
+  });
+
+  res.status(200).json({ status: "success" });
+};
 
 exports.protect = catchAsync(async (req, res, next) => {
   let token;
@@ -80,6 +99,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   }
 
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
+  console.log(decoded);
 
   const currentUser = await User.findOne({ where: { id: decoded.id } });
 
@@ -91,6 +111,13 @@ exports.protect = catchAsync(async (req, res, next) => {
       )
     );
   }
+
+  //  // 4) Check if user changed password after the token was issued
+  //  if (currentUser.changedPasswordAfter(decoded.iat)) {
+  //   return next(
+  //     new AppError('User recently changed password! Please log in again.', 401)
+  //   );
+  // }
 
   req.user = currentUser;
   res.locals.user = currentUser;
@@ -125,4 +152,16 @@ exports.isLoggedIn = async (req, res, next) => {
     }
   }
   next();
+};
+
+exports.restrictTo = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      return next(
+        new AppError("You do not have permission to perform this action", 403)
+      );
+    }
+
+    next();
+  };
 };

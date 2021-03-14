@@ -1,0 +1,221 @@
+.dashboard {
+  &--body {
+    background-color: #fafafa;
+
+    .wrapper {
+      max-width: 76.4rem;
+      margin: 0 auto;
+      padding: 4.8rem 0;
+
+      @include respond(tab-port) {
+        padding: 4.8rem 1.2rem;
+      }
+
+      h2 {
+        margin-bottom: 4.8rem;
+      }
+
+      .notification-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: theme-colors-setup(color-light-gray-lines);
+        padding: 2.4rem 1.6rem;
+        margin-bottom: 4.8rem;
+
+        @include respond(tab-port) {
+          flex-direction: column;
+        }
+
+        button {
+          word-break: keep-all;
+        }
+
+        p {
+          @include respond(tab-port) {
+            margin-bottom: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .info {
+      max-width: 60rem;
+      margin: 0 auto 4.8rem;
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+
+        &:not(:last-child) {
+          margin-bottom: 2.4rem;
+        }
+
+        img {
+          display: block;
+          margin-right: 1.2rem;
+        }
+      }
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4.8rem;
+
+      @include respond(sm-phone) {
+        flex-direction: column;
+      }
+
+      @include respond(xs-phone) {
+        flex-direction: column;
+      }
+
+      button {
+        text-align: center;
+        word-break: keep-all;
+        &:not(:last-child) {
+          margin-right: 2.4rem;
+        }
+
+        @include respond(sm-phone) {
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 1.2rem;
+          }
+        }
+
+        @include respond(xs-phone) {
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .accent--dark {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      font-weight: 500;
+    }
+
+    .investment-plans {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9.6rem;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .investment-plan {
+      &__plan {
+        width: 48%;
+        padding: 3.2rem 2.4rem;
+        border-radius: 2px;
+        border: 1.6px solid theme-colors-setup(color-light-gray-heading);
+
+        @include respond(tab-port) {
+          max-width: 36rem;
+          min-width: 30rem;
+
+          @include respond(sm-phone) {
+            min-width: 30rem;
+          }
+
+          @include respond(xs-phone) {
+            min-width: 25rem;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 4.8rem;
+          }
+        }
+
+        @include respond(xs-phone) {
+          padding: 3.2rem 1.2rem;
+        }
+      }
+
+      &__details {
+        display: flex;
+        margin-bottom: 4.8rem;
+
+        img {
+          display: block;
+          align-self: flex-start;
+          width: 9.6rem;
+          margin-right: 1.2rem;
+
+          @include respond(xs-phone) {
+            width: 6rem;
+          }
+        }
+      }
+
+      &__text {
+        h3 {
+          text-transform: uppercase;
+          margin-bottom: 1.6rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+
+          &:not(:last-child) {
+            margin-bottom: 0.8rem;
+          }
+        }
+      }
+
+      &__meta {
+        margin-bottom: 3.2rem;
+
+        ul {
+          list-style: none;
+        }
+
+        li {
+          display: flex;
+          margin-bottom: 0.4rem;
+        }
+
+        li .pair {
+          width: 50%;
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: theme-colors-setup(color-dark-gray-lines);
+        }
+
+        li .value {
+          width: 50%;
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+      }
+
+      &__btn {
+        text-align: center;
+      }
+    }
+  }
+
+  &--btn {
+    padding: 1.2rem 2.4rem;
+    border-radius: 2px;
+    font-size: 16px;
+  }
+}
+
+#nav--dashboard {
+  padding: 1.2rem 0;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.03);
+}

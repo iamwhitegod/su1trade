@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../axios";
 import * as d from "./eventHandler";
 
 const regexFullname = /^([a-zA-Z0-9]+|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{1,}|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{3,}\s{1}[a-zA-Z0-9]{1,})$/g;
@@ -175,6 +175,62 @@ const removeErrorMessage = (element) => {
   element.parentElement.querySelector("small").textContent = "";
   element.classList.remove("error");
 };
+
+// export const signup = async (inputs) => {
+//   try {
+//     const res = await axios({
+//       method: "POST",
+//       url: "/signup",
+//       data: {
+//         ...inputs,
+//       },
+//     });
+
+//     if (res.data.status === "success") {
+//       alert("success", "Signed up successfully!");
+//       window.setTimeout(() => {
+//         location.assign("/dashboard");
+//       }, 1500);
+//     }
+//   } catch (err) {
+//     alert("error", err.response.data.message);
+//   }
+// };
+
+// export const login = async (email, password) => {
+//   try {
+//     const res = await axios({
+//       method: "POST",
+//       url: "localhost:5000/api/v1/users/login",
+//       data: {
+//         email,
+//         password,
+//       },
+//     });
+
+//     if (res.data.status === "success") {
+//       showAlert("success", "Logged in successfully!");
+//       window.setTimeout(() => {
+//         location.assign("/dashboard");
+//       }, 1500);
+//     }
+//   } catch (err) {
+//     showAlert("error", err.response.data.message);
+//   }
+// };
+
+// export const logout = async () => {
+//   try {
+//     const res = await axios({
+//       method: "GET",
+//       url: "localhost:5000/api/v1/users/logout",
+//     });
+//     if ((res.data.status = "success")) location.reload(true);
+//   } catch (err) {
+//     console.log(err.response);
+//     alert("error", "Error logging out! Try again.");
+//   }
+// };
 
 // //Collect registration contact
 // export const collectRegistrationContact = () => {

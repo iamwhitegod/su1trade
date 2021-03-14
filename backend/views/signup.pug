@@ -1,0 +1,67 @@
+extends base
+
+block navigation
+  nav
+    .row
+      .nav.nav--bar.nav--main
+        figure.logo
+          a(href="/")
+            img(src="assets/su1trade_logo.png", alt="brand logo")
+        ul(data--js="menu--panel")
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/about") About us
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="#") Learn
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/invest") Invest
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/exchange") Exchange
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/login") Sign in
+          li.active(data--js="menu--item")
+            a.active(data--js="menu--link", href="/signup") Sign up
+        menu.icon.icon--small(data--js="mobile--menu")
+          svg
+            use(href="assets/sprite.svg#menu-alt")
+
+block content
+  section.create-account
+    form.form#signup-form
+      .form__caption
+        h2.secondary-heading Sign for Investment
+        p.secondary-desc Welcome to SU1Trade
+      .form__line
+        span.primary-desc Sign Up
+      .form-group
+        input#fullname.form-group__input(name="fullname", placeholder=" ", autocomplete="off", required)
+        label.form-group__label(for="fullname") Full Name
+        small  
+      .form-group
+        input#email.form-group__input(type="email", name="email", placeholder=" ", autocomplete="off", required)
+        label.form-group__label(for="email") Email
+        small  
+      .form-group
+        input#phone.form-group__input(type="number", name="phone", placeholder=" ", autocomplete="off", required)
+        label.form-group__label(for="phone") Phone
+        small  
+      .form-group
+        input#password.form-group__input(type="password", name="password", placeholder=" ", autocomplete="off", required)
+        label.form-group__label(for="password") Password
+        small.small  
+      .form-group
+        input#confirm-password.form-group__input(type="password", name="confirm-password", placeholder=" ", autocomplete="off", required)
+        label.form-group__label(for="confirm-password") Confirm Password
+        small  
+      .form-group.d-flex
+        input.form-group__checkbox(type="checkbox")
+        p.secondary-desc I have read and agree to the terms of service by
+          span.accent Su1trade Inc.
+      .form-group.d-flex
+        button.btn--primary.btn--ripple.btn--full-width.btn--medium.mb2(type="submit").
+
+          Create an account
+
+      .form-group.d-flex
+        p.secondary-desc I already have an account?
+          span.accent
+            a.accent(href="/login") Signin

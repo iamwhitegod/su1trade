@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SU1trade - Dashboard</title>
+
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+
+    <!-- Fav Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+  </head>
+  <body class="dashboard--body">
+
+    
+    <!-- preloader -->
+    <div class="loader-container">
+      <div class="loader three-d-spinner">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="nav--dashboard">
+      <div class="row">
+        <div class="nav nav--dashboard">
+          <figure class="nav--dashboard__logo logo">
+            <img src="assets/su1trade_logo.png" alt="Brand logo" />
+          </figure>
+
+          <ul data--js="menu--panel" class="nav--dashboard__list">
+            <li class="nav--dashboard__item">
+              <span
+                class="nav--dashboard__user-name capitalized capitalized--lite"
+                >ADESANYA</span
+              >
+            </li>
+
+            <li class="nav--dashboard__item">
+              <figure class="nav--dashboard__avatar">
+                <img src="assets/avatar.png" alt="User photo" />
+              </figure>
+            </li>
+
+            <li class="nav--dashboard__item">
+              <button
+                class="btn--primary btn--ripple btn--small capitalized capitalized--lite"
+                id="logout--btn"
+                href="#"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+
+          <menu data--js="mobile--menu" class="icon icon--small">
+            <svg>
+              <use xlink:href="assets/sprite.svg#menu-alt"></use>
+            </svg>
+          </menu>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main  -->
+    <main>
+      <div class="wrapper">
+        <h2>Welcome to your SU1trade account dashboard!</h2>
+
+        <div class="notification-bar">
+          <p>
+            You need a deriv DMT5 account for FUNDS MANAGEMENT investment plan.
+          </p>
+          <button class="btn--primary btn--ripple dashboard--btn">
+            Create account
+          </button>
+        </div>
+
+        <div class="investment-plans">
+          <div class="investment-plan__plan">
+            <div class="investment-plan__details">
+              <img
+                src="assets/lending-investment-icon.svg"
+                alt="Lending money icon"
+              />
+
+              <div class="investment-plan__text">
+                <h3>Lending Investment</h3>
+                <p>
+                  This plan is best suitable for individual who are looking for
+                  profitable ROI for a period of time.</p>
+                </p>
+
+                <p>
+                  With this plan, you earn 17% of your investment every monthly
+                  for five (5) months. And on the sixth month, 70% of your
+                  investment capital is refunded to you and contract terminated
+                  or you renew contract.</p>
+                </p>
+              </div>
+            </div>
+
+            <div class="investment-plan__meta">
+              <ul>
+                <li>
+                  <span class="pair">Profits</span>
+                  <span class="value">17%</span>
+                </li>
+
+                <li>
+                  <span class="pair">Duration</span>
+                  <span class="value">5months</span>
+                </li>
+
+                <li>
+                  <span class="pair">Minimum amount</span>
+                  <span class="value">$200</span>
+                </li>
+
+                <li>
+                  <span class="pair">Commission</span>
+                  <span class="value">No Commission</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="investment-plan__btn">
+              <button class="btn--primary btn--ripple">Start Now</button>
+            </div>
+          </div>
+
+          <div class="investment-plan__plan">
+            <div class="investment-plan__details">
+              <img
+                src="assets/funds-management-icon.svg"
+                alt="Lending money icon"
+              />
+
+              <div class="investment-plan__text">
+                <h3>Funds Management</h3>
+                <p>
+                  This plan is best suitable for individual who are looking for
+                  profitable ROI for a period of time.</p>
+                </p>
+
+                <p>
+                  With this plan, you earn 17% of your investment every monthly
+                  for five (5) months. And on the sixth month, 70% of your
+                  investment capital is refunded to you and contract terminated
+                  or you renew contract.</p>
+                </p>
+              </div>
+            </div>
+
+            <div class="investment-plan__meta">
+              <ul>
+                <li>
+                  <span class="pair">Profits</span>
+                  <span class="value">28%</span>
+                </li>
+
+                <li>
+                  <span class="pair">Duration</span>
+                  <span class="value">Minimum variable</span>
+                </li>
+
+                <li>
+                  <span class="pair">Minimum amount</span>
+                  <span class="value">$1000</span>
+                </li>
+
+                <li>
+                  <span class="pair">Commission</span>
+                  <span class="value">35%</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="investment-plan__btn">
+              <button class="btn--primary btn--ripple">Start Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="info">
+          <ul>
+            <li>
+              <img src="assets/ion_checkmark-outline.svg" alt="Check icon" />
+              <span
+                >All transactions on SU1trade platform is done manually on our
+                <strong>WhatsApp Channel</strong> as we are currently developing
+                the platform to serve you better.</span
+              >
+            </li>
+
+            <li>
+              <img src="assets/ion_checkmark-outline.svg" alt="Check icon" />
+              <span
+                >Please you are adviced to contact our customer service to
+                continue Investment.</span
+              >
+            </li>
+
+            <li>
+              <img src="assets/ion_checkmark-outline.svg" alt="Check icon" />
+              <span
+                >SU1trade official contact number
+                <strong>+234 803 409 4903</strong></span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="cta">
+          <button class="btn--primary btn--ripple dashboard--btn">
+            Chat on Whatsapp
+          </button>
+          <button class="btn--primary btn--ripple dashboard--btn">
+            Join Telegram
+          </button>
+        </div>
+
+        <a class="accent--dark" href="#">Learn more about us</a>
+      </div>
+    </main>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

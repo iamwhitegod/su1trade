@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width,initial-scale=1")
+      title SU1trade - #{title}
+        
+      link(href="css/main.css", rel="stylesheet")
+      link(rel="apple-touch-icon", sizes="180x180", href="assets/favicon_io/apple-touch-icon.png")
+      link(rel="icon", type="image/png", sizes="32x32", href="assets/favicon_io/favicon-32x32.png")
+      link(rel="icon", type="image/png", sizes="16x16", href="assets/favicon_io/favicon-16x16.png")
+      link(rel="manifest", href="assets/favicon_io/site.webmanifest")
+  body
+    // CSS Preloader
+    include _preloader
+
+    // Main navigation
+    block navigation
+      include _navigation
+
+    block content
+      h1 This is a heading. Welcome to SU1Trade
+
+    // Global footer
+    include _footer
+
+    script(src="js/build.js")
