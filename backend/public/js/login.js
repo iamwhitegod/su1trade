@@ -2,7 +2,7 @@ import "@babel/polyfill";
 import axios from "axios";
 import { showAlert } from "./alert";
 
-export const login = async (email, password) => {
+export const login = async (email, password, btn) => {
   try {
     const res = await axios({
       method: "POST",
@@ -15,13 +15,14 @@ export const login = async (email, password) => {
 
     if (res.data.status === "success") {
       showAlert("success", "Logged in successfully!");
+      btn.textContent = "Sign in";
       window.setTimeout(() => {
         location.assign("/user/dashboard");
       }, 1500);
     }
   } catch (err) {
-    console.log(err);
-    showAlert("error", "Invalid email or password");
+    showAlert("error", "Invalid email or password. Try Again");
+    btn.textContent = "Sign in";
   }
 };
 

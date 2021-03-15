@@ -4,7 +4,7 @@ html
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width,initial-scale=1")
-    meta(http-equiv="Content-Security-Policy", content="default-src *; img-src * \'self\' data: https:; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' *; style-src \'self\' \'unsafe-inline\' *")
+    //- meta(http-equiv="Content-Security-Policy", content="default-src 'self' https://placeholder.com; img-src 'self' data:")
     title SU1trade - #{title}
     link(href="../css/main.css", type="text/css", rel="stylesheet")
     //  Fav Icons 
@@ -24,22 +24,21 @@ html
       .row
         .nav.nav--dashboard
           figure.nav--dashboard__logo.logo
-            img(src="../assets/su1trade_logo.png", alt="Brand logo")
+            a(href="/")
+              img(src="../assets/su1trade_logo.png", alt="Brand logo")
           ul.nav--dashboard__list(data--js="menu--panel")
             li.nav--dashboard__item
               span.nav--dashboard__user-name.capitalized.capitalized--lite=user.fullname.split(' ')[0]
             li.nav--dashboard__item
               figure.nav--dashboard__avatar
-                a(href="https://placeholder.com/")
-                  img(src="https://via.placeholder.com/65.png?text=User", alt="User photo")
+                img(src="../assets/person-circle-sharp.svg", alt="User photo")
             li.nav--dashboard__item
               button.btn--primary.btn--ripple.btn--small.capitalized.capitalized--lite#logout--btn(href="#").
                 
                 Logout
                 
           menu.icon.icon--small(data--js="mobile--menu")
-            svg
-              use(href="../assets/sprite.svg#menu-alt")
+            img(src="../assets/menu-alt.svg", alt="Menu icon")
     //  Main  
     main
       .wrapper
@@ -144,7 +143,7 @@ html
               
               Join Telegram
               
-        a.accent--dark(href="./about.html") Learn more about us
+        a.accent--dark(href="../about") Learn more about us
     //  modal starts here 
     .container.backdrop
       //

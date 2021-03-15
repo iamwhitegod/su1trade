@@ -95,20 +95,25 @@ if (signupForm) {
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirm-password").value;
 
-    signup(fullname, email, phone, password, confirmPassword);
-
-    signupForm.querySelector("button").textContent = "Sign up";
+    signup(
+      fullname,
+      email,
+      phone,
+      password,
+      confirmPassword,
+      signupForm.querySelector("button")
+    );
   });
 }
 
 if (loginForm) {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    loginForm.querySelector("button").textContent = 'Please wait...';
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    login(email, password);
+    login(email, password, loginForm.querySelector("button"));
   });
 }
 

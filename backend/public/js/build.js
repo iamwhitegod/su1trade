@@ -8627,7 +8627,7 @@ var signup =
 function () {
   var _ref = _asyncToGenerator(
   /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee(fullname, email, phone, password, confirmPassword) {
+  regeneratorRuntime.mark(function _callee(fullname, email, phone, password, confirmPassword, btn) {
     var res;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
@@ -8652,20 +8652,22 @@ function () {
 
             if (res.data.status === "success") {
               (0, _alert.showAlert)("success", "Signed up successfully!");
+              btn.textContent = "Create an Account";
               window.setTimeout(function () {
                 location.assign("/user/dashboard");
               }, 1500);
             }
 
-            _context.next = 10;
+            _context.next = 11;
             break;
 
           case 7:
             _context.prev = 7;
             _context.t0 = _context["catch"](0);
-            (0, _alert.showAlert)("error", _context.t0.response.data.message);
+            (0, _alert.showAlert)("error", "Sorry, unable to create account. Try Again!");
+            btn.textContent = "Create an Account";
 
-          case 10:
+          case 11:
           case "end":
             return _context.stop();
         }
@@ -8673,7 +8675,7 @@ function () {
     }, _callee, null, [[0, 7]]);
   }));
 
-  return function signup(_x, _x2, _x3, _x4, _x5) {
+  return function signup(_x, _x2, _x3, _x4, _x5, _x6) {
     return _ref.apply(this, arguments);
   };
 }();
@@ -8950,7 +8952,7 @@ var login =
 function () {
   var _ref = _asyncToGenerator(
   /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee(email, password) {
+  regeneratorRuntime.mark(function _callee(email, password, btn) {
     var res;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
@@ -8972,6 +8974,7 @@ function () {
 
             if (res.data.status === "success") {
               (0, _alert.showAlert)("success", "Logged in successfully!");
+              btn.textContent = "Sign in";
               window.setTimeout(function () {
                 location.assign("/user/dashboard");
               }, 1500);
@@ -8983,8 +8986,8 @@ function () {
           case 7:
             _context.prev = 7;
             _context.t0 = _context["catch"](0);
-            console.log(_context.t0);
-            (0, _alert.showAlert)("error", "Invalid email or password");
+            (0, _alert.showAlert)("error", "Invalid email or password. Try Again");
+            btn.textContent = "Sign in";
 
           case 11:
           case "end":
@@ -8994,7 +8997,7 @@ function () {
     }, _callee, null, [[0, 7]]);
   }));
 
-  return function login(_x, _x2) {
+  return function login(_x, _x2, _x3) {
     return _ref.apply(this, arguments);
   };
 }();
@@ -9840,17 +9843,17 @@ if (signupForm) {
     var phone = document.getElementById("phone").value;
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirm-password").value;
-    (0, _signup.signup)(fullname, email, phone, password, confirmPassword);
-    signupForm.querySelector("button").textContent = "Sign up";
+    (0, _signup.signup)(fullname, email, phone, password, confirmPassword, signupForm.querySelector("button"));
   });
 }
 
 if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
+    loginForm.querySelector("button").textContent = 'Please wait...';
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    (0, _login.login)(email, password);
+    (0, _login.login)(email, password, loginForm.querySelector("button"));
   });
 }
 
@@ -9886,7 +9889,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57581" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49690" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

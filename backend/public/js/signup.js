@@ -1,13 +1,14 @@
 import "@babel/polyfill";
 import axios from "axios";
-import {showAlert} from './alert';
+import { showAlert } from "./alert";
 
 export const signup = async (
   fullname,
   email,
   phone,
   password,
-  confirmPassword
+  confirmPassword,
+  btn
 ) => {
   try {
     const res = await axios({
@@ -24,11 +25,13 @@ export const signup = async (
 
     if (res.data.status === "success") {
       showAlert("success", "Signed up successfully!");
+      btn.textContent = "Create an Account";
       window.setTimeout(() => {
         location.assign("/user/dashboard");
       }, 1500);
     }
   } catch (err) {
-    showAlert("error", err.response.data.message);
+    showAlert("error", "Sorry, unable to create account. Try Again!");
+    btn.textContent = "Create an Account";
   }
 };

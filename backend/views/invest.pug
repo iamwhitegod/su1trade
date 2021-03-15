@@ -21,8 +21,7 @@ block navigation
           li(data--js="menu--item")
             a(data--js="menu--link", href="/signup") Sign up
         menu.icon.icon--small(data--js="mobile--menu")
-          svg
-            use(href="assets/sprite.svg#menu-alt")
+          img(src="assets/menu-alt.svg", alt="Menu icon")
 
 block content
   header.header--investment
@@ -86,7 +85,7 @@ block content
             
             With this plan, you earn 17% of your investment every monthly for five (5) months. And on the sixth month, 70% of your investment capital is refunded to you and contract terminated or you renew contract.
             
-          a(href="./signup.html")
+          a(href="/signup")
             button.btn--primary.btn--ripple.btn--medium.
               
               Get Started
@@ -105,7 +104,7 @@ block content
             br
             | Terms & Conditions Apply.
 
-          a(href="./signup.html")
+          a(href="/signup")
             button.btn--primary.btn--ripple.btn--medium.
               
               Get Started
@@ -152,7 +151,7 @@ block content
     .row
       .col-1-of-2
         figure.testimonial--img
-          img(src="assets/customer_story_1.png", alt="customer image")
+          img(src="assets/customer_story_3.png", alt="customer image")
       .col-1-of-2
         .testimonial--wrapper
           blockquote.testimonial--customer-story
@@ -160,7 +159,7 @@ block content
 
             cite
               h4 Joseph Clark
-              span Hon. William Chuks
+              span SU1trade Investor
   section.cta--section-2
     .row
       .col-1-of-2
@@ -169,7 +168,7 @@ block content
           h2 Start investing in just 5 minutes.
       .col-1-of-2
         .cta--btn.cta--btn-2
-          a(href="./signup.html")
+          a(href="/signup")
             button.btn--primary.btn--ripple.btn--large.
               
               Start Your Journey Now
