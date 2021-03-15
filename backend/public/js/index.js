@@ -1,5 +1,5 @@
 import "@babel/polyfill";
-import Typewriter from "typewriter-effect/dist/core";
+// import Typewriter from "typewriter-effect/dist/core";
 
 import { signup } from "./signup";
 import { login, logout } from "./login";
@@ -52,29 +52,29 @@ setupEventListners();
   Typing animation
 **********************************************************
 **********************************************************
-*/
-const heading = document.querySelector('[data--js="typewriter"]');
+// */
+// const heading = document.querySelector('[data--js="typewriter"]');
 
-// Animations
-const typewriter = new Typewriter(heading, {
-  loop: true,
-  delay: 75,
-});
+// // Animations
+// const typewriter = new Typewriter(heading, {
+//   loop: true,
+//   delay: 75,
+// });
 
-typewriter
-  .pauseFor(250)
-  .typeString(
-    `Invest, Buy and Sell Crptocurrencies, Learn Forex Trading and
-    E-commerce.`
-  )
-  .pauseFor(2500)
-  .deleteChars(71)
-  .typeString(` and earn 17% profit every month for 5months.`)
-  .pauseFor(2500)
-  .deleteChars(40)
-  .typeString(`get minimum of 28% or more monthly.`)
-  .pauseFor(25000)
-  .start();
+// typewriter
+//   .pauseFor(250)
+//   .typeString(
+//     `Invest, Buy and Sell Crptocurrencies, Learn Forex Trading and
+//     E-commerce.`
+//   )
+//   .pauseFor(2500)
+//   .deleteChars(71)
+//   .typeString(` and earn 17% profit every month for 5months.`)
+//   .pauseFor(2500)
+//   .deleteChars(40)
+//   .typeString(`get minimum of 28% or more monthly.`)
+//   .pauseFor(25000)
+//   .start();
 
 /*
 **********************************************************
@@ -87,6 +87,7 @@ typewriter
 if (signupForm) {
   signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    signupForm.querySelector("button").textContent = "Please wait...";
 
     const fullname = document.getElementById("fullname").value;
     const email = document.getElementById("email").value;
@@ -95,6 +96,8 @@ if (signupForm) {
     const confirmPassword = document.getElementById("confirm-password").value;
 
     signup(fullname, email, phone, password, confirmPassword);
+
+    signupForm.querySelector("button").textContent = "Sign up";
   });
 }
 

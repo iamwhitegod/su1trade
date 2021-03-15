@@ -3,6 +3,7 @@ extends base
 block head
   meta(charset="UTF-8")
   meta(name="viewport", content="width=device-width,initial-scale=1")
+  meta(http-equiv="Content-Security-Policy", content="default-src gap://ready file://* *; style-src \'self\' http://* https://* \'unsafe-inline\'; script-src \'self\' http://* https://* \'unsafe-inline\' \'unsafe-eval\'")
   title SU1trade - #{title}
   link(href="css/main.css", rel="stylesheet")
   link(rel="apple-touch-icon", sizes="180x180", href="assets/favicon_io/apple-touch-icon.png")
@@ -36,18 +37,15 @@ block navigation
             use(href="assets/sprite.svg#menu-alt")
 
 block content
-  // header starts here 
   header.header--about
     canvas#canvas
     .header--about__text-box.header--about__text-box--2
       .row
         h1 About Us
         p.lg--copy.
-
+          
           SU1trade is a global e-business education and financial investment brand that leverages on the speed of the internet and the power of the global financial market (GFM), to create financial freedom.
-
-  //  header ends here 
-  //  secondary nav starts here 
+          
   nav.nav--secondary
     .row
       ul.nav--secondary__list
@@ -55,69 +53,68 @@ block content
           a.nav--secondary__link.pdl0(href="#")
             b Connect
         li.nav--secondary__item
-          a.nav--secondary__link(href="#") Mission
+          a.nav--secondary__link(href="#mission") Mission
         li.nav--secondary__item
-          a.nav--secondary__link(href="#") Our Team
+          a.nav--secondary__link(href="#team") Our Team
         li.nav--secondary__item
-          a.nav--secondary__link(href="#") Partners
+          a.nav--secondary__link(href="./partners.html") Partners
         li.nav--secondary__item
-          a.nav--secondary__link(href="#") Contact Us
-  //  secondary nav ends here 
-  //  Main starts here 
+          a.nav--secondary__link(href="#contact-us") Contact Us
   main
     section.about-us__section
-      .about-us.about-us__row
+      .about-us.about-us__row#mission
         .about-us__title
           h2.secondary-heading Our Mission
         .about-us__desc
           p.secondary-desc.
-
+            
             To help millions of peope all over the world create wealth, with the speed of the internet by leveraging on the power of the global financial market (GFM).
-
+            
           p.secondary-desc.
-
+            
             We believe that decentralised cryptocurrencies, like Bitcoin, Ethereum etc.. will revolutionise the way the world views, and uses money.
-
+            
           p.secondary-desc.
-
+            
             We are part of pioneering a new financial system being built in real time, and we believe that this new global system will accelerate humanity for generations to come.
-
+            
           p.secondary-desc.
-
+            
             As early innovators in this industry, we feel it’s our duty to bring this knowledge and excitement to the world.
-
+            
       .about-us__row
         .about-us__title
           h2.secondary-heading Our Focus
         .about-us__desc
-          p.secondary-desc Our focused businesses are
+          p.secondary-desc
+            strong Our focused businesses are
           h3.tertiary-heading E-commerce
           p.secondary-desc.
-
+            
             We help you to start your own e-commerce (Drop shipping, mini import and affiliate marketing) business. With this you can invest and earn salary for life.
-
+            
           h3.tertiary-heading Cryptocurrency
           p.secondary-desc.
-
+            
             SU1trade exchange is a semi-automatic platform which sells, buys and exchanges crypto ‘currency’ units online. Fee is moderate. We are always open to negotiations. Our customers positive reviews confirm the lowest exchange rate and high quality of our work.
-
+            
           h3.tertiary-heading E-Trading
           p.secondary-desc.
-
+            
             We educate on forex, oil, metals, commodities and trading in the global financial market (GFM). We link you to professional traders that can manage your account for you. You earn 28% on your investment monthly on our Funds Management Program or 17% every month for five(5) months on our Lending Investment Program.
-
+            
           p.secondary-desc.
-
+            
             You can earn and learn with SU1trade focused businesses, Which is the ultimate vehicle that will bring you financial freedom, respect, dignity, and the power to change your life.
-
-      .about-us__row
+            
+      .about-us__row#team
         .about-us__title
           h2.secondary-heading Our Team
         .about-us__desc
           p.secondary-desc.
-
+            
             Here is the team behind SU1trade. You can contact is on our social media channel. We’d love to chat with you.
-
+            
           h2.secondary-heading MEET SU1trade TEAM
           .our-team__fig
             .our-team
@@ -126,38 +123,14 @@ block content
                   h3.tertiary-heading Sherif Ogehie
                   p.secondary-desc CEO & Founder
                 .figphoto
-                  img(src="assets/sherif-ogerie.png", alt="Photo of Sherif Ogehie")
+                  img(src="assets/sherif-ogerie-00.png", alt="Photo of Sherif Ogehie")
               figure
                 .figinfo
-                  h3.tertiary-heading Ben Mark
-                  p.secondary-desc COO SU1trade Inc.
-                .figphoto
-                  img(src="assets/placeholder01.png", alt="Photo of Sherif Ogehie")
-              figure
-                .figinfo
-                  h3.tertiary-heading Promise Mba..
-                  p.secondary-desc SMM
-                .figphoto
-                  img(src="assets/promise-mbagwu.png", alt="Photo of Sherif Ogehie")
-              figure
-                .figinfo
-                  h3.tertiary-heading Amara Tim
+                  h3.tertiary-heading Promise Mbagwu
                   p.secondary-desc Social Media Manager
                 .figphoto
-                  img(src="assets/placeholder01.png", alt="Photo of Sherif Ogehie")
-              figure
-                .figinfo
-                  h3.tertiary-heading Amara Tim
-                  p.secondary-desc Social Media Manager
-                .figphoto
-                  img(src="assets/placeholder01.png", alt="Photo of Sherif Ogehie")
-              figure
-                .figinfo
-                  h3.tertiary-heading Amara Tim
-                  p.secondary-desc Social Media Manager
-                .figphoto
-                  img(src="assets/placeholder01.png", alt="Photo of Sherif Ogehie")
-      .about-us__row
+                  img(src="assets/promise-mbagwu-00.png", alt="Photo of Promise Mbagwu")
+      .about-us__row#contact-us
         .about-us__title
           h2.secondary-heading Contact Us
         .about-us__desc
@@ -167,56 +140,48 @@ block content
             | one-on-one help?
 
           .about-us__btn
-            button.btn--primary.btn--medium.
-
-              Contact Us for one-on-one help
-
+            a(href="#contact-number")
+              button.btn--primary.btn--medium.
+                
+                Contact Us for one-on-one help
+                
           h2.secondary-heading Customer Service
           p.secondary-desc.
-
+            
             Contact our customer service. We’re here to help.
-
+            
           p.secondary-desc.
-
-            Email support@SU1trade.com or click the yellow button below.
-
-          //
-            <p class="secondary-desc">
-              Most of us here at SU1trade are working from home. Some of us are
-              taking days off to help family. As a result, it may take us longer
-              than usual to reply to your support request. Hang in there and we
-              will respond to you as soon as we can. Thanks for your patience
-              along the way.
-            </p> 
+            
+            Email sherif@su1trade.com or click the yellow button below.
+            
           .about-us__btn
-            button.btn--primary.btn--medium Email Support
+            a(href="mailto:sherif@su1trade.com?subject=I need help on how to Investment")
+              button.btn--primary.btn--medium.
+                
+                Email Support
+                
     section.location
       .our-location
         .our-location__map#map
         .our-location__address
           h2.secondary-heading  
-          //
-            <p class="secondary-desc">
-              Will you be in Portharcourt any time soon? Stop by the office!
-              We'd love to meet.
-            </p> 
           .our-location__shedule-visit
             a.secondary-desc(href="#") Shedule A Visit
             span.arrow  
           h3.tertiary-heading Address
           p.secondary-desc.
-
+            
             Arizona complex, No.6 Location Road Oyigbo, River state, Nigeria. Close to Access diamond bank.
-
-          h3.tertiary-heading Phone
-          p.secondary-desc +234 708 896 1166
+            
+          h3#contact-number.tertiary-heading Phone
+          p.secondary-desc.mb0 +234 708 896 1166
+          p.secondary-desc +234 905 499 7620
           h3.tertiary-heading Email
-          p.secondary-desc support@SU1trade.com
-  //  Main ends here
+          p.secondary-desc sherif@su1trade.com
   script.
-
-    - mapboxgl.accessToken =
-      "pk.eyJ1Ijoid2hpdGVnb2QiLCJhIjoiY2s5Y3Q5bm52MDdsOTNobzhvenp6MnNsdCJ9.vc6KagoZn4bn0JtaLazS7g";
+    
+     mapboxgl.accessToken =
+            "pk.eyJ1Ijoid2hpdGVnb2QiLCJhIjoiY2s5Y3Q5bm52MDdsOTNobzhvenp6MnNsdCJ9.vc6KagoZn4bn0JtaLazS7g";
           const map = new mapboxgl.Map({
             container: "map",
             style: "mapbox://styles/mapbox/streets-v11",
@@ -224,7 +189,8 @@ block content
             zoom: 10,
             interactive: false,
           });
-
+    
           map.scrollZoom.disable();
-
+    
           // const marker = new mapboxgl.Marker().setLngLat([7.150660505501719,4.869074610358993]).addTo(map);
+    

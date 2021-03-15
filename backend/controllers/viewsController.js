@@ -1,12 +1,13 @@
 const catchAsync = require("../utils/catchAsync");
 
 exports.getDashboard = catchAsync(async (req, res, next) => {
-  res.status(200).render("dashboard");
+  res.status(200).render("dashboard", {
+    title: "Dashboard",
+    user: res.locals.user,
+  });
 });
 
 exports.getHomepage = catchAsync(async (req, res, next) => {
-  console.log("Homepage", res.locals.user);
-
   res.status(200).render("homepage", {
     title:
       "Invest, Buy & Sell Crptocurrencies, Learn Forex Trading & E-commerce.",
