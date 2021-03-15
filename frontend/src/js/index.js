@@ -13,29 +13,29 @@ import * as canvas from "./eventHandlers/canvas";
   // setup event listener
   e.setupEventListners();
 
-  // Typing animation
-  const heading = document.querySelector('[data--js="typewriter"]');
+  // // Typing animation
+  // const heading = document.querySelector('[data--js="typewriter"]');
 
-  // Animations
-  const typewriter = new Typewriter(heading, {
-    loop: true,
-    delay: 75,
-  });
+  // // Animations
+  // const typewriter = new Typewriter(heading, {
+  //   loop: true,
+  //   delay: 75,
+  // });
 
-  typewriter
-    .pauseFor(250)
-    .typeString(
-      `Invest, Buy and Sell Crptocurrencies, Learn Forex Trading and
-    E-commerce.`
-    )
-    .pauseFor(2500)
-    .deleteChars(71)
-    .typeString(` and earn 17% profit every month for 5months.`)
-    .pauseFor(2500)
-    .deleteChars(40)
-    .typeString(`get minimum of 28% or more monthly.`)
-    .pauseFor(25000)
-    .start();
+  // typewriter
+  //   .pauseFor(250)
+  //   .typeString(
+  //     `Invest, Buy and Sell Crptocurrencies, Learn Forex Trading and
+  //   E-commerce.`
+  //   )
+  //   .pauseFor(2500)
+  //   .deleteChars(71)
+  //   .typeString(` and earn 17% profit every month for 5months.`)
+  //   .pauseFor(2500)
+  //   .deleteChars(40)
+  //   .typeString(`get minimum of 28% or more monthly.`)
+  //   .pauseFor(25000)
+  //   .start();
 
   // summit.signup();
 })();

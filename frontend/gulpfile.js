@@ -71,4 +71,4 @@ gulp.task("watch:sass", () => {
       .on("change", browserSync.reload);
 });
 
-gulp.task("prod", gulp.series(["webpack", "sass"]));
+gulp.task("prod", gulp.series(["webpack", "sass", "img"]));

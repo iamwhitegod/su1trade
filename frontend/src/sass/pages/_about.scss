@@ -84,9 +84,10 @@
 
   figure {
     background-color: neutral-colors-setup(color-black);
-    flex: 0 0 30%;
+    flex: 0 0 45%;
     box-shadow: 0px 10px 16px rgba(neutral-colors-setup(color-black), 0.08);
     margin-bottom: 1.5rem;
+    height: fit-content;
 
     &:not(:last-child) {
       margin-right: 1.5rem;
@@ -119,7 +120,8 @@
     img {
       display: block;
       width: 100%;
-      // height: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
@@ -132,12 +134,20 @@
   }
 
   .figphoto {
-    height: 20rem;
+    height: 25rem;
+
+    @include respond(tab-port) {
+      height: 30rem;
+    }
+
+    @include respond(phone) {
+      height: 35rem;
+    }
 
     img {
       display: block;
       width: 100%;
-      height: 100%;
+      // height: 25rem;
       object-fit: cover;
     }
   }
