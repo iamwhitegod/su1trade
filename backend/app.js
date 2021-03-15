@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
+const xss = require("xss-clean");
 
 const userRouter = require("./routes/userRoutes");
 const viewRouter = require("./routes/viewRoutes");
@@ -44,6 +45,9 @@ app.use("/api", limiter);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true, limit: "100kb" }));
 app.use(cookieParser());
+
+// Sanitize against XSS
+app.use(xss());
 
 // Test middleware
 app.use((req, res, next) => {
