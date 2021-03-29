@@ -1,0 +1,25 @@
+.swiper {
+  &-pagination {
+    &-bullets {
+      bottom: 0;
+    }
+
+    &-bullet {
+      background-color: neutral-colors-setup(color-white);
+
+      &.active {
+        background-color: primary-colors-setup(primary-color-base-dark);
+      }
+    }
+  }
+
+  &-button {
+    &-next,
+    &-prev {
+      color: neutral-colors-setup(color-white);
+      position: absolute;
+      top: 35%;
+      transform: translateY(-50%);
+    }
+  }
+}

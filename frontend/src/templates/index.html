@@ -13,6 +13,11 @@
       SU1trade - Invest, buy and sell crptocurrencies, learn forex trading &
       e-commerce
     </title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link href="css/main.css" type="text/css" rel="stylesheet" />
 
     <!-- Fav Icons -->
@@ -86,17 +91,61 @@
 
     <header class="header--home">
       <div class="row">
-        <div class="hero--box">
-          <h1 data--js="typewriter">
-            Invest, Buy and Sell Crptocurrencies, Learn Forex Trading &
-            E-commerce
-          </h1>
-          <p>Your financial freedom is our goal.</p>
-          <a href="./signup.html">
-            <button class="btn--primary btn--ripple btn--large">
-              Invest Now
-            </button>
-          </a>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="hero--box">
+                <h1 data--js="typewriter">
+                  Invest, Buy and Sell Crptocurrencies, Learn Forex Trading &
+                  E-commerce.
+                </h1>
+                <p>Your financial freedom is our goal.</p>
+                <a href="./signup.html">
+                  <button
+                    class="btn--primary btn--ripple btn--large uti-neg-mt"
+                  >
+                    Invest Now
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero--box">
+                <h1 data--js="typewriter">
+                  Invest and earn 17% profit every month for 5months.
+                </h1>
+                <p>Your financial freedom is our goal.</p>
+                <a href="./signup.html">
+                  <button class="btn--primary btn--ripple btn--large">
+                    Invest Now
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero--box">
+                <h1 data--js="typewriter">
+                  Invest and get minimum of 28% or more monthly.
+                </h1>
+                <p>Your financial freedom is our goal.</p>
+                <a href="./signup.html">
+                  <button class="btn--primary btn--ripple btn--large">
+                    Invest Now
+                  </button>
+                </a>
+              </div>
+            </div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </header>
@@ -471,6 +520,8 @@
     <!-- Footer end here -->
 
     <!-- <script src="./js/index.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/bundle.js"></script>
   </body>
 </html>

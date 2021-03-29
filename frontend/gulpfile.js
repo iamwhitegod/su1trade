@@ -38,7 +38,6 @@ gulp.task("js", () => {
         },
       })
     )
-    .on("error", logError)
     .pipe(gulp.dest("src/templates/js"));
 });
 
