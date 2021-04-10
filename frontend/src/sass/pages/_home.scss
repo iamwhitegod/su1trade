@@ -269,96 +269,165 @@
 }
 
 .testimonial {
-  &--section {
-    background-color: neutral-colors-setup(color-black);
-  }
-
-  &--wrapper {
-    transform: translateY(-50%);
-    margin-top: 23%;
-    padding-left: auto;
-    padding-right: auto;
-    @extend %d-flex--centered;
+  &-section {
+    padding: 4.8rem 0;
+    // background-color: neutral-colors-setup(color-black);
 
     @include respond(tab-land) {
-      margin-top: 30%;
+      padding: 0 0 3rem;
     }
 
-    @include respond(tab-port) {
-      transform: translateY(0);
-      margin-top: 4.8rem;
+    @include respond(tab-land) {
+      padding: 0 0 5rem;
     }
   }
 
-  &--customer-story {
+  &__caption {
+    max-width: 60rem;
+    margin: 10rem auto;
+    text-align: center;
+
+    @include respond(phone) {
+      padding: 0 1rem;
+    }
+  }
+
+  blockquote {
     font-style: italic;
-    padding: 0 4.8rem;
-    color: neutral-colors-setup(color-white);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    padding: 2rem 3rem;
     position: relative;
-    left: -12rem;
-
-    @include respond(tab-land) {
-      left: 0rem;
-    }
+    border-radius: 0.5rem;
 
     @include respond(tab-port) {
-      font-size: 1.8rem;
+      width: 60%;
+      margin: 0 auto 6rem;
     }
 
-    &::before {
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    &:before {
       content: "\201f";
       display: block;
-      font-size: 4rem;
+      font-size: 13rem;
       position: absolute;
-      top: -1rem;
-      left: 3rem;
-      color: primary-colors-setup(primary-color-base-dark);
-
-      @include respond(tab-port) {
-        font-size: 9.6rem;
-      }
+      top: 2rem;
+      left: -1rem;
+      color: #666;
     }
 
     cite {
       display: flex;
-      flex-direction: column;
-      margin-top: 4.8rem;
+      align-items: center;
+      margin-top: 4rem;
 
-      h4 {
-        color: primary-colors-setup(primary-color-base-dark);
+      img {
+        width: 5rem;
+        margin-right: 2rem;
+        border-radius: 50%;
       }
 
       span {
-        font-size: 1.6rem;
-        font-weight: 400;
+        font-weight: 600;
+        color: #024873;
       }
     }
   }
-
-  &--img {
-    padding: 0 14rem 0 18rem;
-
-    @include respond(tab-land) {
-      padding: 0 0rem 0 18rem;
-    }
-
-    @include respond(tab-port) {
-      padding: 0 14rem;
-    }
-
-    @include respond(phone) {
-      padding: 0 10rem;
-    }
-
-    @include respond(sm-phone) {
-      padding: 0 8rem;
-    }
-
-    @include respond(xs-phone) {
-      padding: 0 4rem;
-    }
-  }
 }
+
+// .testimonial {
+//   &--section {
+//     background-color: neutral-colors-setup(color-black);
+//   }
+
+//   &--wrapper {
+//     transform: translateY(-50%);
+//     margin-top: 23%;
+//     padding-left: auto;
+//     padding-right: auto;
+//     @extend %d-flex--centered;
+
+//     @include respond(tab-land) {
+//       margin-top: 30%;
+//     }
+
+//     @include respond(tab-port) {
+//       transform: translateY(0);
+//       margin-top: 4.8rem;
+//     }
+//   }
+
+//   &--customer-story {
+//     font-style: italic;
+//     padding: 0 4.8rem;
+//     color: neutral-colors-setup(color-white);
+//     position: relative;
+//     left: -12rem;
+
+//     @include respond(tab-land) {
+//       left: 0rem;
+//     }
+
+//     @include respond(tab-port) {
+//       font-size: 1.8rem;
+//     }
+
+//     &::before {
+//       content: "\201f";
+//       display: block;
+//       font-size: 4rem;
+//       position: absolute;
+//       top: -1rem;
+//       left: 3rem;
+//       color: primary-colors-setup(primary-color-base-dark);
+
+//       @include respond(tab-port) {
+//         font-size: 9.6rem;
+//       }
+//     }
+
+//     cite {
+//       display: flex;
+//       flex-direction: column;
+//       margin-top: 4.8rem;
+
+//       h4 {
+//         color: primary-colors-setup(primary-color-base-dark);
+//       }
+
+//       span {
+//         font-size: 1.6rem;
+//         font-weight: 400;
+//       }
+//     }
+//   }
+
+//   &--img {
+//     padding: 0 14rem 0 18rem;
+
+//     @include respond(tab-land) {
+//       padding: 0 0rem 0 18rem;
+//     }
+
+//     @include respond(tab-port) {
+//       padding: 0 14rem;
+//     }
+
+//     @include respond(phone) {
+//       padding: 0 10rem;
+//     }
+
+//     @include respond(sm-phone) {
+//       padding: 0 8rem;
+//     }
+
+//     @include respond(xs-phone) {
+//       padding: 0 4rem;
+//     }
+//   }
+// }
 
 .cta {
   &--section {
