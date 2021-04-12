@@ -113,7 +113,7 @@
 .social-proof {
   &--section {
     background-color: neutral-colors-setup(color-black);
-    padding: 12rem 0;
+    padding: 12rem 0 2rem;
 
     @include respond(tab-port) {
       text-align: center;

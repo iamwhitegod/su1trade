@@ -39,6 +39,41 @@ import * as canvas from "./eventHandlers/canvas";
     },
   });
 
+  const testimonialSwiper = new Swiper(".swiper-testimonial", {
+    speed: 600,
+    // loop: true,
+    // effect: "fade",
+
+    // Default parameters
+    slidesPerView: 3,
+    spaceBetween: 40,
+
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+
+      // when window width is >= 600px
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+
+      // when window width is >= 900px
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+  });
+
   console.log(swiper);
 
   // const slider = document.querySelector(".swiper-container").swiper;
