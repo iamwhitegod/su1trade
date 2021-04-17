@@ -99,7 +99,7 @@
     height: 0.3rem;
   }
 
-  .mobile--menu {
+  [data--js="mobile--menu"] {
     display: none;
 
     @include respond(tab-port) {
@@ -107,7 +107,7 @@
     }
   }
 
-  .mobile--menuv2 {
+  [data--js="mobile--menuv2"] {
     display: block;
 
     @include respond(tab-port) {
