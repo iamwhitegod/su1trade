@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SU1trade - Dashboard</title>
+
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+
+    <!-- Fav Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+  </head>
+  <body class="dashboardv2">
+    <!-- preloader -->
+    <div class="loader-container">
+      <div class="loader three-d-spinner">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+      </div>
+    </div>
+
+    <nav id="nav--dashboardv2">
+      <div class="row">
+        <div class="nav nav--dashboardv2">
+          <menu data--js="mobile--menuv2" class="icon icon--small">
+            <svg>
+              <use xlink:href="assets/sprite.svg#menu-alt-2"></use>
+            </svg>
+          </menu>
+
+          <figure class="nav--dashboard__logo logo">
+            <img src="assets/su1trade_logo.png" alt="Brand logo" />
+          </figure>
+
+          <menu data--js="mobile--menu" class="icon icon--small">
+            <svg>
+              <use xlink:href="assets/sprite.svg#notification-bell"></use>
+            </svg>
+          </menu>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main--dashboardv2">
+      <div class="main--dashboardv2__sidebar">
+        <ul data--js="menu--panelv2">
+          <a href="">
+            <li class="active">
+              <svg>
+                <use xlink:href="assets/sprite.svg#ion_layers-outline"></use>
+              </svg>
+
+              <span>Invest</span>
+            </li>
+          </a>
+
+          <a href="">
+            <li>
+              <svg>
+                <use
+                  xlink:href="assets/sprite.svg#ion_chatbubbles-outline"
+                ></use>
+              </svg>
+
+              <span>Chat</span>
+            </li>
+          </a>
+
+          <a href="">
+            <li>
+              <svg>
+                <use
+                  xlink:href="assets/sprite.svg#ion_person-circle-outline"
+                ></use>
+              </svg>
+
+              <span>About</span>
+            </li>
+          </a>
+
+          <a href="">
+            <li>
+              <svg>
+                <use xlink:href="assets/sprite.svg#ion_log-out-outline"></use>
+              </svg>
+
+              <span>Logout</span>
+            </li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="main--dashboardv2__main">
+        <div class="main--dashboardv2__intro">
+          <div class="main--dashboardv2__user">
+            <figure>
+              <img src="assets/user photo.png" alt="User avatar" />
+            </figure>
+
+            <div class="main--dashboardv2__greeting">
+              <h3>Hello, Braide!</h3>
+              <p>Welcome to your su1trade account.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="main--dashboardv2__flex-card">
+          <div class="main--dashboardv2__active-in">
+            <h3>Active Investments</h3>
+            <p>You do not have any active investments</p>
+          </div>
+
+          <div class="main--dashboardv2__investment-card">
+            <figure>
+              <img
+                src="assets/Wallet_Monochromatic 1.png"
+                alt="Lending Investment illustration"
+              />
+            </figure>
+
+            <div class="main--dashboardv2__investment-details">
+              <h3>Lending Investment</h3>
+              <p>Make 17% return on investment every month for 5months.</p>
+              <a href=""></a>
+              <button>Start Now</button>
+            </div>
+          </div>
+
+          <div class="main--dashboardv2__investment-card">
+            <figure>
+              <img
+                src="assets/Bitcoin _Monochromatic 1.png"
+                alt="Bitcoin Monochromatic illustration"
+              />
+            </figure>
+
+            <div class="main--dashboardv2__investment-details">
+              <h3>Funds Management</h3>
+              <p>
+                Invest & earn minimum of 28% or more your investment monthly.
+              </p>
+              <button>Start Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

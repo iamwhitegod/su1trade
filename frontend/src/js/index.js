@@ -45,8 +45,8 @@ import * as canvas from "./eventHandlers/canvas";
     // effect: "fade",
 
     // Default parameters
-    slidesPerView: 3,
-    spaceBetween: 40,
+    slidesPerView: 1,
+    spaceBetween: 20,
 
     autoplay: {
       delay: 4500,
@@ -54,27 +54,21 @@ import * as canvas from "./eventHandlers/canvas";
     },
 
     breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-
-      // when window width is >= 600px
-      600: {
+      // when window width is >= 768px
+      768: {
         slidesPerView: 2,
-        spaceBetween: 30,
+        spaceBetween: 40,
       },
 
-      // when window width is >= 900px
-      900: {
+      // when window width is >= 1024px
+      1024: {
         slidesPerView: 3,
         spaceBetween: 40,
       },
     },
   });
 
-  console.log(swiper);
+  // console.log(swiper);
 
   // const slider = document.querySelector(".swiper-container").swiper;
 })();

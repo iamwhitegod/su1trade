@@ -1,5 +1,6 @@
-const menu = document.querySelector('[data--js="mobile--menu"]');
+const menuv2 = document.querySelector('[data--js="mobile--menuv2"]');
 const menuPanel = document.querySelector('[data--js="menu--panel"]');
+const menuPanelv2 = document.querySelector('[data--js="menu--panelv2"]');
 const menuItems = Array.from(
   document.querySelectorAll('[data--js="menu--item"]')
 );
@@ -13,8 +14,10 @@ const modalOverlay = document.querySelector(".modal__overlay");
 // Setup eventlisteners
 export const setupEventListners = () => {
   // Toggle mobile menu
-  menu.addEventListener("click", (event) => {
-    menuPanel.classList.toggle("flex");
+  menuv2.addEventListener("click", (event) => {
+    menuPanelv2.parentElement.classList.toggle("no-flex");
+    menuPanelv2.parentElement.classList.toggle("sidebar-mobile");
+    menuPanelv2.classList.toggle("no-flex");
   });
 
   if (menuItems) {

@@ -100,7 +100,7 @@
   }
 
   menu {
-    display: none;
+    display: block;
 
     @include respond(tab-port) {
       display: block;
