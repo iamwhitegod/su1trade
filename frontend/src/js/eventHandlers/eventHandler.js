@@ -5,6 +5,9 @@ const menuPanelv2 = document.querySelector('[data--js="menu--panelv2"]');
 const menuItems = Array.from(
   document.querySelectorAll('[data--js="menu--item"]')
 );
+const menuItemsv2 = Array.from(
+  document.querySelectorAll('[data--js="menu--itemv2"]')
+);
 const modalBtns = document.querySelectorAll('[data--js="open--modal"]');
 const menuLinks = document.querySelectorAll('[data--js="menu--link"]');
 const questionPanel = document.querySelectorAll(".FAQs__question");
@@ -34,6 +37,16 @@ export const setupEventListners = () => {
     menuItems.forEach((item) => {
       item.addEventListener("click", (event) => {
         menuItems.forEach((menu) => menu.classList.remove("active"));
+
+        item.classList.add("active");
+      });
+    });
+  }
+
+  if (menuItemsv2) {
+    menuItemsv2.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        menuItemsv2.forEach((menu) => menu.classList.remove("active"));
 
         item.classList.add("active");
       });

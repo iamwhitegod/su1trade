@@ -279,6 +279,11 @@
     &__btns {
       display: flex;
 
+      a {
+        display: flex;
+        width: 100%;
+      }
+
       button {
         font-weight: 400;
         background-color: #f7dc39;
