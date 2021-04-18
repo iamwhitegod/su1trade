@@ -26,9 +26,9 @@ export const setupEventListners = () => {
   if (menuv2) {
     // Toggle mobile menu
     menuv2.addEventListener("click", (event) => {
-      menuPanelv2.parentElement.classList.toggle("no-flex");
+      menuPanelv2.parentElement.classList.toggle("d-block");
       menuPanelv2.parentElement.classList.toggle("sidebar-mobile");
-      menuPanelv2.classList.toggle("no-flex");
+      menuPanelv2.classList.toggle("d-block");
     });
   }
 

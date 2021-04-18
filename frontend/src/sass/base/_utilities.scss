@@ -267,3 +267,11 @@ $padding: 8px;
     width: 85%;
   }
 }
+
+.d-block {
+  display: none;
+
+  @include respond(tab-land) {
+    display: block !important;
+  }
+}
