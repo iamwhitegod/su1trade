@@ -1,6 +1,6 @@
 const menu = document.querySelector('[data--js="mobile--menu"]');
-const menuv2 = document.querySelector('[data--js="mobile--menuv2"]');
 const menuPanel = document.querySelector('[data--js="menu--panel"]');
+const menuv2 = document.querySelector('[data--js="mobile--menuv2"]');
 const menuPanelv2 = document.querySelector('[data--js="menu--panelv2"]');
 const menuItems = Array.from(
   document.querySelectorAll('[data--js="menu--item"]')
@@ -12,19 +12,25 @@ const modal = document.querySelector(".modal__container");
 const modalPopup = document.querySelector(".modal__popup");
 const modalOverlay = document.querySelector(".modal__overlay");
 
+console.log(menuv2);
+
 // Setup eventlisteners
 export const setupEventListners = () => {
-  // Toggle mobile menu
-  menuv2.addEventListener("click", (event) => {
-    menuPanelv2.parentElement.classList.toggle("no-flex");
-    menuPanelv2.parentElement.classList.toggle("sidebar-mobile");
-    menuPanelv2.classList.toggle("no-flex");
-  });
+  if (menu) {
+    // Toggle mobile menu
+    menu.addEventListener("click", (event) => {
+      menuPanel.classList.toggle("flex");
+    });
+  }
 
-  // Toggle mobile menu
-  menu.addEventListener("click", (event) => {
-    menuPanel.classList.toggle("no-flex");
-  });
+  if (menuv2) {
+    // Toggle mobile menu
+    menuv2.addEventListener("click", (event) => {
+      menuPanelv2.parentElement.classList.toggle("no-flex");
+      menuPanelv2.parentElement.classList.toggle("sidebar-mobile");
+      menuPanelv2.classList.toggle("no-flex");
+    });
+  }
 
   if (menuItems) {
     menuItems.forEach((item) => {

@@ -46,7 +46,7 @@ import * as canvas from "./eventHandlers/canvas";
 
     // Default parameters
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 40,
 
     autoplay: {
       delay: 4500,
