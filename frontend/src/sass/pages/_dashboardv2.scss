@@ -217,7 +217,13 @@
       background-color: neutral-colors-setup(color-white);
 
       @include respond(tab-port) {
-        padding: 2.4rem 0;
+        padding: 2.4rem;
+      }
+
+      &.no-white {
+        @include respond(tab-port) {
+          padding: 2.4rem 0;
+        }
       }
     }
 
@@ -300,11 +306,18 @@
     }
 
     &__notification-card {
+      display: flex;
       margin-bottom: 1.6rem;
 
       &:not(:last-child) {
         border-bottom: 0.15rem solid #dddddd;
         padding-bottom: 1.6rem;
+      }
+
+      svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 0.8rem;
       }
 
       p {

@@ -61,4 +61,9 @@
    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="arrow-left">
     <path d="M6.667 12.667L2 8.001m0 0l4.667-4.667M2 8.001h12" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
+
+   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ion_mail-outline">
+    <path d="M19.875 4.5H4.125c-1.036 0-1.875.84-1.875 1.875v11.25c0 1.035.84 1.875 1.875 1.875h15.75c1.035 0 1.875-.84 1.875-1.875V6.375c0-1.036-.84-1.875-1.875-1.875z" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M5.25 7.5L12 12.75l6.75-5.25" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
 </svg>
