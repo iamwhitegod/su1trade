@@ -12,8 +12,6 @@ const modal = document.querySelector(".modal__container");
 const modalPopup = document.querySelector(".modal__popup");
 const modalOverlay = document.querySelector(".modal__overlay");
 
-console.log(menuv2);
-
 // Setup eventlisteners
 export const setupEventListners = () => {
   if (menu) {
