@@ -21,6 +21,9 @@ const htmlTemplateNames = [
   "security",
   "terms",
   "tutorial",
+  "dashboardv2",
+  "lend",
+  "fundsmanagement",
 ];
 const multipleHtmlTemplates = htmlTemplateNames.map(
   (name) =>
