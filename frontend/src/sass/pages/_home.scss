@@ -269,6 +269,8 @@
 }
 
 .testimonial {
+  height: 30rem;
+
   &--section {
     // padding: 4.8rem 0;
     background-color: neutral-colors-setup(color-black);
@@ -309,6 +311,7 @@
     padding: 2rem 3rem;
     position: relative;
     border-radius: 0.5rem;
+    height: 100%;
 
     @include respond(tab-port) {
       width: 90%;
