@@ -1,7 +1,12 @@
 const menu = document.querySelector('[data--js="mobile--menu"]');
 const menuPanel = document.querySelector('[data--js="menu--panel"]');
+const menuv2 = document.querySelector('[data--js="mobile--menuv2"]');
+const menuPanelv2 = document.querySelector('[data--js="menu--panelv2"]');
 const menuItems = Array.from(
   document.querySelectorAll('[data--js="menu--item"]')
+);
+const menuItemsv2 = Array.from(
+  document.querySelectorAll('[data--js="menu--itemv2"]')
 );
 const modalBtns = document.querySelectorAll('[data--js="open--modal"]');
 const menuLinks = document.querySelectorAll('[data--js="menu--link"]');
@@ -12,15 +17,36 @@ const modalOverlay = document.querySelector(".modal__overlay");
 
 // Setup eventlisteners
 export const setupEventListners = () => {
-  // Toggle mobile menu
-  menu.addEventListener("click", (event) => {
-    menuPanel.classList.toggle("flex");
-  });
+  if (menu) {
+    // Toggle mobile menu
+    menu.addEventListener("click", (event) => {
+      menuPanel.classList.toggle("flex");
+    });
+  }
+
+  if (menuv2) {
+    // Toggle mobile menu
+    menuv2.addEventListener("click", (event) => {
+      menuPanelv2.parentElement.classList.toggle("d-block");
+      menuPanelv2.parentElement.classList.toggle("sidebar-mobile");
+      menuPanelv2.classList.toggle("d-block");
+    });
+  }
 
   if (menuItems) {
     menuItems.forEach((item) => {
       item.addEventListener("click", (event) => {
         menuItems.forEach((menu) => menu.classList.remove("active"));
+
+        item.classList.add("active");
+      });
+    });
+  }
+
+  if (menuItemsv2) {
+    menuItemsv2.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        menuItemsv2.forEach((menu) => menu.classList.remove("active"));
 
         item.classList.add("active");
       });

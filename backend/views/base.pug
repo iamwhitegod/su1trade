@@ -3,15 +3,18 @@ html
   head
     block head
       meta(charset="UTF-8")
+      //- meta(http-equiv="Content-Security-Policy" content="default-src *; font-src *; img-src *; script-src *; style-src *; frame-src 'self'")
       meta(name="description", content="SU1trade is a global e-business education and financial investment brand that leverages on the speed of the internet and the power of the global financial market (GFM), to create financial freedom.")
       meta(name="viewport", content="width=device-width,initial-scale=1")
       title SU1trade - #{title}
-        
-      link(href="css/main.css", rel="stylesheet")
+      
       link(rel="apple-touch-icon", sizes="180x180", href="assets/favicon_io/apple-touch-icon.png")
       link(rel="icon", type="image/png", sizes="32x32", href="assets/favicon_io/favicon-32x32.png")
       link(rel="icon", type="image/png", sizes="16x16", href="assets/favicon_io/favicon-16x16.png")
       link(rel="manifest", href="assets/favicon_io/site.webmanifest")
+      link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.css" )
+      link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+      link(href="css/main.css", rel="stylesheet")
   body
     // CSS Preloader
     include _preloader
@@ -26,4 +29,6 @@ html
     // Global footer
     include _footer
 
+    script(src="https://unpkg.com/swiper/swiper-bundle.js")
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="js/build.js")

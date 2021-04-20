@@ -43,6 +43,14 @@ router.get(
   authController.protect,
   viewsController.getDashboard
 );
+
+router.get("/user/lend", authController.protect, viewsController.getLend);
+
+router.get(
+  "/user/management",
+  authController.protect,
+  viewsController.getManagement
+);
 // router.get("/me", authController.protect, viewsController.getAccount);
 
 module.exports = router;

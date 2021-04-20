@@ -6,171 +6,119 @@ html
     meta(name="viewport", content="width=device-width,initial-scale=1")
     //- meta(http-equiv="Content-Security-Policy", content="default-src 'self' https://placeholder.com; img-src 'self' data:")
     title SU1trade - #{title}
-    link(href="../css/main.css", type="text/css", rel="stylesheet")
     //  Fav Icons 
     link(rel="apple-touch-icon", sizes="180x180", href="../assets/favicon_io/apple-touch-icon.png")
     link(rel="icon", type="image/png", sizes="32x32", href="../assets/favicon_io/favicon-32x32.png")
     link(rel="icon", type="image/png", sizes="16x16", href="../assets/favicon_io/favicon-16x16.png")
     link(rel="manifest", href="../assets/favicon_io/site.webmanifest")
-  body.dashboard--body
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.css" )
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(href="../css/main.css", type="text/css", rel="stylesheet")
+  body.dashboardv2
     //  preloader 
     .loader-container
       .loader.three-d-spinner
         .inner
         .inner
         .inner
-    //  Navigation 
-    nav#nav--dashboard
+    nav#nav--dashboardv2
       .row
-        .nav.nav--dashboard
+        .nav.nav--dashboardv2
+          menu.icon.icon--small(data--js="mobile--menuv2")
+            svg
+              use(href="../assets/sprite.svg#menu-alt-2")
           figure.nav--dashboard__logo.logo
-            a(href="/")
-              img(src="../assets/su1trade_logo.png", alt="Brand logo")
-          ul.nav--dashboard__list(data--js="menu--panel")
-            li.nav--dashboard__item
-              span.nav--dashboard__user-name.capitalized.capitalized--lite=user.fullname.split(' ')[0]
-            li.nav--dashboard__item
-              figure.nav--dashboard__avatar
-                img(src="../assets/person-circle-sharp.svg", alt="User photo")
-            li.nav--dashboard__item
-              button.btn--primary.btn--ripple.btn--small.capitalized.capitalized--lite#logout--btn(href="#").
-                
-                Logout
-                
-          menu.icon.icon--small(data--js="mobile--menu")
-            img(src="../assets/menu-alt.svg", alt="Menu icon")
-    //  Main  
-    main
-      .wrapper
-        h2 Welcome to your SU1trade account dashboard!
-        .notification-bar
-          p.
-            
-            You need a deriv DMT5 account for FUNDS MANAGEMENT investment plan.
-            
-          a(href="https://track.deriv.com/_NBBuvzxp2yG2vdm9PpHVCmNd7ZgqdRLk/1/", target="_blank")
-            button.btn--primary.btn--ripple.dashboard--btn.
-              
-              Create account
-              
-        .investment-plans
-          .investment-plan__plan
-            .investment-plan__details
-              img(src="../assets/lending-investment-icon.svg", alt="Lending money icon")
-              .investment-plan__text
-                h3 Lending Investment
-                p.
-                  
-                  This plan is best suitable for individual who are looking for profitable ROI for a period of time.
-                p
-                p.
-                  
-                  With this plan, you earn 17% of your investment every monthly for five (5) months. And on the sixth month, 70% of your investment capital is refunded to you and contract terminated or you renew contract.
-                p
-            .investment-plan__meta
-              ul
-                li
-                  span.pair Profits
-                  span.value 17%
-                li
-                  span.pair Duration
-                  span.value 5months
-                li
-                  span.pair Minimum amount
-                  span.value $200
-                li
-                  span.pair Commission
-                  span.value No Commission
-            .investment-plan__btn
-              button.btn--primary.btn--ripple(data--js="open--modal") Start Now
-          .investment-plan__plan
-            .investment-plan__details
-              img(src="../assets/funds-management-icon.svg", alt="Lending money icon")
-              .investment-plan__text
-                h3 Funds Management
-                p.
-                  
-                  With our Funds Management Plans, SU1trade provides you with experts to manage your Investment. Here, we help you do the heavy work and provide you with real-time progress of your Investment very step of the way..
-                p
-                p.
-                  
-                  You have 100% control over your investment with monthly earnings of 28% percent or more.
-                p
-            .investment-plan__meta
-              ul
-                li
-                  span.pair Profits
-                  span.value 28%
-                li
-                  span.pair Duration
-                  span.value Minimum variable
-                li
-                  span.pair Minimum amount
-                  span.value $1000
-                li
-                  span.pair Commission
-                  span.value 35%
-            .investment-plan__btn
-              button.btn--primary.btn--ripple(data--js="open--modal") Start Now
-        .info
-          ul
-            li
-              img(src="../assets/ion_checkmark-outline.svg", alt="Check icon")
-              span
-                | All transactions on SU1trade platform is done manually on our
+            img(src="../assets/su1trade_logo.png", alt="Brand logo")
+          menu.icon.icon--small(data--js="mobile--menuv22")
+            svg
+              use(href="../assets/sprite.svg#notification-bell")
+    main.main--dashboardv2
+      .main--dashboardv2__sidebar
+        ul(data--js="menu--panelv2")
+          a(href="/user/dashboard")
+            li.active(data--js="menu--itemv2")
+              svg
+                use(href="../assets/sprite.svg#ion_layers-outline")
+              span Invest
+          a(href="https://wa.me/message/JIJYS42CTYW5B1")
+            li(data--js="menu--itemv2")
+              svg
+                use(href="../assets/sprite.svg#ion_chatbubbles-outline")
+              span Chat
+          a(href="/about")
+            li(data--js="menu--itemv2")
+              svg
+                use(href="../assets/sprite.svg#ion_person-circle-outline")
+              span About
+          a(href="#")
+            li#logout--btn(data--js="menu--itemv2")
+              svg
+                use(href="../assets/sprite.svg#ion_log-out-outline")
+              span Logout
+      .main--dashboardv2__main.no-white
+        .main--dashboardv2__intro
+          .main--dashboardv2__user
+            figure
+              a(href="https://via.placeholder.com") 
+                img(src="https://via.placeholder.com/150" alt="User avatar")
+            .main--dashboardv2__greeting
+              h3 Hello, #{user.fullname.split(" ")[0]}!
+              p Welcome to your su1trade account.
+        .main--dashboardv2__flex-card
+          .main--dashboardv2__active-in
+            h3 Active Investments
+            p You do not have any active investments
+          .main--dashboardv2__investment-card
+            figure
+              img(src="../assets/Wallet_Monochromatic 1.png", alt="Lending Investment illustration")
+            .main--dashboardv2__investment-details
+              h3 Lending Investment
+              p Make 17% return on investment every month for 5months.
+              a(href="/user/lend")
+                button Start Now
+          .main--dashboardv2__investment-card
+            figure
+              img(src="../assets/Bitcoin _Monochromatic 1.png", alt="Bitcoin Monochromatic illustration")
+            .main--dashboardv2__investment-details
+              h3 Funds Management
+              p.
 
-                strong  WhatsApp Channel
-                |  as we are currently developing the platform to serve you better.
-            li
-              img(src="../assets/ion_checkmark-outline.svg", alt="Check icon")
-              span Please you are adviced to contact our customer service to continue Investment.
-            li
-              img(src="../assets/ion_checkmark-outline.svg", alt="Check icon")
-              span
-                | SU1trade official contact number
+                Invest & earn minimum of 28% or more your investment monthly.
 
-                strong +234 708 896 1166
-                |  or 
-                strong +234 905 499 7620
-        .cta
-          a(href="https://wa.me/message/JIJYS42CTYW5B1", target="_blank")
-            button.btn--primary.btn--ripple.dashboard--btn.
-              
-              Chat on Whatsapp
-              
-          a(href="http://T.me/SUcommunity", target="_blank")
-            button.btn--primary.btn--ripple.dashboard--btn.
-              
-              Join Telegram
-              
-        a.accent--dark(href="../about") Learn more about us
-    //  modal starts here 
-    .container.backdrop
-      //
-        <div class="modal__container">
-                  <div class="modal__content">
-                    <span><img src="images/close-dark.svg" alt="close dark icon" /></span>
-                    <h2 class="secondary-heading">This is a modal heading 2</h2>
-                    <p class="secondary-desc">This is a modal</p>
-                    <button class="btn">Modal button</button>
-                  </div>
-                </div> 
-      .modal__popup.popup-dark
-        .modal__content
-          span
-            img(src="../assets/close.svg", alt="close dark icon")
-          h2.secondary-heading Congrats!
-          p.secondary-desc.
-            
-            Thank you for your interest in Investing in the global financial market (GFM). We'll contact you on how to begin investment in less than 24hrs.
-            
-          //
-            <div class="modal__img">
-                          <img src="images/logo.png" alt="Deriv" />
-                        </div> 
-          p.secondary-desc Click button to send us an email
-          a(href="mailto:sherif@su1trade.com?subject=How do I start investing", target="_blank")
-            button.btn--primary.btn--ripple Send Email
-      .modal__overlay  
-    //  modal ends here 
+              a(href="/user/management")
+                button Start Now
+        .main--dashboardv2__notification
+          h3 Notifications
+          .main--dashboardv2__flex-card
+            .main--dashboardv2__tutorial
+              h4 How to create a Deriv real account.
+              iframe(src="https://www.youtube.com/embed/FQ5ct91pFw0", title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+            .main--dashboardv2__notifications
+              h4 System Updates
+              .main--dashboardv2__notification-card
+                span
+                  svg
+                    use(href="../assets/sprite.svg#ion_mail-outline")
+                p.
+
+                  All transactions on SU1trade platform is done manually on our WhatsApp Channel as we are currently developing the platform to serve you better.
+
+              .main--dashboardv2__notification-card
+                span
+                  svg
+                    use(href="../assets/sprite.svg#ion_mail-outline")
+                p.
+
+                  You are adviced to contact our customer service to continue Investment.
+
+              .main--dashboardv2__notification-card
+                span
+                  svg
+                    use(href="../assets/sprite.svg#ion_mail-outline")
+                p
+                  | SU1trade official contact number
+
+                  strong +234 708 896 1166
+    script(src="https://unpkg.com/swiper/swiper-bundle.js")
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="../js/build.js")

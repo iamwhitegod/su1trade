@@ -1,0 +1,95 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    //- meta(http-equiv="Content-Security-Policy", content="default-src 'self' https://placeholder.com; img-src 'self' data:")
+    title SU1trade - #{title}
+    //  Fav Icons 
+    link(rel="apple-touch-icon", sizes="180x180", href="../assets/favicon_io/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="../assets/favicon_io/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="../assets/favicon_io/favicon-16x16.png")
+    link(rel="manifest", href="../assets/favicon_io/site.webmanifest")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.css" )
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(href="../css/main.css", type="text/css", rel="stylesheet")
+  body.dashboardv2
+    .loader-container
+      .loader.three-d-spinner
+        .inner
+        .inner
+        .inner
+    nav#nav--dashboardv2
+      .row
+        .nav.nav--dashboardv2
+          menu.icon.icon--small(data--js="mobile--menuv2")
+            svg
+              use(href="../assets/sprite.svg#menu-alt-2")
+          figure.nav--dashboard__logo.logo
+            img(src="../assets/su1trade_logo.png", alt="Brand logo")
+          menu.icon.icon--small(data--js="mobile--menuv2")
+            svg
+              use(href="../assets/sprite.svg#notification-bell")
+    main.main--dashboardv2
+      .main--dashboardv2__sidebar
+        ul(data--js="menu--panelv2")
+          a(href="/user/dashboard")
+            li.active(data--js="menu--itemv2")
+              svg
+                use(href="../assets/sprite.svg#ion_layers-outline")
+              span Invest
+          a(href="https://wa.me/message/JIJYS42CTYW5B1")
+            li(data--js="menu--itemv2")
+              svg
+                use(href="../assets/sprite.svg#ion_chatbubbles-outline")
+              span Chat
+          a(href="/about")
+            li(data--js="menu--itemv2")
+              svg
+                use(href="../assets/sprite.svg#ion_person-circle-outline")
+              span About
+          a(href="#")
+            li#logout--btn(data--js="menu--itemv2")
+              svg
+                use(href="../assets/sprite.svg#ion_log-out-outline")
+              span Logout
+      .main--dashboardv2__main
+        .main--dashboardv2__backward
+          a(href="/user/dashboard")
+            svg
+              use(href="../assets/sprite.svg#arrow-left")
+        .main--dashboardv2__details
+          h3.main--dashboardv2__lending-title Lending Investment
+          figure
+            img(src="../assets/Wallet_Monochromatic 1.png", alt="Lending Investment illustration")
+          h2 Your money should work just as hard as you do.
+          p.
+            
+            This investment plan is best suitable for individual who are looking for profitable ROI for a period of time.
+            
+          p.
+            
+            With this plan, you earn 17% of your investment every monthly for five (5) months. And on the sixth month, 70% of your investment capital is refunded to you and contract terminated or you renew contract.
+            
+          .main--dashboardv2__metadata
+            .main--dasboardv2__infolist
+              .main--dashboardv2__infoitem
+                span.main--dashboardv2__infotitle Profits
+                span.main--dashboardv2__info 17% monthly
+              .main--dashboard__infoitem
+                span.main--dashboardv2__infotitle Duration
+                span.main--dashboardv2__info 5 months
+            .main--dasboardv2__infolist
+              .main--dashboardv2__infoitem
+                span.main--dashboardv2__infotitle Minimum amount
+                span.main--dashboardv2__info $200
+              .main--dashboard__infoitem
+                span.main--dashboardv2__infotitle Commission
+                span.main--dashboardv2__info No commisson
+          .main--dashboardv2__btns
+            a(href="https://wa.me/message/JIJYS42CTYW5B1")
+              button.btn--full-width Start Now
+    script(src="https://unpkg.com/swiper/swiper-bundle.js")
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="../js/build.js")

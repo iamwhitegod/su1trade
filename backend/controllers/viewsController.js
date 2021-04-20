@@ -7,6 +7,20 @@ exports.getDashboard = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.getLend = catchAsync(async (req, res, next) => {
+  res.status(200).render("lend", {
+    title: "Lending Investment",
+    user: res.locals.user,
+  });
+});
+
+exports.getManagement = catchAsync(async (req, res, next) => {
+  res.status(200).render("management", {
+    title: "Funds Management",
+    user: res.locals.user,
+  });
+});
+
 exports.getHomepage = catchAsync(async (req, res, next) => {
   res.status(200).render("homepage", {
     title:

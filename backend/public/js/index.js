@@ -1,4 +1,6 @@
 import "@babel/polyfill";
+// import Swiper from "swiper";
+// import "swiper/swiper-bundle.css";
 // import Typewriter from "typewriter-effect/dist/core";
 
 import { signup } from "./signup";
@@ -49,32 +51,64 @@ setupEventListners();
 /*
 **********************************************************
 **********************************************************
-  Typing animation
+ Swiper animation
 **********************************************************
 **********************************************************
-// */
-// const heading = document.querySelector('[data--js="typewriter"]');
+*/
+if (Swiper) {
+}
+const swiper = new Swiper(".swiper-container", {
+  speed: 600,
+  loop: true,
+  // effect: "fade",
 
-// // Animations
-// const typewriter = new Typewriter(heading, {
-//   loop: true,
-//   delay: 75,
-// });
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 10,
 
-// typewriter
-//   .pauseFor(250)
-//   .typeString(
-//     `Invest, Buy and Sell Crptocurrencies, Learn Forex Trading and
-//     E-commerce.`
-//   )
-//   .pauseFor(2500)
-//   .deleteChars(71)
-//   .typeString(` and earn 17% profit every month for 5months.`)
-//   .pauseFor(2500)
-//   .deleteChars(40)
-//   .typeString(`get minimum of 28% or more monthly.`)
-//   .pauseFor(25000)
-//   .start();
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const testimonialSwiper = new Swiper(".swiper-testimonial", {
+  speed: 600,
+  // loop: true,
+  // effect: "fade",
+
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 20,
+
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+});
 
 /*
 **********************************************************
@@ -109,7 +143,7 @@ if (signupForm) {
 if (loginForm) {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    loginForm.querySelector("button").textContent = 'Please wait...';
+    loginForm.querySelector("button").textContent = "Please wait...";
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 

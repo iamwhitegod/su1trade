@@ -5,6 +5,13 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
+const {
+  expressCspHeader,
+  INLINE,
+  NONE,
+  SELF,
+  NONCE,
+} = require("express-csp-header");
 const xss = require("xss-clean");
 
 const userRouter = require("./routes/userRoutes");
@@ -12,6 +19,40 @@ const viewRouter = require("./routes/viewRoutes");
 
 // Start express app
 const app = express();
+
+app.use(
+  expressCspHeader({
+    directives: {
+      "default-src": [SELF, NONCE, "blob:", "gap:"],
+      "script-src": [
+        SELF,
+        INLINE,
+        "blob:",
+        "https://unpkg.com/swiper/swiper-bundle.js https://unpkg.com/swiper/swiper-bundle.min.js https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js",
+      ],
+      "style-src": [
+        SELF,
+        INLINE,
+        "https://unpkg.com/swiper/swiper-bundle.css https://unpkg.com/swiper/swiper-bundle.min.css",
+      ],
+      "img-src": [SELF, INLINE, "data:", "*"],
+      "worker-src": [SELF, INLINE, "blob: filesystem:", "*"],
+      "font-src": [SELF, INLINE, "data:", "*"],
+      "connect-src": [SELF, INLINE, "ws: wss:", "*"],
+      "frame-src": [SELF, "https://www.youtube.com"],
+      "block-all-mixed-content": true,
+    },
+    reportOnly: true,
+  })
+);
+
+// app.use(function (req, res, next) {
+//   res.setHeader(
+//     "Content-Security-Policy",
+//     "default-src '*'; font-src data: application/font-woff; charset=utf-8; base64; img-src 'self'; script-src https://unpkg.com/swiper/swiper-bundle.js https://unpkg.com/swiper/swiper-bundle.min.js; style-src https://unpkg.com/swiper/swiper-bundle.css https://unpkg.com/swiper/swiper-bundle.min.css; frame-src 'self'"
+//   );
+//   next();
+// });
 
 app.enable("trust proxy");
 
@@ -25,9 +66,6 @@ app.options("*", cors());
 
 // Serving static files
 app.use(express.static(path.join(__dirname, "public")));
-
-// Set security HTTP headers
-app.use(helmet());
 
 // Dev logging
 if (process.env.NODE_ENV === "development") {

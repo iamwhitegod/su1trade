@@ -9059,7 +9059,10 @@ exports.openModalPopup = openModalPopup;
 exports.setupEventListners = void 0;
 var menu = document.querySelector('[data--js="mobile--menu"]');
 var menuPanel = document.querySelector('[data--js="menu--panel"]');
+var menuv2 = document.querySelector('[data--js="mobile--menuv2"]');
+var menuPanelv2 = document.querySelector('[data--js="menu--panelv2"]');
 var menuItems = Array.from(document.querySelectorAll('[data--js="menu--item"]'));
+var menuItemsv2 = Array.from(document.querySelectorAll('[data--js="menu--itemv2"]'));
 var modalBtns = document.querySelectorAll('[data--js="open--modal"]');
 var menuLinks = document.querySelectorAll('[data--js="menu--link"]');
 var questionPanel = document.querySelectorAll(".FAQs__question");
@@ -9068,15 +9071,37 @@ var modalPopup = document.querySelector(".modal__popup");
 var modalOverlay = document.querySelector(".modal__overlay"); // Setup eventlisteners
 
 var setupEventListners = function setupEventListners() {
-  // Toggle mobile menu
-  menu.addEventListener("click", function (event) {
-    menuPanel.classList.toggle("flex");
-  });
+  if (menu) {
+    // Toggle mobile menu
+    menu.addEventListener("click", function (event) {
+      menuPanel.classList.toggle("flex");
+    });
+  }
+
+  if (menuv2) {
+    // Toggle mobile menu
+    menuv2.addEventListener("click", function (event) {
+      menuPanelv2.parentElement.classList.toggle("d-block");
+      menuPanelv2.parentElement.classList.toggle("sidebar-mobile");
+      menuPanelv2.classList.toggle("d-block");
+    });
+  }
 
   if (menuItems) {
     menuItems.forEach(function (item) {
       item.addEventListener("click", function (event) {
         menuItems.forEach(function (menu) {
+          return menu.classList.remove("active");
+        });
+        item.classList.add("active");
+      });
+    });
+  }
+
+  if (menuItemsv2) {
+    menuItemsv2.forEach(function (item) {
+      item.addEventListener("click", function (event) {
+        menuItemsv2.forEach(function (menu) {
           return menu.classList.remove("active");
         });
         item.classList.add("active");
@@ -9762,6 +9787,8 @@ var _formValidators = _interopRequireDefault(require("./formValidators"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import Swiper from "swiper";
+// import "swiper/swiper-bundle.css";
 // import Typewriter from "typewriter-effect/dist/core";
 console.log("Hello from parcel");
 /*
@@ -9801,31 +9828,56 @@ window.addEventListener("load", function () {
 /*
 **********************************************************
 **********************************************************
-  Typing animation
+ Swiper animation
 **********************************************************
 **********************************************************
-// */
-// const heading = document.querySelector('[data--js="typewriter"]');
-// // Animations
-// const typewriter = new Typewriter(heading, {
-//   loop: true,
-//   delay: 75,
-// });
-// typewriter
-//   .pauseFor(250)
-//   .typeString(
-//     `Invest, Buy and Sell Crptocurrencies, Learn Forex Trading and
-//     E-commerce.`
-//   )
-//   .pauseFor(2500)
-//   .deleteChars(71)
-//   .typeString(` and earn 17% profit every month for 5months.`)
-//   .pauseFor(2500)
-//   .deleteChars(40)
-//   .typeString(`get minimum of 28% or more monthly.`)
-//   .pauseFor(25000)
-//   .start();
+*/
 
+if (Swiper) {}
+
+var swiper = new Swiper(".swiper-container", {
+  speed: 600,
+  loop: true,
+  // effect: "fade",
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: ".swiper-pagination"
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
+var testimonialSwiper = new Swiper(".swiper-testimonial", {
+  speed: 600,
+  // loop: true,
+  // effect: "fade",
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false
+  },
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    }
+  }
+});
 /*
 **********************************************************
 **********************************************************
@@ -9850,7 +9902,7 @@ if (signupForm) {
 if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    loginForm.querySelector("button").textContent = 'Please wait...';
+    loginForm.querySelector("button").textContent = "Please wait...";
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     (0, _login.login)(email, password, loginForm.querySelector("button"));
@@ -9889,7 +9941,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49690" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49688" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
