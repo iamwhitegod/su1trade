@@ -170,10 +170,10 @@
       background: #f7ff00; /* fallback for old browsers */
       background: -webkit-linear-gradient(
         to right,
-        #f7ff00,
-        #db36a4
+        #efeb77,
+        #f6af04
       ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right bottom, #f7ff00, #db36a4);
+      background: linear-gradient(to right bottom, #efeb77, #f6af04);
       // background-color: hsl(51, 92, 60);
       padding: 2.4rem;
       // align-self: flex-start;
@@ -279,7 +279,12 @@
     &__metadata {
       display: flex;
       margin-bottom: 2.4rem;
-      margin-right: 2.4rem;
+
+      & > * {
+        &:not(:last-child) {
+          margin-right: 2.4rem;
+        }
+      }
     }
 
     &__infoitem {
@@ -366,6 +371,14 @@
         @include respond(phone) {
           height: 21.5rem;
         }
+      }
+    }
+
+    &__mt5-details {
+      a {
+        color: #001172;
+        font-weight: 400;
+        word-break: break-all;
       }
     }
   }
