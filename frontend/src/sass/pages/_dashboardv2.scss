@@ -407,6 +407,20 @@
         font-weight: 700;
         word-break: break-all;
       }
+
+      .copy-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-left: 0.8rem;
+        display: inline-block;
+        cursor: pointer;
+
+        svg {
+          width: 100%;
+          height: inherit;
+          margin-bottom: -0.5rem;
+        }
+      }
     }
   }
 }

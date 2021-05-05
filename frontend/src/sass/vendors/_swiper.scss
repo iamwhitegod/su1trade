@@ -23,7 +23,7 @@
 
       &::after {
         @include respond(phone) {
-          font-size: 2.8rem;
+          display: none;
         }
       }
     }
