@@ -9068,7 +9068,9 @@ var menuLinks = document.querySelectorAll('[data--js="menu--link"]');
 var questionPanel = document.querySelectorAll(".FAQs__question");
 var modal = document.querySelector(".modal__container");
 var modalPopup = document.querySelector(".modal__popup");
-var modalOverlay = document.querySelector(".modal__overlay"); // Setup eventlisteners
+var modalOverlay = document.querySelector(".modal__overlay");
+var copyText = Array.from(document.querySelectorAll(".copy"));
+var copyIcon = Array.from(document.querySelectorAll(".copy-icon")); // Setup eventlisteners
 
 var setupEventListners = function setupEventListners() {
   if (menu) {
@@ -9160,6 +9162,14 @@ var setupEventListners = function setupEventListners() {
       return openModal(btn);
     });
   }
+
+  if (copyIcon) {
+    copyIcon.forEach(function (icon) {
+      icon.addEventListener("click", function (e) {
+        copy(icon);
+      });
+    });
+  }
 }; // setupEventListners();
 // /**********************************
 //  * modal
@@ -9182,6 +9192,13 @@ function openModalPopup() {
     modalPopup.classList.add("active");
     modalOverlay.classList.add("active");
     console.log(modalOverlay);
+  }
+}
+
+function copy(target) {
+  if (target) {
+    var text = target.parentElement.querySelector("strong").textContent;
+    navigator.clipboard.writeText(text);
   }
 } // openModalPopup();
 },{}],"canvas.js":[function(require,module,exports) {
@@ -9941,7 +9958,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49687" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56721" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

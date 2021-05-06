@@ -14,6 +14,8 @@ const questionPanel = document.querySelectorAll(".FAQs__question");
 const modal = document.querySelector(".modal__container");
 const modalPopup = document.querySelector(".modal__popup");
 const modalOverlay = document.querySelector(".modal__overlay");
+const copyText = Array.from(document.querySelectorAll(".copy"));
+const copyIcon = Array.from(document.querySelectorAll(".copy-icon"));
 
 // Setup eventlisteners
 export const setupEventListners = () => {
@@ -102,6 +104,14 @@ export const setupEventListners = () => {
     console.log(modalBtns);
     modalBtns.forEach((btn) => openModal(btn));
   }
+
+  if (copyIcon) {
+    copyIcon.forEach((icon) => {
+      icon.addEventListener("click", (e) => {
+        copy(icon);
+      });
+    });
+  }
 };
 
 // setupEventListners();
@@ -125,6 +135,13 @@ export function openModalPopup() {
     modalPopup.classList.add("active");
     modalOverlay.classList.add("active");
     console.log(modalOverlay);
+  }
+}
+
+function copy(target) {
+  if (target) {
+    const text = target.parentElement.querySelector("strong").textContent;
+    navigator.clipboard.writeText(text);
   }
 }
 
