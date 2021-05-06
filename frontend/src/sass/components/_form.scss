@@ -107,10 +107,10 @@
 
     &__input:focus ~ .form-group__label {
       font-size: 1.2rem;
-      top: -16%;
+      top: -23%;
       left: 2rem;
       background-color: neutral-colors-setup(color-white);
-      padding: 0;
+      padding: 0.4rem;
       color: primary-colors-setup(primary-color-base-dark);
       z-index: 9;
       transition: all 0.1s;
@@ -119,12 +119,12 @@
     &__input:not(:placeholder-shown).form-group__input:not(:focus)
       + .form-group__label {
       font-size: 1.2rem;
-      top: -16%;
+      top: -23%;
       left: 2rem;
       background-color: neutral-colors-setup(color-white);
-      padding: 0;
+      padding: 0.4rem;
       opacity: 1;
-      z-index: 100;
+      z-index: 9;
     }
 
     &__checkbox {

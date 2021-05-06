@@ -9819,6 +9819,8 @@ console.log("Hello from parcel");
 var signupForm = document.getElementById("signup-form");
 var loginForm = document.getElementById("signin-form");
 var logOutBtn = document.getElementById("logout--btn");
+var heroSwiper = document.querySelector(".swiper-container");
+var testSwiper = document.querySelector(".swiper-testimonial");
 /*
 **********************************************************
 **********************************************************
@@ -9850,51 +9852,51 @@ window.addEventListener("load", function () {
 **********************************************************
 */
 
-if (Swiper) {}
-
-var swiper = new Swiper(".swiper-container", {
-  speed: 600,
-  loop: true,
-  // effect: "fade",
-  // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 10,
-  autoplay: {
-    delay: 4500,
-    disableOnInteraction: false
-  },
-  pagination: {
-    el: ".swiper-pagination"
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  }
-});
-var testimonialSwiper = new Swiper(".swiper-testimonial", {
-  speed: 600,
-  // loop: true,
-  // effect: "fade",
-  // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 20,
-  autoplay: {
-    delay: 4500,
-    disableOnInteraction: false
-  },
-  breakpoints: {
-    // when window width is >= 768px
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 40
+if (heroSwiper || testSwiper) {
+  var swiper = new Swiper(heroSwiper, {
+    speed: 600,
+    loop: true,
+    // effect: "fade",
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false
     },
-    // when window width is >= 1024px
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 40
+    pagination: {
+      el: ".swiper-pagination"
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
     }
-  }
-});
+  });
+  var testimonialSwiper = new Swiper(testSwiper, {
+    speed: 600,
+    // loop: true,
+    // effect: "fade",
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    }
+  });
+}
 /*
 **********************************************************
 **********************************************************
@@ -9902,6 +9904,7 @@ var testimonialSwiper = new Swiper(".swiper-testimonial", {
 **********************************************************
 **********************************************************
 */
+
 
 if (signupForm) {
   signupForm.addEventListener("submit", function (e) {

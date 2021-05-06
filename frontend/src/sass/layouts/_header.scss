@@ -226,6 +226,13 @@
           order: -1;
           margin-bottom: 4.8rem;
         }
+
+        @include respond(phone) {
+          width: 100%;
+          padding: 2.8rem;
+          order: -1;
+          margin-bottom: 1.6rem;
+        }
       }
     }
   }

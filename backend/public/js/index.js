@@ -22,6 +22,8 @@ console.log("Hello from parcel");
 const signupForm = document.getElementById("signup-form");
 const loginForm = document.getElementById("signin-form");
 const logOutBtn = document.getElementById("logout--btn");
+const heroSwiper = document.querySelector(".swiper-container");
+const testSwiper = document.querySelector(".swiper-testimonial");
 
 /*
 **********************************************************
@@ -55,60 +57,60 @@ setupEventListners();
 **********************************************************
 **********************************************************
 */
-if (Swiper) {
+if (heroSwiper || testSwiper) {
+  const swiper = new Swiper(heroSwiper, {
+    speed: 600,
+    loop: true,
+    // effect: "fade",
+
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  const testimonialSwiper = new Swiper(testSwiper, {
+    speed: 600,
+    // loop: true,
+    // effect: "fade",
+
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 20,
+
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+  });
 }
-const swiper = new Swiper(".swiper-container", {
-  speed: 600,
-  loop: true,
-  // effect: "fade",
-
-  // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 10,
-
-  autoplay: {
-    delay: 4500,
-    disableOnInteraction: false,
-  },
-
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-const testimonialSwiper = new Swiper(".swiper-testimonial", {
-  speed: 600,
-  // loop: true,
-  // effect: "fade",
-
-  // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 20,
-
-  autoplay: {
-    delay: 4500,
-    disableOnInteraction: false,
-  },
-
-  breakpoints: {
-    // when window width is >= 768px
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 40,
-    },
-
-    // when window width is >= 1024px
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
-  },
-});
 
 /*
 **********************************************************
