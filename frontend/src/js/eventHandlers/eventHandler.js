@@ -16,6 +16,7 @@ const modalPopup = document.querySelector(".modal__popup");
 const modalOverlay = document.querySelector(".modal__overlay");
 const copyText = Array.from(document.querySelectorAll(".copy"));
 const copyIcon = Array.from(document.querySelectorAll(".copy-icon"));
+const passwordElem = document.querySelector(".form__password-visibility");
 
 // Setup eventlisteners
 export const setupEventListners = () => {
@@ -146,3 +147,23 @@ function copy(target) {
 }
 
 // openModalPopup();
+
+if (passwordElem) {
+  passwordElem.addEventListener("click", () => {
+    if (
+      passwordElem
+        .querySelector("use")
+        .attributes[0].value.includes("#eye-outline")
+    ) {
+      passwordElem.querySelector("use").attributes[0].value =
+        "assets/sprite.svg#eye-off-outline";
+
+      passwordElem.parentElement.querySelector("input").type = "text";
+    } else {
+      passwordElem.querySelector("use").attributes[0].value =
+        "assets/sprite.svg#eye-outline";
+
+      passwordElem.parentElement.querySelector("input").type = "password";
+    }
+  });
+}
