@@ -17,13 +17,14 @@ const htmlTemplateNames = [
   "news",
   "partners",
   "privacy",
-  "resetpassword",
+  "reset-password",
   "security",
   "terms",
   "tutorial",
   "dashboardv2",
   "lend",
   "fundsmanagement",
+  "forgot-password",
 ];
 const multipleHtmlTemplates = htmlTemplateNames.map(
   (name) =>
