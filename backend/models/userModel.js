@@ -1,3 +1,4 @@
+const crypto = require("crypto");
 const { Sequelize, DataTypes, Model } = require("sequelize");
 const db = require("../config/database");
 const bcrypt = require("bcrypt");
@@ -37,6 +38,9 @@ const userSchema = (db, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      passwordChangedAt: DataTypes.DATE,
+      passwordResetToken: DataTypes.STRING,
+      passwordResetExpires: DataTypes.DATE,
     },
     {
       hooks: {
@@ -62,9 +66,36 @@ User.prototype.correctPassword = async (canditatePassword, userPassword) => {
   return await bcrypt.compare(canditatePassword, userPassword);
 };
 
+User.prototype.changedPasswordAfter = function (JWTTimestamp) {
+  if (this.passwordChangedAt) {
+    const changedTimestamp = parseInt(
+      this.passwordChangedAt.getTime() / 1000,
+      10
+    );
+
+    return JWTTimestamp < changedTimestamp;
+  }
+
+  // False means PASSWORD WAS NOT changed.
+  return false;
+};
+
+User.prototype.createPasswordResetToken = function () {
+  const resetToken = crypto.randomBytes(32).toString("hex");
+
+  this.passwordResetToken = crypto
+    .createHash("sha256")
+    .update(resetToken)
+    .digest("hex");
+
+  this.passwordResetExpires = Date.now() + 10 * 60 + 1000;
+
+  return resetToken;
+};
+
 console.log(User);
 
-db.sync().then(() => {
+db.sync({ alter: true }).then(() => {
   console.log(`Database & tables created!`);
 });
 
