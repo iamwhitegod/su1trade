@@ -7,6 +7,7 @@ const User = require("../models/userModel");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const { sendEmail } = require("./emailController");
+const Email = require("../utils/email");
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -49,7 +50,8 @@ exports.signup = catchAsync(async (req, res, next) => {
 
   console.log(url);
 
-  sendEmail(newUser.fullname, newUser.email, newUser.phone);
+  // sendEmail(newUser.fullname, newUser.email, newUser.phone);
+  await new Email(newUser, url).sendWelcome();
   createSendToken(newUser, 201, req, res);
 });
 
@@ -173,7 +175,7 @@ exports.restrictTo = (...roles) => {
 exports.forgotPassword = catchAsync(async (req, res, next) => {
   // 1) Get user based on POSTED email
   const user = await User.findOne({
-    attributes: ["id", "email"],
+    attributes: ["id", "email", "fullname"],
     where: { email: req.body.email },
   });
 
@@ -192,6 +194,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     const resetURL = `${req.protocol}://${req.get(
       "host"
     )}/api/v1/users/reset-password/${resetToken}`;
+    await new Email(user, resetURL).sendPasswordReset();
 
     res.status(200).json({
       status: "success",
@@ -201,6 +204,8 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   } catch (err) {
     user.passwordResetToken = undefined;
     user.passwordResetExpires = undefined;
+
+    console.log(err.message);
     await user.save();
 
     return next(

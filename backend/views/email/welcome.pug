@@ -1,0 +1,18 @@
+extends baseEmail
+
+block content
+  p Hi #{firstName},
+  p Welcome to SU1trade! Thank you for signing up 🙏
+  p Please verify your email address by clicking the button below.
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Verify account
+  p If you need any help with funding your account, please don't hesitate to contact me!
+  p Please note that unverified accounts are automatically deleted in 30 days after sign up.
+  p - Sherif Ogehie, CEO
