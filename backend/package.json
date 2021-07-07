@@ -25,6 +25,7 @@
     "sequelize": "^6.5.0",
     "swiper": "^6.5.7",
     "xss-clean": "^0.1.1",
+    "yarn-audit-fix": "^6.3.5",
     "yarn-upgrade-all": "^0.5.4"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
   },
   "scripts": {
     "start": "node server.js",
+    "yarn:audit": "yarn-audit-fix [--opts]",
     "start:dev": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production & nodemon ./server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file build.js",
