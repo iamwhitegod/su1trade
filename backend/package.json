@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "yarn:audit": "yarn-audit-fix [--opts]",
+    "yarn:audit": "yarn-audit-fix [--force]",
     "start:dev": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production & nodemon ./server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file build.js",

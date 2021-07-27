@@ -37,6 +37,9 @@ block content
       .form-group
         input#password.form-group__input(type="password", name="password", placeholder=" ", autocomplete="off", required)
         label.form-group__label(for="password") Password
+        span.form__password-visibility
+          svg
+            use(href="assets/sprite.svg#eye-outline")
       .form-group.d-flex
         button.btn--primary.btn--ripple.btn--full-width.btn--medium.mb2(type="submit") Sign In
 
@@ -47,4 +50,4 @@ block content
       .form-group.d-flex
         p.secondary-desc Forgotten Password?
           span.accent
-            a.accent(href="/forgottenPassword") Reset Password
+            a.accent(href="/forgot-password") Reset Password

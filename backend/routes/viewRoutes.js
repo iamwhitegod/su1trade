@@ -37,6 +37,8 @@ router.get(
 );
 router.get("/login", authController.isLoggedIn, viewsController.getLoginForm);
 router.get("/signup", authController.isLoggedIn, viewsController.getSignupForm);
+router.get("/forgot-password", viewsController.getForgotPassword);
+router.get("/reset-password/:token", viewsController.getResetPassword);
 
 router.get(
   "/user/dashboard",

@@ -46,11 +46,17 @@ block content
       .form-group
         input#password.form-group__input(type="password", name="password", placeholder=" ", autocomplete="off", required)
         label.form-group__label(for="password") Password
-        small.small  
+        small.small
+        span.form__password-visibility
+          svg
+            use(href="assets/sprite.svg#eye-outline")  
       .form-group
         input#confirm-password.form-group__input(type="password", name="confirm-password", placeholder=" ", autocomplete="off", required)
         label.form-group__label(for="confirm-password") Confirm Password
-        small  
+        small
+        span.form__password-visibility
+          svg
+            use(href="assets/sprite.svg#eye-outline")
       .form-group.d-flex
         input.form-group__checkbox(type="checkbox")
         p.secondary-desc I have read and agree to the terms of service by
