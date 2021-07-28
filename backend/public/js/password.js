@@ -1,5 +1,6 @@
 import "@babel/polyfill";
 import axios from "axios";
+import { showAlert } from "./alert";
 
 export const forgotPassword = async function (email) {
   try {
@@ -11,9 +12,16 @@ export const forgotPassword = async function (email) {
       },
     });
 
-    console.log(res);
+    // console.log(res);
+
+    if (res.data.status === "success") {
+      showAlert("success", "Request sent successfully. Check your email!");
+      window.setTimeout(() => {
+        location.assign("/sent-email");
+      }, 500);
+    }
   } catch (err) {
-    console.log(err.message);
+    showAlert("error", "Something went wrong. Try Again!");
   }
 };
 
