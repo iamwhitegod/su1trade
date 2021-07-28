@@ -19,6 +19,12 @@ exports.getResetPassword = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.getSentEmail = catchAsync(async (req, res, next) => {
+  res.status(200).render("sent-email", {
+    title: "Sent Email"
+  })
+})
+
 exports.getLend = catchAsync(async (req, res, next) => {
   res.status(200).render("lend", {
     title: "Lending Investment",

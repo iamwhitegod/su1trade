@@ -1,0 +1,30 @@
+extends base
+
+block navigation
+  nav
+    .row
+      .nav.nav--bar.nav--main
+        figure.logo
+          img(src="assets/su1trade_logo.png", alt="brand logo")
+        ul(data--js="menu--panel")
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/about") About us
+          li.active(data--js="menu--item")
+            a.active(data--js="menu--link", href="/signin") Sign in
+          li(data--js="menu--item")
+            a(data--js="menu--link", href="/signup") Sign up
+        menu.icon.icon--small(data--js="mobile--menu")
+          svg
+            use(href="assets/sprite.svg#menu-alt")
+
+block content
+  section.create-account
+    .row
+      h2.secondary-heading.uti-mb-2.uti-mt-12
+        | We've sent a reset password to your email.
+        br
+        | Please check your email.
+      p.secondary-desc.uti-mb-12
+        | Did get an email? 
+        span.accent
+          a.accent(href="/forgot-password") Resend

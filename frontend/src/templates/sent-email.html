@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Su1trade | Sign in</title>
+    <title>Su1trade | Email Sent</title>
     <link href="css/main.css" type="text/css" rel="stylesheet" />
 
     <!-- Fav Icons -->
@@ -70,73 +70,19 @@
     <!-- Main site navigation ends here -->
 
     <section class="create-account">
-      <form class="form" id="signin-form">
-        <div class="form__caption">
-          <h2 class="secondary-heading">Reset Your Password</h2>
-        </div>
+      <div class="row">
+        <h2 class="secondary-heading uti-mb-2 uti-mt-12">
+          We've sent a reset password link to your email. <br />
+          Please check your email.
+        </h2>
 
-        <div class="form__line">
-          <span class="primary-desc">Enter new password</span>
-        </div>
-
-        <div class="form-group">
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder=" "
-            autocomplete="off"
-            class="form-group__input"
-            required
-          />
-          <label for="password" class="form-group__label">Password</label>
-
-          <span class="pass-vis">
-            <svg>
-              <use xlink:href="assets/sprite.svg#eye-outline"></use>
-            </svg>
-          </span>
-        </div>
-
-        <div class="form-group">
-          <input
-            type="password"
-            name="confirmPassword"
-            id="confirmPassword"
-            placeholder=" "
-            autocomplete="off"
-            class="form-group__input"
-            required
-          />
-          <label for="confirmPassword" class="form-group__label"
-            >Confirm password</label
+        <p class="secondary-desc uti-mb-12">
+          Did get an email?
+          <span class="accent"
+            ><a href="./forgot-password.html" class="accent"> Resend</a></span
           >
-
-          <span class="pass-vis">
-            <svg>
-              <use xlink:href="assets/sprite.svg#eye-outline"></use>
-            </svg>
-          </span>
-        </div>
-
-        <div class="form-group d-flex">
-          <button
-            type="submit"
-            class="btn--primary btn--ripple btn--full-width btn--medium mb2"
-          >
-            Reset Password
-          </button>
-        </div>
-
-        <div class="form-group d-flex">
-          <p class="secondary-desc">
-            Don't have an account?
-            <span class="accent"
-              ><a href="./signup.html" class="accent"> Sign up</a></span
-            >
-          </p>
-        </div>
-      </form>
+        </p>
+      </div>
     </section>
 
     <!-- Footer starts here -->
