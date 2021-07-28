@@ -25,6 +25,7 @@ const htmlTemplateNames = [
   "lend",
   "fundsmanagement",
   "forgot-password",
+  "sent-email",
 ];
 const multipleHtmlTemplates = htmlTemplateNames.map(
   (name) =>

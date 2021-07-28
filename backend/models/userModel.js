@@ -95,7 +95,8 @@ User.prototype.createPasswordResetToken = function () {
 
 console.log(User);
 
-db.sync({ alter: true }).then(() => {
+// db.sync({ alter: true }).then(() => {
+db.sync().then(() => {
   console.log(`Database & tables created!`);
 });
 

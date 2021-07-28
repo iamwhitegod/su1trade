@@ -16,6 +16,8 @@ const modalPopup = document.querySelector(".modal__popup");
 const modalOverlay = document.querySelector(".modal__overlay");
 const copyText = Array.from(document.querySelectorAll(".copy"));
 const copyIcon = Array.from(document.querySelectorAll(".copy-icon"));
+const passwordElem = document.querySelectorAll(".form__password-visibility");
+const passVisElem = document.querySelectorAll(".pass-vis");
 
 // Setup eventlisteners
 export const setupEventListners = () => {
@@ -146,3 +148,46 @@ function copy(target) {
 }
 
 // openModalPopup();
+
+if (passwordElem) {
+  passwordElem.forEach((el) =>
+    el.addEventListener("click", () => {
+      if (
+        el.querySelector("use").attributes[0].value.includes("#eye-outline")
+      ) {
+        el.querySelector("use").attributes[0].value =
+          "assets/sprite.svg#eye-off-outline";
+
+        el.parentElement.querySelector("input").type = "text";
+      } else {
+        el.querySelector("use").attributes[0].value =
+          "assets/sprite.svg#eye-outline";
+
+        el.parentElement.querySelector("input").type = "password";
+      }
+    })
+  );
+}
+
+if (passVisElem) {
+  passVisElem.forEach((el) =>
+    el.addEventListener("click", () => {
+      if (
+        el
+          .querySelector("use")
+          .attributes[0].value.includes("#eye-outline-reset")
+      ) {
+        console.log("You clicked");
+        el.querySelector("use").attributes[0].value =
+          "../assets/sprite.svg#eye-off-outline-reset";
+
+        el.parentElement.querySelector("input").type = "text";
+      } else {
+        el.querySelector("use").attributes[0].value =
+          "../assets/sprite.svg#eye-outline-reset";
+
+        el.parentElement.querySelector("input").type = "password";
+      }
+    })
+  );
+}

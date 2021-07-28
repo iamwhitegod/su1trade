@@ -4,6 +4,7 @@ import "@babel/polyfill";
 // import Typewriter from "typewriter-effect/dist/core";
 
 import { signup } from "./signup";
+import { forgotPassword, resetPassword } from "./password";
 import { login, logout } from "./login";
 import { setupEventListners } from "./event";
 
@@ -22,6 +23,8 @@ console.log("Hello from parcel");
 const signupForm = document.getElementById("signup-form");
 const loginForm = document.getElementById("signin-form");
 const logOutBtn = document.getElementById("logout--btn");
+const forgotPasswordForm = document.getElementById("forgot-password-form");
+const resetPasswordForm = document.getElementById("reset-password-form");
 const heroSwiper = document.querySelector(".swiper-container");
 const testSwiper = document.querySelector(".swiper-testimonial");
 
@@ -156,4 +159,25 @@ if (loginForm) {
 if (logOutBtn) {
   console.log(logOutBtn, "logged out");
   logOutBtn.addEventListener("click", logout);
+}
+
+if (forgotPasswordForm) {
+  forgotPasswordForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    forgotPassword(email);
+  });
+}
+
+if (resetPasswordForm) {
+  resetPasswordForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const pathname = window.location.pathname;
+
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    resetPassword(password, confirmPassword, pathname);
+  });
 }

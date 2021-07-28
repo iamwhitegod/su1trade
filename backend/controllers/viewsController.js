@@ -7,6 +7,24 @@ exports.getDashboard = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.getForgotPassword = catchAsync(async (req, res, next) => {
+  res.status(200).render("forgot-password", {
+    title: "Forgot Password",
+  });
+});
+
+exports.getResetPassword = catchAsync(async (req, res, next) => {
+  res.status(200).render("reset-password", {
+    title: "Reset Password",
+  });
+});
+
+exports.getSentEmail = catchAsync(async (req, res, next) => {
+  res.status(200).render("sent-email", {
+    title: "Sent Email"
+  })
+})
+
 exports.getLend = catchAsync(async (req, res, next) => {
   res.status(200).render("lend", {
     title: "Lending Investment",

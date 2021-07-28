@@ -165,7 +165,8 @@
     }
   }
 
-  &__password-visibility {
+  &__password-visibility,
+  .pass-vis {
     display: inline-block;
     width: 2.4rem;
     position: absolute;
